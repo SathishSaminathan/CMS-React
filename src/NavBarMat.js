@@ -109,7 +109,7 @@ function NavBArMat(props) {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar style={{ackgroundColor: "#a40606",
+        <Toolbar style={{backgroundColor: "#a40606",
 backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
 }}>
           

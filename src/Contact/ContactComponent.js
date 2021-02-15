@@ -127,11 +127,8 @@ function ContactComponent(props) {
               Get in Touch With Us
             </Typography>
             <div className="underline"></div>
-            <Typography>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-              asperiores fugiat aliquid. At impedit, provident repudiandae quis
-              deleniti eum sequi doloribus distinctio consectetur nobis culpa
-              ad, corporis odit quae blanditiis.
+            <Typography style={{width:"50%",marginTop:"20px"}}>
+            Any Kind of business solution and Consulation don't hesitate to contact with us for imidiate customer support.We would love to hear from you
             </Typography>
           </Grid>
           <Grid container md={6} >
@@ -143,11 +140,8 @@ function ContactComponent(props) {
               Send Us Your Message
             </Typography>
             <div className="underline"></div>
-            <Typography>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-              asperiores fugiat aliquid. At impedit, provident repudiandae quis
-              deleniti eum sequi doloribus distinctio consectetur nobis culpa
-              ad, corporis odit quae blanditiis.
+            <Typography style={{marginTop:"20px"}}>
+              Alternatively,if you'd like for us to get back in touch with you please fill in the form below.
             </Typography>
             <TextField id="outlined-size-small"
           defaultValue=""

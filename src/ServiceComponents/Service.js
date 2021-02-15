@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         textAlign: 'center',
         alignItems: 'center',
+        alignContent:"center",
         display: 'flex',
         width: '100%',
         marginTop: '50px',
@@ -79,12 +80,13 @@ const useStyles = makeStyles((theme) => ({
            
           },
       },
+     
       logimg:{
           
       },
       img: {
         display: "block",
-        maxWidth: "8%",
+        maxWidth: "5%",
         maxHeight: "10",
         display: "inline-block",
         [theme.breakpoints.down('md')]: {
@@ -122,7 +124,15 @@ const useStyles = makeStyles((theme) => ({
         height: '35vh',
         marginBottom:"-25px"
       },
-      
+      gridcontainer1:{
+        display: 'flex',
+        justifyContent: 'left',
+        alignItems: 'left',
+        textAlign: 'left',
+        [theme.breakpoints.down('xs')]: {
+          marginRight:"20%"
+        },
+      }
 
 }));
 function Service(props) {
@@ -161,7 +171,7 @@ function Service(props) {
           <Paper className={classes.paper} elevation={0}>
         <Grid container spacing={0} style={{marginTop:"10%"}}>
           <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" >
+            <Grid item xs container direction="column" className={classes.gridcontainer1} >
               <Grid
                 item
                 xs
@@ -171,15 +181,16 @@ function Service(props) {
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  
                 >
-                  <span>
+                  <span >
                     <img
                     style={{paddingRight:"10px"}}
                       className={classes.img}
                       alt="complex"
                       src="./images/logosmall.png"
                     />
-                  </span>
+                  </span >
                   Stratergic buissness planning
                 </Typography>
               </Grid>
@@ -200,7 +211,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+Six sigma Program Implementation
                 </Typography>
               </Grid>
               <Grid
@@ -220,7 +231,84 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+Cost reduction projects                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+Facultication of Kaizen/Operational Excellence Events                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+QA as a Service(QAaaS)                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+<span style={{color:"#0C2D48",fontWeight:"600"}}>ISO 9001</span>- Quality Management System Requirements                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+                  <span style={{color:"#0C2D48",fontWeight:"600"}}>ISO 14001</span>- Environment Management System Requirements          
+
                 </Typography>
               </Grid>
               <Grid
@@ -240,7 +328,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+                  <span style={{color:"#0C2D48",fontWeight:"600"}}>IATF 16949</span>- Quality Management System Requirements for automotive suppliers         
                 </Typography>
               </Grid>
               <Grid
@@ -260,7 +348,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+                  <span style={{color:"#0C2D48",fontWeight:"600"}}>ISO/IEC 27001</span>- Information Security Management System Requirements        
                 </Typography>
               </Grid>
               <Grid
@@ -280,92 +368,12 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+                  <span style={{color:"#0C2D48",fontWeight:"600"}}>ISO/IEC 17025</span>- General requirements for the competency of testing and callibration laboratories     
                 </Typography>
               </Grid>
             </Grid>
             <Grid item md={6} xs={12}>
-                <Paper style={{width:450,height:400}}><img style={{width:"100%",}} src="./images/onlineL.jpg"/></Paper>
+                <Paper elevation={0} style={{width:450,height:400,backgroundColor:"transparent"}}><img style={{width:"80%",}} src="./images/onlineL.jpg"/></Paper>
             </Grid>
           </Grid>
         </Grid>
@@ -395,7 +403,159 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Stratergic buissness planning
+Implementation of <span style={{color:"#0C2D48",fontWeight:"600"}}>APQP,FMEA,MSA,SPC & PPAP for specific projects</span> </Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+Training and obtaining PPAP from suppliers</Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+Supplier Assessments</Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+Establish and implement ITIL processes  </Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+Establish and implement Metrics for IT Governance</Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+IT Risk Management in line with Established frameworks </Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+Perform risk-based IT aduits</Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+Perform Application control review</Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+                  Perform Applicaton control review
                 </Typography>
               </Grid>
               <Grid
@@ -415,8 +575,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
+Perform <span style={{color:"#0C2D48",fontWeight:"600"}}>IQ/QQ/PQ(software validation) per ICH Guidelines and <span>21CFR Part 11 complaince requirements</span></span>                </Typography>
               </Grid>
               <Grid
                 item
@@ -435,8 +594,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
+Critical process analysis and development of Business Continuity and Disaster Recovery Plans </Typography>
               </Grid>
               <Grid
                 item
@@ -455,128 +613,8 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
+Documentation of policies ,<span style={{color:"#0C2D48",fontWeight:"600"}}>SOPs,</span>,Operator instructions,Visual aids,Control plans and Training Materials relevant to Quality,information security ,and Environment Management area
+</Typography>
               </Grid>
             </Grid>
            
@@ -633,7 +671,27 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Stratergics buissness planning
+Understand the client needs and expectations                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs
+               
+              >
+                <Typography
+                  gutterBottom
+                  variant="subtitle1"
+                  style={{ color: 'white'}}
+                >
+                  <span>
+                    <img
+                    style={{paddingRight:"10px"}}
+                      className={classes.img}
+                      alt="complex"
+                      src="./images/logosmall.png"
+                    />
+                  </span>
+Perform "AS IS" assesment to understand the baseline
                 </Typography>
               </Grid>
               <Grid
@@ -654,8 +712,8 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
+Prepare a detailed technical proposal and get agreement               
+ </Typography>
               </Grid>
               <Grid
                 item
@@ -663,9 +721,9 @@ function Service(props) {
                
               >
                 <Typography
+                style={{ color: 'white'}}
                   gutterBottom
                   variant="subtitle1"
-                  style={{ color: 'white'}}
                 >
                   <span>
                     <img
@@ -675,7 +733,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+Prepare a commercial proposal and get agreement
                 </Typography>
               </Grid>
               <Grid
@@ -696,7 +754,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+Prepare a project a project plan and reach agreement
                 </Typography>
               </Grid>
               <Grid
@@ -717,7 +775,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+Perform onsite visits as per the plan
                 </Typography>
               </Grid>
               <Grid
@@ -738,7 +796,7 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
+                  Unlimited offline support
                 </Typography>
               </Grid>
               <Grid
@@ -759,75 +817,13 @@ function Service(props) {
                       src="./images/logosmall.png"
                     />
                   </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
+Periodic submission of a progress report and review with Stake Holders                </Typography>
               </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                style={{ color: 'white'}}
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                style={{ color: 'white'}}
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
-              <Grid
-                item
-                xs
-               
-              >
-                <Typography
-                style={{ color: 'white'}}
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  <span>
-                    <img
-                    style={{paddingRight:"10px"}}
-                      className={classes.img}
-                      alt="complex"
-                      src="./images/logosmall.png"
-                    />
-                  </span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sapiente ha.
-                </Typography>
-              </Grid>
+              
+             
             </Grid>
             <Grid item md={6} xs={12}>
-                <Paper style={{width:"auto",height:"auto",marginLeft:"50px",marginRight:"20px"}}><img style={{width:"100%",}} src="./images/onlineL.jpg"/></Paper>
+                <Paper style={{width:"auto",height:"auto",marginLeft:"50px",marginRight:"20px"}}><img style={{width:"100%",}} src="./images/random1.jpg"/></Paper>
             </Grid>
           </Grid>
         </Grid>

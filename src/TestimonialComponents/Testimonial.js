@@ -127,10 +127,10 @@ function Testimonial(props) {
           </Grid>
           <Grid item md={12} className={classes.header1}>
             <Typography
-              style={{ color: 'darkblue', fontWeight: '400' }}
+              style={{ color:"#0C2D48", fontWeight: '400' }}
               variant="h4"
             >
-              What Client Says About Us?{' '}
+              What Client Says About Us?
               <div
                 style={{
                   justifyContent: 'center',
@@ -146,7 +146,7 @@ function Testimonial(props) {
             <div className={classes.box}></div>
             <Paper
               className={classes.paper}
-              style={{ backgroundColor: '#0d335d' }}
+              style={{ backgroundColor: '#0C2D48' }}
             >
               <img
                 className={classes.orangebox}
@@ -205,7 +205,7 @@ function Testimonial(props) {
             <div className={classes.box}></div>
             <Paper
               className={classes.paper}
-              style={{ backgroundColor: '#0d335d' }}
+              style={{ backgroundColor: '#0C2D48' }}
             >
               <img
                 className={classes.orangebox}
@@ -264,7 +264,7 @@ function Testimonial(props) {
             <div className={classes.box}></div>
             <Paper
               className={classes.paper}
-              style={{ backgroundColor: '#0d335d' }}
+              style={{ backgroundColor: '#0C2D48' }}
             >
               <img
                 className={classes.orangebox}

@@ -1,0 +1,7 @@
+.controls-top{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 8em;
+    right: 2em;
+}
