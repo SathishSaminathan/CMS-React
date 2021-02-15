@@ -518,14 +518,14 @@ function Home(props) {
             <img className={classes.imgLogo} src="../images/logosmall.png" />
             </Fade>
           </Grid>
-          <Grid item className={classes.cantonContainer}>
+          <Grid md={4} item className={classes.cantonContainer}>
            
             <div class="devicer"></div>
             <Typography variant="h4" style={{ marginLeft: '40px',color:"orangered" }}>About Us</Typography>
             <Fade right>
             <Typography
               style={{ width: '50%',color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' }}
-              variant="h1"
+              variant="h2"
               gutterBottom="true"
             >
               Canton Management
@@ -539,13 +539,13 @@ function Home(props) {
               style={{
                 backgroundColor: 'orangered',
                 borderRadius: '30px',
-                width: '23%',
+                
                 color: 'white',
                 marginTop: '20px',
                 paddingTop:"15px",
                 paddingBottom:"15px",
-                paddingLeft:"20px",
-                paddingRight:"20px"
+                paddingLeft:"25px",
+                paddingRight:"25px"
               }}
             >
               Learn More

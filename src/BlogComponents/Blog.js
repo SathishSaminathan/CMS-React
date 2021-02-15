@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
        
        
         marginTop:"5%",
-        paddingLeft:"5em",
+       
         [theme.breakpoints.down('md')]: {
          padding:"0px",
          display:"flex",
@@ -78,13 +78,21 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"400"
       },
       paper:{
-          width:400,
+          width: "750px",
           height:550,
           backgroundColor:"transparent",
+          paddingLeft:"15em",
+          paddingRight:"10em",
+          
+          [theme.breakpoints.down('md')]: {
+            padding:"10px",
+            width: "627px",
+           
+           },
           
       },
       paperContainer:{
-paddingLeft:"15em",
+
 [theme.breakpoints.down('md')]: {
   padding:"0px",
   display:"flex",
@@ -149,8 +157,8 @@ function Blog(props) {
         </Select>
         </Grid>
           </Grid>
-          <Grid container className={classes.paperContainer}>
-          <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
+          <Grid container className={classes.paperContainer} direction="row">
+          <Grid item xs={12} md={3} sm={6} className={classes.blogCard} >
               <Paper
                 style={{
                  
@@ -269,7 +277,7 @@ function Blog(props) {
                 </Typography>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
+            <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
               <Paper
                 style={{
                   
