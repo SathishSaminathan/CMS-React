@@ -38,12 +38,16 @@ const useStyles = makeStyles((theme) => ({
   },
  BlogText: {
    
-    paddingLeft:"12.5em",
+    paddingLeft:"7.5em",
     marginBottom:"60px"
   },
   GridContainer:{
     position:"absolute",
-    top:"40%"
+    top:"40%",
+    flexGrow: 1,
+    display: "flex",
+    justifyContent: "space-evenly",
+    paddingLeft: "86px",
       },
       blogCard: {
        
@@ -78,18 +82,26 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"400"
       },
       paper:{
-          width: "750px",
-          height:550,
-          backgroundColor:"transparent",
-          paddingLeft:"15em",
-          paddingRight:"10em",
-          
+          width: 500,
+          height:350,
+          backgroundColor:"pink",
+       marginBottom:"15em",
+         
+        
           [theme.breakpoints.down('md')]: {
             padding:"10px",
-            width: "627px",
+           
            
            },
           
+      },
+      paperGrid:{
+display:"flex",
+justifyContent:"center",
+alignContent:"center",
+alignItems:"center",
+paddingTop:"40px",
+
       },
       paperContainer:{
 
@@ -157,8 +169,8 @@ function Blog(props) {
         </Select>
         </Grid>
           </Grid>
-          <Grid container className={classes.paperContainer} direction="row">
-          <Grid item xs={12} md={3} sm={6} className={classes.blogCard} >
+         
+          {/* <Grid item xs={12} md={3} sm={6} className={classes.blogCard} >
               <Paper
                 style={{
                  
@@ -301,12 +313,161 @@ function Blog(props) {
                 </Typography>
               </Paper>
               
-            </Grid>
-          </Grid>
+            </Grid> */}
+          
+    
+      <Grid container spacing={2} className={classes.paperGrid}>
+        <Grid item xs>
+        <Paper
+                style={{
+                 
+                  backgroundColor: 'transparent',
+                }}
+                className={classes.paper}
+                elevation={0}
+              >
+                <img className={classes.blogImg1} src="../images/bman.jpg" />
+                <Typography className={classes.authorText} variant="subtitle1">
+                  BY AUTHOR PUBLISHED ON JULY 9,2020
+                </Typography>
+                <Typography className={classes.blogTitleText} variant="h5">
+                  blog Title Goes here
+                </Typography>
+                <Typography className={classes.blogContent} variant="h6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia unde provident, earum perspiciatis dolor ratione
+                  molestiae velit iusto obcaecati debitis repellat error libero
+                  neque similique saepe eius veniam illo consequatur.
+                </Typography>
+              </Paper>
+        </Grid>
+        <Grid item xs>
+        <Paper
+                style={{
+                 
+                  backgroundColor: 'transparent',
+                }}
+                className={classes.paper}
+                elevation={0}
+              >
+                <img className={classes.blogImg1} src="../images/bwomen.jpg" />
+                <Typography className={classes.authorText} variant="subtitle1">
+                  BY AUTHOR PUBLISHED ON JULY 9,2020
+                </Typography>
+                <Typography className={classes.blogTitleText} variant="h5">
+                  blog Title Goes here
+                </Typography>
+                <Typography className={classes.blogContent} variant="h6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia unde provident, earum perspiciatis dolor ratione
+                  molestiae velit iusto obcaecati debitis repellat error libero
+                  neque similique saepe eius veniam illo consequatur.
+                </Typography>
+              </Paper>
+        </Grid>
+        <Grid item xs>
+        <Paper
+                style={{
+                 
+                  backgroundColor: 'transparent',
+                }}
+                className={classes.paper}
+                elevation={0}
+              >
+                <img className={classes.blogImg1} src="../images/ourclients.jpg" />
+                <Typography className={classes.authorText} variant="subtitle1">
+                  BY AUTHOR PUBLISHED ON JULY 9,2020
+                </Typography>
+                <Typography className={classes.blogTitleText} variant="h5">
+                  blog Title Goes here
+                </Typography>
+                <Typography className={classes.blogContent} variant="h6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia unde provident, earum perspiciatis dolor ratione
+                  molestiae velit iusto obcaecati debitis repellat error libero
+                  neque similique saepe eius veniam illo consequatur.
+                </Typography>
+              </Paper>
+        </Grid>
+        <Grid item xs>
+        <Paper
+                style={{
+                 
+                  backgroundColor: 'transparent',
+                }}
+                className={classes.paper}
+                elevation={0}
+              >
+                <img className={classes.blogImg1} src="../images/bman.jpg" />
+                <Typography className={classes.authorText} variant="subtitle1">
+                  BY AUTHOR PUBLISHED ON JULY 9,2020
+                </Typography>
+                <Typography className={classes.blogTitleText} variant="h5">
+                  blog Title Goes here
+                </Typography>
+                <Typography className={classes.blogContent} variant="h6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia unde provident, earum perspiciatis dolor ratione
+                  molestiae velit iusto obcaecati debitis repellat error libero
+                  neque similique saepe eius veniam illo consequatur.
+                </Typography>
+              </Paper>
+        </Grid>
+        <Grid item xs>
+        <Paper
+                style={{
+                 
+                  backgroundColor: 'transparent',
+                }}
+                className={classes.paper}
+                elevation={0}
+              >
+                <img className={classes.blogImg1} src="../images/bwomen.jpg" />
+                <Typography className={classes.authorText} variant="subtitle1">
+                  BY AUTHOR PUBLISHED ON JULY 9,2020
+                </Typography>
+                <Typography className={classes.blogTitleText} variant="h5">
+                  blog Title Goes here
+                </Typography>
+                <Typography className={classes.blogContent} variant="h6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia unde provident, earum perspiciatis dolor ratione
+                  molestiae velit iusto obcaecati debitis repellat error libero
+                  neque similique saepe eius veniam illo consequatur.
+                </Typography>
+              </Paper>
+        </Grid>
+        <Grid item xs>
+        <Paper
+                style={{
+                 
+                  backgroundColor: 'transparent',
+                }}
+                className={classes.paper}
+                elevation={0}
+              >
+                <img className={classes.blogImg1} src="../images/ourclients.jpg" />
+                <Typography className={classes.authorText} variant="subtitle1">
+                  BY AUTHOR PUBLISHED ON JULY 9,2020
+                </Typography>
+                <Typography className={classes.blogTitleText} variant="h5">
+                  blog Title Goes here
+                </Typography>
+                <Typography className={classes.blogContent} variant="h6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia unde provident, earum perspiciatis dolor ratione
+                  molestiae velit iusto obcaecati debitis repellat error libero
+                  neque similique saepe eius veniam illo consequatur.
+                </Typography>
+              </Paper>
+        </Grid>
+      </Grid>
+      
           <Grid item md={12} style={{display:"flex",justifyContent:"center",
             alignItems:"center", paddingRight:"50px",paddingLeft:"50px"}}>
                   <Button variant="outlined" style={{color:"white",backgroundColor:"orangered",marginTop:"50px",borderRadius:"30px",paddingTop:"15px",paddingBottom:"15px",}}>Read More</Button>
               </Grid>
+              
               <FooterPage />
 
           </Grid>
