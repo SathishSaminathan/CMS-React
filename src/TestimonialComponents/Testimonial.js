@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '15px',
     marginLeft: '0px',
     position: 'relative',
-    right: '80px',
+    right: '64px',
     objectFit:"cover",
     [theme.breakpoints.down('md')]: {
       right: '20px',
