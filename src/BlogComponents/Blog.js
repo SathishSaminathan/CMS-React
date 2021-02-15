@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     display: "flex",
     justifyContent: "space-evenly",
-    paddingLeft: "86px",
+    
       },
       blogCard: {
        
@@ -101,7 +101,7 @@ justifyContent:"center",
 alignContent:"center",
 alignItems:"center",
 paddingTop:"40px",
-
+paddingLeft: "3em",
       },
       paperContainer:{
 
@@ -466,10 +466,11 @@ function Blog(props) {
           <Grid item md={12} style={{display:"flex",justifyContent:"center",
             alignItems:"center", paddingRight:"50px",paddingLeft:"50px"}}>
                   <Button variant="outlined" style={{color:"white",backgroundColor:"orangered",marginTop:"50px",borderRadius:"30px",paddingTop:"15px",paddingBottom:"15px",}}>Read More</Button>
+                 
               </Grid>
               
+            
               <FooterPage />
-
           </Grid>
          
         </ThemeProvider>
