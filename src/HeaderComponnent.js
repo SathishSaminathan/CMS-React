@@ -33,93 +33,86 @@ const useStyles = makeStyles((theme) => ({
      },  
 
 },
-   logo:{
-width:"50%",
-[theme.breakpoints.down("xl")]: {
-    width:"50%",  
-},
-},
-
-   logoContainer:{
-      position:"absolute",
-      left:"10%",
-      top:"1%",
-      width:"20%", 
-   },
-   phoneContainer:{
-       position:"absolute",
-       left:"30%",
-       top:"4%"
-   },
-   phoneDetails:{
-       position:"absolute",
-       left:"40px",
-       top:"-15px",
-       width:"130px",
-       [theme.breakpoints.down("md")]: {
-        fontSize:"10px",
-        
-    },
-       
-       
-     
-   },
-   phoneNumber:{
-fontSize:"12px",
-position:"absolute",
-top:"10px",
-right:"2px",
-width:"100%",
-[theme.breakpoints.down("md")]: {
-    fontSize:"10px",
-    
-},
-   },
-   email:{
-position:"absolute",
-top:"-4px",
-left:"60px",
-fontSize:"13px",
-
-[theme.breakpoints.down("md")]: {
-    fontSize:"10px",
-    
-},
-   },
-   emailContainer:{
-position:"absolute",
-left:"50%",
-top:"20px",
-[theme.breakpoints.down("md")]: {
- 
-},
-
-   },
-   emailText:{
-    fontSize:"13px",
-   left:"48px",
-   bottom:"24px",
-   position:"relative",
-   [theme.breakpoints.down("md")]: {
-    fontSize:"12px"
-},
    
-   },
-   touchBtn:{
-    [theme.breakpoints.down("md")]: {
-    
+   
+logo: {
+    width: "20%",
+    color:"black",
+    filter: "invert(48%) sepia(13%) saturate(3207%) hue-rotate(335deg) brightness(95%) contrast(80%)",
+      
+    [theme.breakpoints.down("xl")]: {
+      width: "50%",
     },
-   },
-   inTouchBtn:{
+  },
+
+  logoContainer: {
     position: "absolute",
-    
-    left:"80%",
-    top:"1%",
-    [theme.breakpoints.down("md")]: {
-        
-      },
+    left: "10%",
+    top: "0%",
+    width: "15%",
+  },
+  phoneContainer: {
+    position: "absolute",
+    left: "30%",
+    top: "4%",
+  },
+  phoneDetails: {
+    position: "absolute",
+    left: "40px",
+    top: "-15px",
+    width: "130px",
    
-   },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "10px",
+    },
+  },
+  phoneNumber: {
+    fontSize: "16px",
+    position: "absolute",
+    top: "10px",
+    right: "2px",
+    width: "100%",
+    
+    [theme.breakpoints.down("md")]: {
+      fontSize: "10px",
+    },
+  },
+  email: {
+    position: "absolute",
+    top: "-4px",
+    left: "60px",
+    fontSize: "16px",
+
+    [theme.breakpoints.down("md")]: {
+      fontSize: "10px",
+    },
+  },
+  emailContainer: {
+    position: "absolute",
+    left: "50%",
+    top: "35px",
+    [theme.breakpoints.down("md")]: {},
+  },
+  emailText: {
+    fontSize: "15px",
+    left: "48px",
+    bottom: "24px",
+    position: "relative",
+    paddingTop:"10px",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "12px",
+    },
+  },
+  touchBtn: {
+    [theme.breakpoints.down("md")]: {},
+  },
+  inTouchBtn: {
+    position: "absolute",
+
+    left: "80%",
+    top: "3%",
+    [theme.breakpoints.down("md")]: {},
+  },
    
   }));
 
@@ -141,26 +134,26 @@ function HeaderComponent(props) {
         <Hidden xsDown >
         <Grid item xl={3} md={2}  className={classes.logoContainer} >
        
-            <img className={classes.logo} src="/images/companyLogo.png" alt="companylogo"/>
+            <img className={classes.logo} src="/images/logoBg.png" alt="companylogo"/>
            
         </Grid>
         <Grid item xl={3} md={2} className={classes.phoneContainer}>
         <div className={classes.phoneDetails}>
             <PhoneInTalkOutlinedIcon style={{position:"relative",top:"15px",right:"50px"}}/>
-            <Typography className={classes.phoneNumber} variant="h7">+1(242)848-2805</Typography>
-            <Typography style={{fontSize:"13px"}}>Give us a call</Typography>
+            <Typography className={classes.phoneNumber} variant="h6">+1(242)848-2805</Typography>
+            <Typography style={{fontSize:"15px",paddingTop:"12px",fontWeight:"500"}}>Give us a call</Typography>
             </div>
         </Grid>
         <Grid item xl={3} md={2} className={classes.emailContainer} >
         <div className={classes.emailDetails}>
             <EmailOutlinedIcon  style={{position:"relative",top:"-10px"}}/>
             <Typography className={classes.email} variant="h6">cantonManagement@gmail.com</Typography>
-            <Typography className={classes.emailText}>Get in Touch</Typography>
+            <Typography style={{fontWeight:"500"}} className={classes.emailText}>Get in Touch</Typography>
             </div>
         </Grid>
         <Grid item xl={3} md={2} className={classes.inTouchBtn} >
 
-<Button className={classes.touchBtn} variant="outlined" size="small">Get in Touch</Button>
+<Button className={classes.touchBtn} variant="outlined" size="medium"  style={{borderRadius:"20px",}}>Get in Touch</Button>
         </Grid>
         </Hidden>
        

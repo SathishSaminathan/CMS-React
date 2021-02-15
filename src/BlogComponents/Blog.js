@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
  BlogText: {
    
-    marginLeft:"140px",
+    paddingLeft:"12.5em",
     marginBottom:"60px"
   },
   GridContainer:{
@@ -46,34 +46,51 @@ const useStyles = makeStyles((theme) => ({
     top:"40%"
       },
       blogCard: {
-        justifyContent: 'left',
-        alignItems: 'left',
-        textAlign: 'left',
-        marginBottom:"2px",
-        paddingLeft:"5%",
+       
+       
         marginTop:"5%",
+        paddingLeft:"5em",
+        [theme.breakpoints.down('md')]: {
+         padding:"0px",
+         display:"flex",
+         justifyContent:"center",
+         alignContent:"center"
+        },
+        
       },
       blogImg1: {
         width: '100%',
       },
       authorText: {
-        fontSize: '8px',
-        paddingRight: '10px',
-        paddingLeft: '10px',
+        fontSize: '15px',
+        paddingTop:"20px",
+        color:"orangered"
       },
       blogTitleText: {
-        fontSize: '16px',
-        paddingRight: '10px',
-        paddingLeft: '10px',
+        fontSize: '30px',
+        paddingTop:"10px",
+       color:"#0C2D48",
+       fontWeight:"500"
       },
       blogContent: {
-        fontSize: '8px',
-        paddingRight: '10px',
-        paddingLeft: '10px',
+        fontSize: '15px',
+        paddingTop:"10px",
+        fontWeight:"400"
       },
       paper:{
-          width:200,
-          height:250
+          width:400,
+          height:550,
+          backgroundColor:"transparent",
+          
+      },
+      paperContainer:{
+paddingLeft:"15em",
+[theme.breakpoints.down('md')]: {
+  padding:"0px",
+  display:"flex",
+  justifyContent:"center",
+  alignContent:"center"
+ },
       }
 }));
 
@@ -111,7 +128,7 @@ function Blog(props) {
               <Typography style={{paddingRight:"20px"}} variant="body1">showing 50 post</Typography>
               </Grid>
               <Grid item  md={1}>
-              <InputLabel id="demo-controlled-open-select-label">Category</InputLabel>
+              <InputLabel id="demo-controlled-open-select-label">Filter Category</InputLabel>
               </Grid>
               <Grid item  md={1}>
         <Select
@@ -132,19 +149,43 @@ function Blog(props) {
         </Select>
         </Grid>
           </Grid>
-          <Grid container >
-          <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
+          <Grid container className={classes.paperContainer}>
+          <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
               <Paper
                 style={{
-                  marginLeft: '10px',
-                  marginRight: '10px',
+                 
                   backgroundColor: 'transparent',
                 }}
                 className={classes.paper}
+                elevation={0}
+              >
+                <img className={classes.blogImg1} src="../images/bman.jpg" />
+                <Typography className={classes.authorText} variant="subtitle1">
+                  BY AUTHOR PUBLISHED ON JULY 9,2020
+                </Typography>
+                <Typography className={classes.blogTitleText} variant="h5">
+                  blog Title Goes here
+                </Typography>
+                <Typography className={classes.blogContent} variant="h6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia unde provident, earum perspiciatis dolor ratione
+                  molestiae velit iusto obcaecati debitis repellat error libero
+                  neque similique saepe eius veniam illo consequatur.
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
+              <Paper
+                style={{
+                
+                  backgroundColor: 'transparent',
+                }}
+                className={classes.paper}
+                elevation={0}
               >
                 <img className={classes.blogImg1} src="../images/bwomen.jpg" />
                 <Typography className={classes.authorText} variant="subtitle1">
-                  By Author Published on July9,2020
+                BY AUTHOR PUBLISHED ON JULY 9,2020
                 </Typography>
                 <Typography className={classes.blogTitleText} variant="h5">
                   blog Title Goes here
@@ -160,15 +201,15 @@ function Blog(props) {
             <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
               <Paper
                 style={{
-                  marginLeft: '10px',
-                  marginRight: '10px',
+                 
                   backgroundColor: 'transparent',
                 }}
                 className={classes.paper}
+                elevation={0}
               >
-                <img className={classes.blogImg1} src="../images/bwomen.jpg" />
+                <img className={classes.blogImg1} src="../images/training.jpg" />
                 <Typography className={classes.authorText} variant="subtitle1">
-                  By Author Published on July9,2020
+                BY AUTHOR PUBLISHED ON JULY 9,2020
                 </Typography>
                 <Typography className={classes.blogTitleText} variant="h5">
                   blog Title Goes here
@@ -181,18 +222,17 @@ function Blog(props) {
                 </Typography>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
+            <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
               <Paper
                 style={{
-                  marginLeft: '0px',
-                  marginRight: '0px',
                   backgroundColor: 'transparent',
                 }}
                 className={classes.paper}
+                elevation={0}
               >
-                <img className={classes.blogImg1} src="../images/bwomen.jpg" />
+                <img className={classes.blogImg1} src="../images/bman.jpg" />
                 <Typography className={classes.authorText} variant="subtitle1">
-                  By Author Published on July9,2020
+                BY AUTHOR PUBLISHED ON JULY 9,2020
                 </Typography>
                 <Typography className={classes.blogTitleText} variant="h5">
                   blog Title Goes here
@@ -205,18 +245,18 @@ function Blog(props) {
                 </Typography>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
+            <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
               <Paper
                 style={{
-                  marginLeft: '10px',
-                  marginRight: '10px',
+                 
                   backgroundColor: 'transparent',
                 }}
                 className={classes.paper}
+                elevation={0}
               >
                 <img className={classes.blogImg1} src="../images/bwomen.jpg" />
                 <Typography className={classes.authorText} variant="subtitle1">
-                  By Author Published on July9,2020
+                BY AUTHOR PUBLISHED ON JULY 9,2020
                 </Typography>
                 <Typography className={classes.blogTitleText} variant="h5">
                   blog Title Goes here
@@ -229,42 +269,18 @@ function Blog(props) {
                 </Typography>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
+            <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
               <Paper
                 style={{
-                  marginLeft: '10px',
-                  marginRight: '10px',
+                  
                   backgroundColor: 'transparent',
                 }}
                 className={classes.paper}
+                elevation={0}
               >
-                <img className={classes.blogImg1} src="../images/bwomen.jpg" />
+                <img className={classes.blogImg1} src="../images/ourclients.jpg" />
                 <Typography className={classes.authorText} variant="subtitle1">
-                  By Author Published on July9,2020
-                </Typography>
-                <Typography className={classes.blogTitleText} variant="h5">
-                  blog Title Goes here
-                </Typography>
-                <Typography className={classes.blogContent} variant="h6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia unde provident, earum perspiciatis dolor ratione
-                  molestiae velit iusto obcaecati debitis repellat error libero
-                  neque similique saepe eius veniam illo consequatur.
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
-              <Paper
-                style={{
-                  marginLeft: '10px',
-                  marginRight: '10px',
-                  backgroundColor: 'transparent',
-                }}
-                className={classes.paper}
-              >
-                <img className={classes.blogImg1} src="../images/bwomen.jpg" />
-                <Typography className={classes.authorText} variant="subtitle1">
-                  By Author Published on July9,2020
+                BY AUTHOR PUBLISHED ON JULY 9,2020
                 </Typography>
                 <Typography className={classes.blogTitleText} variant="h5">
                   blog Title Goes here
@@ -281,7 +297,7 @@ function Blog(props) {
           </Grid>
           <Grid item md={12} style={{display:"flex",justifyContent:"center",
             alignItems:"center", paddingRight:"50px",paddingLeft:"50px"}}>
-                  <Button variant="outlined" style={{color:"white",backgroundColor:"orangered",marginTop:"50px",borderRadius:"20px"}}>Read More</Button>
+                  <Button variant="outlined" style={{color:"white",backgroundColor:"orangered",marginTop:"50px",borderRadius:"30px",paddingTop:"15px",paddingBottom:"15px",}}>Read More</Button>
               </Grid>
               <FooterPage />
 

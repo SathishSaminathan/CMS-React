@@ -34,25 +34,25 @@ const useStyles = makeStyles((theme) => ({
     display:"flex",
     position:"relative",
     top:"-10px",
-    left:"0px",
-    position:"abolute",
+    left:"8px",
 
 
   },
   cardimg:{
-    width:"10%",
-    height:"40px",
+    width:"20%",
+    height:"90px",
     borderRadius:"50%",
    alignItems:"left",
    justifyContent:"left",
    display:"flex",
    position:"relative",
    top:"0px",
-   left:"7px"
+   left:"7px",
+   objectFit:"cover"
   },
   card:{
-    width:400,
-    height:200,
+    width:500,
+    height:330,
 backgroundColor:"#0C2D48",
   },
   cardTitle:{
@@ -60,7 +60,7 @@ backgroundColor:"#0C2D48",
    justifyContent:"left",
    display:"flex",
   
-   fontSize:"13px",
+   fontSize:"22px",
    color:"white",
    position:"relative",
    left:"10px"
@@ -70,16 +70,16 @@ backgroundColor:"#0C2D48",
     justifyContent:"left",
     display:"flex",
    
-    fontSize:"13px",
+    fontSize:"22px",
     marginLeft:"10px",
     color:"white"
 
   },
   cardContent:{
-    fontSize:"12px",
 color:"white",
 justifyContent:"left",
-textAlign:"left"
+textAlign:"left",
+fontSize:"15px"
     
   },
   cardContainer2:{
@@ -94,7 +94,7 @@ textAlign:"left"
       
     },
     cardContainerMain:{
-    marginTop:"10px",
+    
     marginLeft:"40px"
     },
     
@@ -153,9 +153,9 @@ const DoubleCarosel = () => {
             </MDBCarouselItem> */}
            
             <MDBCarouselItem itemId="1" >
-              <Grid container direction="row" spacing={2} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
+              <Grid container direction="row" spacing={0} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                  <Paper className={classes.card}  style={{ fontSize: '12px', padding: '10px' }}>
+                  <Paper className={classes.card}  style={{  padding: '10px' }}>
                    
                     
                        <img
@@ -165,55 +165,58 @@ const DoubleCarosel = () => {
                     <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
                    <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                    <img className={classes.starimg} src="./images/5star.png"/>
-                   <Typography className={classes.cardContent} variant='subtitle1' style={{ fontSize: '10px', padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
                   
                   </Paper>
                 </Grid>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                  <Paper className={classes.card}>
+                <Paper className={classes.card}  style={{  padding: '10px' }}>
                    
                     
-                       <img
-                      className={classes.cardimg}
-                      src="./images/willsmith.jpg"                    />
-                    <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
-                   <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
-                   <img className={classes.starimg} src="./images/5star.png"/>
-                   <Typography className={classes.cardContent}  style={{ fontSize: '10px', padding: '10px' }} variant='subtitle1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
-                  
-                  </Paper>
+                   <img
+                  className={classes.cardimg}
+                  src="./images/willsmith.jpg"
+                />
+                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+               <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
+               <img className={classes.starimg} src="./images/5star.png"/>
+               <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
+              
+              </Paper>
                 </Grid>
                 </Grid>
             </MDBCarouselItem>
             <MDBCarouselItem itemId="2" >
               <Grid container direction="row" spacing={2} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                  <Paper className={classes.card}  style={{ fontSize: '12px', padding: '10px' }}>
+                <Paper className={classes.card}  style={{  padding: '10px' }}>
                    
                     
-                       <img
-                      className={classes.cardimg}
-                      src="./images/willsmith.jpg"                    />
-                    <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
-                   <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
-                   <img className={classes.starimg} src="./images/5star.png"/>
-                   <Typography className={classes.cardContent} variant='subtitle1' style={{ fontSize: '10px', padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
-                  
-                  </Paper>
+                   <img
+                  className={classes.cardimg}
+                  src="./images/willsmith.jpg"
+                />
+                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+               <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
+               <img className={classes.starimg} src="./images/5star.png"/>
+               <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
+              
+              </Paper>
                 </Grid>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                  <Paper className={classes.card}>
+                <Paper className={classes.card}  style={{  padding: '10px' }}>
                    
                     
-                       <img
-                      className={classes.cardimg}
-                      src="./images/willsmith.jpg"                    />
-                    <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
-                   <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
-                   <img className={classes.starimg} src="./images/5star.png"/>
-                   <Typography className={classes.cardContent}  style={{ fontSize: '10px', padding: '10px' }} variant='subtitle1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
-                  
-                  </Paper>
+                   <img
+                  className={classes.cardimg}
+                  src="./images/willsmith.jpg"
+                />
+                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+               <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
+               <img className={classes.starimg} src="./images/5star.png"/>
+               <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
+              
+              </Paper>
                 </Grid>
                 </Grid>
             </MDBCarouselItem>

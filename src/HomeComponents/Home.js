@@ -27,17 +27,40 @@ const useStyles = makeStyles((theme) => ({
   cmsContent: {
     position: 'absolute',
     bottom: '25%',
-    left: '150px',
+    left: '13em',
 
     [theme.breakpoints.down('md')]: {
       left: '10%',
       justifyContent: 'center',
       textAlign: 'center',
+      bottom: '15%',
     },
   },
+  paperblog1:{
+ height: 350,
+    width: 400,
+    position:"relative",
+    left:"32%",
+    [theme.breakpoints.down('md')]: {
+      left:"0"
+    },
+  },
+  paperblog2:{
+    height: 350,
+       width: 400,
+     },
+     paperblog3:{
+      height: 350,
+         width: 400,
+         position:"relative",
+         right:"32%",
+         [theme.breakpoints.down('md')]: {
+           right:"0"
+         },
+       },
   paper1: {
-    height: 250,
-    width: 350,
+    height: 350,
+    width: 400,
     backgroundColor: '#0C2D48',
     position: 'relative',
     top: '10px',
@@ -55,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   paper2: {
-    height: 300,
+    height: 380,
     width: 350,
    backgroundColor: "#a40606",
 backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
@@ -75,11 +98,11 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     },
   },
   paper3: {
-    height: 250,
-    width: 350,
+    height: 350,
+    width: 400,
     position: 'relative',
     top: '10px',
-    left: '9.6%',
+    left: '8.4%',
     justifyContent: 'center',
     textAlign: 'center',
     backgroundColor: '#2E8BC0',
@@ -117,12 +140,12 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
   },
   img1: {
     objectFit: 'contain',
-    width: '70%',
+    width: '80%',
     height: '50%',
   },
   img2: {
     objectFit: 'contain',
-    width: '50%',
+    width: '60%',
     height: '70%',
     position: 'relative',
     bottom: '30%',
@@ -160,7 +183,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'left',
-    marginLeft: '5px',
+    marginLeft: '35px',
     [theme.breakpoints.down('md')]: {
       marginLeft: '60px',
     },
@@ -184,10 +207,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     backgroundColor:"#0C2D48"
   },
   partnerContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
+   
     backgroundColor: 'orangered',
     width: '99%',
     height: 'auto',
@@ -249,27 +269,25 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     width: '100%',
   },
   authorText: {
-    fontSize: '8px',
-    paddingRight: '10px',
-    paddingLeft: '10px',
+    fontSize: '14px',
+   
     color:"white"
   },
   blogTitleText: {
-    fontSize: '16px',
-    paddingRight: '10px',
-    paddingLeft: '10px',
+    fontSize: '20px',
+   
     color:"white"
   },
   blogContent: {
-    fontSize: '8px',
-    paddingRight: '10px',
-    paddingLeft: '10px',
+    fontSize: '12px',
+   
     color:"white"
   },
   blogCard: {
-    justifyContent: 'left',
+    justifyContent: 'space-around',
     alignItems: 'left',
     textAlign: 'left',
+    display:"flex"
   },
   partnerCard: {
     height: 150,
@@ -282,7 +300,27 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     alignItems: 'center',
     textAlign: 'center',
     display: 'flex',
+    marginTop:"50px"
   },
+  trustcontainer:{
+    marginLeft:"16%",
+    [theme.breakpoints.down('md')]: {
+     marginLeft:"0",
+     display:"flex",
+     justifyContent:"center",
+     textAlign:"center"
+    },
+   
+  },
+  partnerText:{
+    marginLeft:"16%",
+    [theme.breakpoints.down('md')]: {
+      marginLeft:"0",
+      display:"flex",
+      justifyContent:"center",
+      textAlign:"center"
+     },
+  }
 }));
 
 function Home(props) {
@@ -293,15 +331,19 @@ function Home(props) {
       <ThemeProvider theme={theme}>
         <Header />
         <NavBArMat/>
+        
+       
         <Grid xl="auto" container>
+        
           <Grid item spacing={2} xs={12} className={classes.cmsContent}>
+          
             <Typography style={{ marginBottom: '30px',fontFamily:"Noto Sans KR, sans-serif" }} variant="h4">
               CMS IS A
             </Typography>
-            <Typography style={{ marginBottom: '30px',fontFamily: 'Hammersmith One, sans-serif' }} variant="h2">
+            <Typography style={{ marginBottom: '30px',fontFamily: 'Hammersmith One, sans-serif',fontSize:"90px" }} variant="h1">
               PRACTICAL & "SHOW-HOW"
             </Typography>
-            <Typography style={{ marginBottom: '30px' }} varitant="h4">
+            <Typography style={{ marginBottom: '30px' }} variant="h5">
               type of consultancy services organization
             </Typography>
             <Button
@@ -309,20 +351,31 @@ function Home(props) {
               style={{
                 backgroundColor: 'orangered',
                 marginRight: '20px',
-                borderRadius: '18px',
+                borderRadius: '30px',
                 color: 'white',
-                marginBottom: '20px',
+                marginBottom: '10px',
+                paddingTop:"15px",
+                paddingBottom:"15px",
+                paddingRight:"20px",
+                paddingLeft:"20px"
               }}
             >
               Our Services
             </Button>
             <Button
-              variant="contained"
+              variant="outlined"
               style={{
-                backgroundColor: 'orangered',
-                borderRadius: '18px',
-                color: 'white',
-                marginBottom: '20px',
+               
+                marginRight: '20px',
+                borderRadius: '30px',
+                color: 'black',
+                marginBottom: '10px',
+                paddingTop:"15px",
+                paddingBottom:"15px",
+                paddingRight:"20px",
+                paddingLeft:"20px",
+                borderWidth:"2px",
+                borderColor:"white"
               }}
             >
               Learn More
@@ -338,21 +391,21 @@ function Home(props) {
                 <Paper className={classes.paper1} elevation={0} >
                   <img
                     style={{
-                      width: '50px',
+                      width: '90px',
                       marginBottom: '20px',
                       marginTop: '10px',
                     }}
                     src="../images/callAgent.png"
                   />
                   <Typography
-                    style={{ fontSize: '19px', marginBottom: '10px' }}
+                    style={{ fontSize: '22px', marginBottom: '10px' }}
                     variant="h5"
                   >
                     Consulting Services
                   </Typography>
 
                   <Typography
-                    style={{ fontSize: '12px', padding: '10px' }}
+                    style={{ fontSize: '16px', padding: '10px' }}
                     variant="h6"
                   >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -362,7 +415,7 @@ function Home(props) {
                   </Typography>
                   <Typography
                     style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       textDecoration: 'underline',
                       color: 'white',
                     }}
@@ -379,18 +432,18 @@ function Home(props) {
                 <Paper className={classes.paper2} elevation={0} >
                   <img
                     className={classes.card2img}
-                    style={{ width: '50px', marginBottom: '20px' }}
+                    style={{ width: '90px', marginBottom: '20px' }}
                     src="../images/pickingPeople.png"
                   />
                   <Typography
-                    style={{ fontSize: '19px', marginBottom: '10px' }}
+                    style={{ fontSize: '22px', marginBottom: '10px' }}
                     variant="h5"
                   >
                     Consultancy Approach
                   </Typography>
 
                   <Typography
-                    style={{ fontSize: '12px', padding: '10px' }}
+                    style={{ fontSize: '16px', padding: '10px' }}
                     variant="h6"
                   >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -400,7 +453,7 @@ function Home(props) {
                   </Typography>
                   <Typography
                     style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       textDecoration: 'underline',
                       color: 'white',
                     }}
@@ -418,21 +471,21 @@ function Home(props) {
                 <Paper className={classes.paper3} elevation={0} >
                   <img
                     style={{
-                      width: '50px',
+                      width: '90px',
                       marginBottom: '20px',
                       marginTop: '10px',
                     }}
                     src="../images/presentation.png"
                   />
                   <Typography
-                    style={{ fontSize: '19px', marginBottom: '10px' }}
+                    style={{ fontSize: '22px', marginBottom: '10px' }}
                     variant="h5"
                   >
                     Training Workshops
                   </Typography>
 
                   <Typography
-                    style={{ fontSize: '12px', padding: '10px' }}
+                    style={{ fontSize: '16px', padding: '10px' }}
                     variant="h6"
                   >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -442,7 +495,7 @@ function Home(props) {
                   </Typography>
                   <Typography
                     style={{
-                      fontSize: '10px',
+                      fontSize: '12px',
                       textDecoration: 'underline',
                       color: 'white',
                     }}
@@ -468,16 +521,16 @@ function Home(props) {
           <Grid item className={classes.cantonContainer}>
            
             <div class="devicer"></div>
-            <Typography style={{ marginLeft: '40px' }}>About Us</Typography>
+            <Typography variant="h4" style={{ marginLeft: '40px',color:"orangered" }}>About Us</Typography>
             <Fade right>
             <Typography
-              style={{ width: '50%',color:"#0C2D48" }}
-              variant="h3"
+              style={{ width: '50%',color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' }}
+              variant="h1"
               gutterBottom="true"
             >
               Canton Management
             </Typography>
-            <Typography variant="subtitle" gutterBottom="true">
+            <Typography variant="h6" gutterBottom="true">
                                  Our core competencies are <span style={{color:"#0C2D48",fontWeight:"600"}}>Management Consultancy Services</span> on integrated Management System(IMS),Business Process <span style={{color:"#0C2D48",fontWeight:"600"}}>Re-Engineering</span> and improvement                  
 
             </Typography>
@@ -485,10 +538,14 @@ function Home(props) {
               className={classes.btnLearn}
               style={{
                 backgroundColor: 'orangered',
-                borderRadius: '20px',
+                borderRadius: '30px',
                 width: '23%',
                 color: 'white',
                 marginTop: '20px',
+                paddingTop:"15px",
+                paddingBottom:"15px",
+                paddingLeft:"20px",
+                paddingRight:"20px"
               }}
             >
               Learn More
@@ -503,8 +560,8 @@ function Home(props) {
               xl={12}
               className={classes.blogContainer}
             >
-              <Typography style={{color:"white"}}> Our </Typography>
-              <Typography style={{color:"white",fontWeight:"600"}}> News & blog </Typography>
+              <Typography variant="h4" style={{color:"white"}}> Our </Typography>
+              <Typography variant="h4" style={{color:"white",fontWeight:"600"}}> News & blog </Typography>
             </Grid>
             <Grid item xs={12} md={4} className={classes.blogCard}>
               <Paper
@@ -513,7 +570,7 @@ function Home(props) {
                   marginRight: '10px',
                   backgroundColor: 'transparent',
                 }}
-                className={classes.paper}
+                className={classes.paperblog1}
                 elevation={0}
               >
                 <img
@@ -541,7 +598,7 @@ function Home(props) {
                   marginRight: '10px',
                   backgroundColor: 'transparent',
                 }}
-                className={classes.paper}
+                className={classes.paperblog2}
                 elevation={0}
               >
                 <img className={classes.blogImg1} src="../images/bman.jpg" />
@@ -566,7 +623,7 @@ function Home(props) {
                   marginRight: '10px',
                   backgroundColor: 'transparent',
                 }}
-                className={classes.paper}
+                className={classes.paperblog3}
                 elevation={0}
               >
                 <img className={classes.blogImg1} src="../images/bwomen.jpg" />
@@ -592,11 +649,12 @@ function Home(props) {
             </Grid>
           </Grid>
           <Grid container className={classes.partnerContainer} spacing={3}>
-            <Grid item xs={12} md={12}>
-              <Typography style={{color:"white"}}>TRUST WE GOT</Typography>
+            <Grid item xs={12} md={12} className={classes.trustcontainer}>
+            
+              <Typography style={{color:"white",fontSize:"30px"}}> <span class="devicer1"></span>TRUST WE GOT</Typography>
             </Grid>
-            <Grid item xs={12} md={12}>
-              <Typography style={{color:"white"}} variant="h4">OUR PARTNERS</Typography>
+            <Grid item xs={12} md={12} className={classes.partnerText}>
+              <Typography style={{color:"white",fontFamily: 'Hammersmith One, sans-serif'}} variant="h1">OUR PARTNERS</Typography>
             </Grid>
             <Grid item xs={12} md={12}>
               <SimpleCarosel />
@@ -604,20 +662,20 @@ function Home(props) {
           </Grid>
           <Grid container className={classes.cardCarosel}>
             <Grid item xs={12} md={12}>
-              <Typography>From Our Great Clients</Typography>
+              <Typography variant="h4" style={{color:"#1687a7",fontFamily: 'Hammersmith One, sans-serif'}}>From Our Great Clients</Typography>
             </Grid>
             <Grid item xs={12} md={12}>
-              <Typography variant="h4" style={{ color: 'darkslateblue' }}>
+              <Typography variant="h3" style={{ color: '#0C2D48',fontFamily: 'Hammersmith One, sans-serif' }}>
                 What clients Say About Us ?
               </Typography>
             </Grid>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12} md={12} style={{marginBottom:"25px"}}>
               <DoubleCarosel />
             </Grid>
           </Grid>
           <Grid container className={classes.lastGrid}>
             <Grid item xs={12} md={6}>
-              <Typography variant="h6" style={{ color: 'white' }}>
+              <Typography variant="h4" style={{ color: 'white',paddingLeft:"50px",fontFamily: 'Hammersmith One, sans-serif' }}>
                 We Help You unlock & unleash the power within your large scale
                 buissness
               </Typography>
@@ -627,7 +685,9 @@ function Home(props) {
                 style={{
                   color: 'white',
                   backgroundColor: 'orangered',
-                  borderRadius: '20px',
+                  borderRadius: '30px',
+                  paddingTop:"15px",
+                  paddingBottom:"15px"
                 }}
               >
                 Book a Consulation

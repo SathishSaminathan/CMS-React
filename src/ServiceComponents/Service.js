@@ -15,6 +15,7 @@ import {
 import '../workshopStyles.css';
 import HeaderComponent from '../HeaderComponnent';
 import NavBArMat from '../NavBarMat';
+import Fade from 'react-reveal/Fade';
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -55,8 +56,7 @@ const useStyles = makeStyles((theme) => ({
         top: '42%',
       },
       ClientText: {
-        marginLeft: '140px',
-        marginBottom: '60px',
+        paddingLeft:"12.5em"
       },
       clientH1: {
         [theme.breakpoints.down('md')]: {},
@@ -129,10 +129,64 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'left',
         alignItems: 'left',
         textAlign: 'left',
+        paddingLeft:"3em",
         [theme.breakpoints.down('xs')]: {
-          marginRight:"20%"
+          
+          padding:"0px",
+          
         },
-      }
+      },
+      typotext:{
+        fontSize:"22px"
+      },
+      consultancysub:{
+        width:"78%",paddingLeft:"28em",paddingTop:"1em",
+        [theme.breakpoints.down('md')]: {
+          padding:0,
+         display:"flex",
+         justifyContent:"center",
+         alignItems:"center",
+
+        },
+      },
+      firstimgcontainer:{
+        width:550,height:400,backgroundColor:"transparent",
+        paddingLeft:"10em",
+        [theme.breakpoints.down('md')]: {
+          padding:0,
+         display:"flex",
+         justifyContent:"center",
+         alignItems:"center",
+         width:400,
+         height:"auto",
+         alignContent:"center"
+
+        },
+
+      },
+      secoundpaper:{
+        backgroundColor:"transparent",
+        paddingLeft:"3em",
+        marginBottom:"40px",
+        [theme.breakpoints.down('md')]: {
+          padding:0,
+         display:"flex",
+         justifyContent:"center",
+         alignItems:"center",
+         width:"300",
+         height:"auto",
+         alignContent:"center"
+      },
+      [theme.breakpoints.down('xs')]: {
+        padding:0,
+       display:"flex",
+       justifyContent:"center",
+       alignItems:"center",
+       width:"auto",
+       height:"auto",
+       alignContent:"center"
+    }
+    }
 
 }));
 function Service(props) {
@@ -154,9 +208,11 @@ function Service(props) {
             </Typography>
           </Grid>
           <Grid item md={12} className={classes.Header1}>
-            <Typography style={{ color: '#0B132B', fontWeight: '400' }} variant="h4" className={classes.HeaderText1}>
+            <Fade top delay={2000}>
+            <Typography style={{ color: '#0C2D48',fontFamily: 'Hammersmith One, sans-serif', fontWeight: '400' }} variant="h2" className={classes.HeaderText1} >
                 Consultancy Services
             </Typography>
+            </Fade>
             <div
                 style={{
                   justifyContent: 'center',
@@ -167,21 +223,29 @@ function Service(props) {
                 }}
                 className="underline"
               ></div>
-          </Grid>
+
+         <div className={classes.consultancysub}>
+         <Fade right delay={2000}>
+              <Typography align="center"  style={{fontSize:"22px"}}  variant="subtitle1">Hands-on consultancy guidance on establishment and implementation of the management system,including support services:</Typography>
+              </Fade>
+             </div>
+            
+         </Grid>
           <Paper className={classes.paper} elevation={0}>
         <Grid container spacing={0} style={{marginTop:"10%"}}>
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" className={classes.gridcontainer1} >
+              <Fade left delay={2000}>
               <Grid
                 item
                 xs
                 
-                
+               
               >
                 <Typography
                   gutterBottom
                   variant="subtitle1"
-                  
+                  className={classes.typotext}
                 >
                   <span >
                     <img
@@ -202,6 +266,7 @@ function Service(props) {
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -222,6 +287,7 @@ Six sigma Program Implementation
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -241,6 +307,7 @@ Cost reduction projects                </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -260,6 +327,7 @@ Facultication of Kaizen/Operational Excellence Events                </Typograph
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -279,6 +347,7 @@ QA as a Service(QAaaS)                </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -298,6 +367,7 @@ QA as a Service(QAaaS)                </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -319,6 +389,7 @@ QA as a Service(QAaaS)                </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -339,6 +410,7 @@ QA as a Service(QAaaS)                </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -359,6 +431,7 @@ QA as a Service(QAaaS)                </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -371,20 +444,28 @@ QA as a Service(QAaaS)                </Typography>
                   <span style={{color:"#0C2D48",fontWeight:"600"}}>ISO/IEC 17025</span>- General requirements for the competency of testing and callibration laboratories     
                 </Typography>
               </Grid>
+              </Fade>  
             </Grid>
             <Grid item md={6} xs={12}>
-                <Paper elevation={0} style={{width:450,height:400,backgroundColor:"transparent"}}><img style={{width:"80%",}} src="./images/onlineL.jpg"/></Paper>
+              <Fade right delay={2000}>
+                <Paper elevation={0} className={classes.firstimgcontainer}><img style={{width:"100%",}} src="./images/onlineL.jpg"/></Paper>
+                </Fade>
             </Grid>
+           
           </Grid>
+          
         </Grid>
       </Paper>
       <Paper className={classes.paper} elevation={0}>
         <Grid container spacing={0} style={{marginTop:"10%"}}>
           <Grid item xs={12} sm container>
           <Grid item md={6} xs={12}>
-                <Paper elevation={0} style={{width:450,height:650}}><img style={{width:"90%"}} src="./images/onlineT.jpg"/></Paper>
+          <Fade left delay={2000}>
+                <Paper elevation={0} className={classes.secoundpaper} style={{width:480,height:650,}}><img style={{width:"100%"}} src="./images/onlineT.jpg"/></Paper>
+                </Fade>
             </Grid>
             <Grid item xs container direction="column" >
+            <Fade right delay={2000}>
               <Grid
                 item
                 xs
@@ -394,6 +475,7 @@ QA as a Service(QAaaS)                </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -413,6 +495,7 @@ Implementation of <span style={{color:"#0C2D48",fontWeight:"600"}}>APQP,FMEA,MSA
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -432,6 +515,7 @@ Training and obtaining PPAP from suppliers</Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -451,6 +535,7 @@ Supplier Assessments</Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -470,6 +555,7 @@ Establish and implement ITIL processes  </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -489,6 +575,7 @@ Establish and implement Metrics for IT Governance</Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -508,6 +595,7 @@ IT Risk Management in line with Established frameworks </Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -527,6 +615,7 @@ Perform risk-based IT aduits</Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -546,6 +635,7 @@ Perform Application control review</Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -566,6 +656,7 @@ Perform Application control review</Typography>
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -585,6 +676,7 @@ Perform <span style={{color:"#0C2D48",fontWeight:"600"}}>IQ/QQ/PQ(software valid
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -604,6 +696,7 @@ Critical process analysis and development of Business Continuity and Disaster Re
                 <Typography
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -616,6 +709,7 @@ Critical process analysis and development of Business Continuity and Disaster Re
 Documentation of policies ,<span style={{color:"#0C2D48",fontWeight:"600"}}>SOPs,</span>,Operator instructions,Visual aids,Control plans and Training Materials relevant to Quality,information security ,and Environment Management area
 </Typography>
               </Grid>
+               </Fade>
             </Grid>
            
           </Grid>
@@ -632,9 +726,11 @@ Documentation of policies ,<span style={{color:"#0C2D48",fontWeight:"600"}}>SOPs
 
       <Paper className={classes.paper} style={{width:"auto",backgroundColor:"#0B132B",marginBottom:"-13px"}} elevation={3}>
       <Grid item md={12} className={classes.Header1}>
-            <Typography style={{ color: 'white', fontWeight: '400' }} variant="h4" className={classes.HeaderText1}>
+        <Fade bottom delay={2000}>
+            <Typography style={{ color: 'white',fontFamily: 'Hammersmith One, sans-serif', fontWeight: '400' }} variant="h2" className={classes.HeaderText1}>
                 Consultancy Approach
             </Typography>
+            </Fade>
             <div
                 style={{
                   justifyContent: 'center',
@@ -646,10 +742,10 @@ Documentation of policies ,<span style={{color:"#0C2D48",fontWeight:"600"}}>SOPs
                 className="underline"
               ></div>
           </Grid>
-        <Grid container spacing={0} style={{marginTop:"10%"}}>
+        <Grid container spacing={0} style={{marginTop:"5%",marginBottom:"5%"}}>
         
           <Grid item xs={12} sm container>
-              
+          <Fade left delay={2000}>
             <Grid item xs container direction="column" >
               <Grid
                 item
@@ -662,6 +758,7 @@ Documentation of policies ,<span style={{color:"#0C2D48",fontWeight:"600"}}>SOPs
                   gutterBottom
                   variant="subtitle1"
                   style={{ color: 'white'}}
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -682,6 +779,7 @@ Understand the client needs and expectations                </Typography>
                   gutterBottom
                   variant="subtitle1"
                   style={{ color: 'white'}}
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -703,6 +801,7 @@ Perform "AS IS" assesment to understand the baseline
                   gutterBottom
                   variant="subtitle1"
                   style={{ color: 'white'}}
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -724,6 +823,7 @@ Prepare a detailed technical proposal and get agreement
                 style={{ color: 'white'}}
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -745,6 +845,7 @@ Prepare a commercial proposal and get agreement
                 style={{ color: 'white'}}
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -766,6 +867,7 @@ Prepare a project a project plan and reach agreement
                 style={{ color: 'white'}}
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -787,6 +889,7 @@ Perform onsite visits as per the plan
                 style={{ color: 'white'}}
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -808,6 +911,7 @@ Perform onsite visits as per the plan
                 style={{ color: 'white'}}
                   gutterBottom
                   variant="subtitle1"
+                  className={classes.typotext}
                 >
                   <span>
                     <img
@@ -822,16 +926,20 @@ Periodic submission of a progress report and review with Stake Holders          
               
              
             </Grid>
+            </Fade>
             <Grid item md={6} xs={12}>
+              <Fade right delay={2000}>
                 <Paper style={{width:"auto",height:"auto",marginLeft:"50px",marginRight:"20px"}}><img style={{width:"100%",}} src="./images/random1.jpg"/></Paper>
+                </Fade>
             </Grid>
+           
           </Grid>
         </Grid>
       </Paper>
 
       <Grid container className={classes.lastGrid}>
             <Grid item xs={12} md={6}>
-              <Typography variant="h6" style={{ color: 'white' }}>
+              <Typography variant="h4" style={{ color: 'white',paddingLeft:"50px",fontFamily: 'Hammersmith One, sans-serif' }}>
                 We Help You unlock & unleash the power within your large scale
                 buissness
               </Typography>
@@ -841,7 +949,9 @@ Periodic submission of a progress report and review with Stake Holders          
                 style={{
                   color: 'white',
                   backgroundColor: 'orangered',
-                  borderRadius: '20px',
+                  borderRadius: '30px',
+                  paddingTop:"15px",
+                  paddingBottom:"15px"
                 }}
               >
                 Book a Consulation

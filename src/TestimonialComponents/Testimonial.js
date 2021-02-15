@@ -13,6 +13,7 @@ import {
 } from '@material-ui/core';
 import '../testimonialStyles.css';
 import NavBArMat from '../NavBarMat';
+import Fade from 'react-reveal/Fade';
 
 
 import HeaderComponent from '../HeaderComponnent';
@@ -39,8 +40,7 @@ const useStyles = makeStyles((theme) => ({
     top: '42%',
   },
   TestimonialText: {
-    marginLeft: '140px',
-    marginBottom: '60px',
+   paddingLeft:"12.5em"
   },
   header1: {
     justifyContent: 'center',
@@ -49,6 +49,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     width: '100%',
     marginTop: '50px',
+    color:"#0C2D48",
+    fontFamily: 'Hammersmith One, sans-serif' ,
   },
   testimonialH1: {
     [theme.breakpoints.down('md')]: {},
@@ -58,31 +60,38 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   willsmith: {
-    width: '15%',
-    height: '9vh',
+    width: '8%',
+    height: '7vh',
     borderRadius: '50%',
     marginTop: '15px',
     marginLeft: '0px',
     position: 'relative',
-    right: '35px',
+    right: '80px',
+    objectFit:"cover",
+    [theme.breakpoints.down('md')]: {
+      right: '20px',
+      height:"6vh",
+      
+    },
   },
   starimg: {
     width: '20%',
     paddingBottom: '20px',
   },
   detailContainer: {
-    paddingLeft: '5em',
+    paddingLeft: '6em',
     position: 'relative',
-    bottom: '50px',
+    bottom: '70px',
+    paddingBottom:"20px"
   },
   paper: {
     backgroundColor: 'white',
-    width: 350,
-    height: 230,
+    width:"70%",
+    height:290,
     marginTop: '10px',
   },
   cardContent: {
-    fontSize: '12px',
+    fontSize: '15px',
     paddingLeft: '25px',
     paddingRight: '10px',
     paddingBottom: '10px',
@@ -95,9 +104,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     marginBottom: '10px',
-    marginTop: '10px',
+    marginTop: '80px',
+   
+   
     [theme.breakpoints.down('md')]: {
       paddingLeft: '5px',
+      marginRight:"0px",
+      marginLeft:"0",
     },
   },
   orangebox: {
@@ -107,6 +120,19 @@ const useStyles = makeStyles((theme) => ({
     right: '15px',
     bottom: '30px',
   },
+  HeaderText1: {
+   
+    
+   color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' ,
+   
+    [theme.breakpoints.down('md')]: {
+      padding:"0",
+      justifyContent: 'center',
+      textAlign: 'center',
+      alignItems: 'center',
+      display: 'flex',
+    },
+  }
 }));
 function Testimonial(props) {
   const classes = useStyles();
@@ -121,33 +147,39 @@ function Testimonial(props) {
 <NavBArMat/>
         <Grid container spacing={0} className={classes.GridContainer}>
           <Grid item md={12} className={classes.TestimonialText}>
+           
             <Typography variant="h3" className={classes.testimonialH1}>
               TESTIMONIALS
             </Typography>
+           
           </Grid>
           <Grid item md={12} className={classes.header1}>
+          <Fade bottom delay={2000}>
             <Typography
+className={classes.HeaderText1}
               style={{ color:"#0C2D48", fontWeight: '400' }}
-              variant="h4"
+              variant="h3"
             >
               What Client Says About Us?
               <div
                 style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  position: 'relative',
-                  left: '40%',
+                  marginLeft:"5em"
                 }}
                 className="underline"
               ></div>
             </Typography>
+            </Fade>
           </Grid>
-          <Grid item md={7} className={classes.cardGrid}>
+        
+          <Grid item md={6} className={classes.cardGrid}>
+          
             <div className={classes.box}></div>
+           
             <Paper
               className={classes.paper}
               style={{ backgroundColor: '#0C2D48' }}
             >
+              
               <img
                 className={classes.orangebox}
                 src="../images/orangebox.png"
@@ -173,9 +205,12 @@ function Testimonial(props) {
                 architecto mollitia aperiam, odio maxime eaque nulla error
                 cupiditate, aut non corporis nesciunt.
               </Typography>
+              
             </Paper>
+           
           </Grid>
-          <Grid item md={5} className={classes.cardGrid}>
+       
+          <Grid item md={6} className={classes.cardGrid}>
             <Paper className={classes.paper}>
               <img
                 className={classes.orangebox}
@@ -201,7 +236,7 @@ function Testimonial(props) {
               </Typography>
             </Paper>
           </Grid>
-          <Grid item md={7} className={classes.cardGrid}>
+          <Grid item md={6} className={classes.cardGrid}>
             <div className={classes.box}></div>
             <Paper
               className={classes.paper}
@@ -234,7 +269,7 @@ function Testimonial(props) {
               </Typography>
             </Paper>
           </Grid>
-          <Grid item md={5} className={classes.cardGrid}>
+          <Grid item md={6} className={classes.cardGrid}>
             <Paper className={classes.paper}>
               <img
                 className={classes.orangebox}
@@ -260,7 +295,7 @@ function Testimonial(props) {
               </Typography>
             </Paper>
           </Grid>
-          <Grid item md={7} className={classes.cardGrid}>
+          <Grid item md={6} className={classes.cardGrid}>
             <div className={classes.box}></div>
             <Paper
               className={classes.paper}
@@ -293,7 +328,7 @@ function Testimonial(props) {
               </Typography>
             </Paper>
           </Grid>
-          <Grid item md={5} className={classes.cardGrid}>
+          <Grid item md={6} className={classes.cardGrid}>
             <Paper className={classes.paper}>
               <img
                 className={classes.orangebox}

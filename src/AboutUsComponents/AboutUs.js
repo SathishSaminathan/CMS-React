@@ -17,6 +17,7 @@ import AlbumOutlinedIcon from '@material-ui/icons/AlbumOutlined';
 import DoubleCarosel from '../DoubleCarosel';
 import FooterPagePro from '../Footer';
 import NavBArMat from '../NavBarMat';
+import Fade from 'react-reveal/Fade';
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -43,58 +44,58 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   aboutText: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    alignItems: 'flex-start',
-    position: 'absolute',
-    top: '40%',
-    left: '10%',
-    width: '50%',
-    marginBottom: '10px',
+    paddingLeft:"12.5em",
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
   contentContainer: {
-    position: 'absolute',
-    top: '55%',
-    width: '94%',
-    marginLeft: '40px',
-    height: 'auto',
-    paddingLeft: '10px',
+   width:"100%",
+   
+   
+   
     [theme.breakpoints.down('xs')]: {
-      marginRight: '20px',
-      marginLeft: '20px',
+     
     },
   },
   vidcontainer: {
     width: '100%',
   },
   aboutimgcontainer: {
-    width: '50%',
+    width: '80%',
+    position: 'relative',
+    top: '7em',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
   },
   cantonText: {
-    fontSize: '14px',
+    fontSize: '20px',
     paddingBottom: '20px',
     paddingTop: '20px',
     paddingRight: '20px',
+    width: '80%',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
   },
   cantonTitle: {
     paddingTop: '30px',
     width: '70%',
+    fontFamily: 'Hammersmith One, sans-serif',
+    color: '#0C2D48',
   },
 
   Aboutimg: {
     width: '80%',
-
-    paddingTop: '9%',
-    paddingLeft: '5%',
-    marginLeft: '40px',
   },
 
   playimgcontainer: {
     width: '100%',
   },
   imgdiv: {
-    backgroundColor: 'pink',
     width: '100%',
     height: '40vh',
     paddingRight: '10px',
@@ -125,6 +126,39 @@ const useStyles = makeStyles((theme) => ({
     left: '15px',
     marginTop: '13px',
   },
+  cantonContainer: {
+    paddingLeft:"12.5em",
+    paddingTop:"4em",
+    [theme.breakpoints.down('md')]: {
+      left: '0',
+    },
+  },
+  undertext: {
+ 
+ 
+    fontSize: '22px',
+  
+  
+   [theme.breakpoints.down('md')]: {
+    marginLeft:"0",
+    
+    width:"100%",
+  },
+  },
+  gridmain:{
+    position:"relative",
+    top:"27em",
+    
+   
+  },
+  aboutTypo:{
+    
+  },
+  subs:{
+    width:"80%",
+    paddingLeft:"12.5em",
+    paddingBottom:"2em"
+  }
 }));
 
 function AboutUs(props) {
@@ -138,32 +172,36 @@ function AboutUs(props) {
       <ThemeProvider theme={theme}>
         <HeaderComponent />
         <NavBArMat />
-        <Grid container spacing={1}>
+        <Grid container className={classes.gridmain}>
           <Grid item md={12} className={classes.aboutText}>
-            <Typography variant="h3">ABOUT US</Typography>
+            <Typography className={classes.aboutTypo} variant="h3">ABOUT US</Typography>
           </Grid>
-        </Grid>
-        <Grid item md={6}>
-          <Grid
-            container
-            className={classes.contentContainer}
-            justify="space-around"
-            xl={12}
-          >
-            <Grid item xs={12} md={6}>
-              <Typography variant="h4" className={classes.cantonTitle}>
+        
+      
+          
+            <Grid item xs={12} md={6} className={classes.cantonContainer}>
+              <Fade left>
+              <Typography variant="h2" className={classes.cantonTitle}>
                 Canton Management Service
               </Typography>
+              </Fade>
               <div className="underline"></div>
+              <Fade left>
               <Typography variant="h6" className={classes.cantonText}>
                 Canton Management Services,Inc was established in 2008,CMS is a
-                practical and <span  style={{color:"#0C2D48",fontWeight:"600"}}>"SHOW-HOW"</span> type of Consultancy
-                Services organization.it has been instrumental in bringing a{' '}
-                <span  style={{color:"#0C2D48",fontWeight:"600"}}>
+                practical and{' '}
+                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                  "SHOW-HOW"
+                </span>{' '}
+                type of Consultancy Services organization.it has been
+                instrumental in bringing a{' '}
+                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                   perceptible change in the companies'outlook image and
                   performance
                 </span>
               </Typography>
+              </Fade>
+              <Fade left>
               <Typography variant="subtitle1" className={classes.cantonText}>
                 We provide consultancy services to
                 Automotive,Tire,Steel,Foundries,Paint and Electrical &
@@ -172,29 +210,45 @@ function AboutUs(props) {
                 recovery centers,utilizing kitting,3PL providers and Banks in
                 Service industries.
               </Typography>
+              </Fade>
             </Grid>
+            
             <Grid item className={classes.aboutimgcontainer} md={6} xs={12}>
+              <Fade right>
               <img className={classes.Aboutimg} src="../images/Aboutus.jpg" />
+              </Fade>
             </Grid>
-            <Grid item xs={12} md={12} xl={12}>
-              <Typography
-                style={{ marginTop: '40px', width: '95%', fontSize: '14px' }}
-                variant="subtitle1"
-              >
+            <Grid item xs={12} md={12} xl={12} className={classes.subs}>
+            <Fade left>
+              <Typography className={classes.undertext} variant="subtitle1">
                 Our core Competencies are Management Consultancy Services on
-                Integrated Management System <span  style={{color:"#0C2D48",fontWeight:"600"}}>(IMS)</span>
-                .Busineess Process <span  style={{color:"#0C2D48",fontWeight:"600"}}>Re-Engineering</span>. and Conctinual
-                improvement.
+                Integrated Management System{' '}
+                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                  (IMS)
+                </span>
+                .Busineess Process{' '}
+                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                  Re-Engineering
+                </span>
+                . and Conctinual improvement.
               </Typography>
-              <Typography variant="subtitle1" style={{ fontSize: '14px' }}>
+              </Fade>
+              <Fade left>
+              <Typography variant="subtitle1" className={classes.undertext}>
                 We are well qualified,very experienced and holds certification
-                on Auditing,<span  style={{color:"#0C2D48",fontWeight:"600"}}>CISA,ITIL</span>,Lean and Siz Sigma Black
-                Belts
+                on Auditing,
+                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                  CISA,ITIL
+                </span>
+                ,Lean and Siz Sigma Black Belts
               </Typography>
-              <Typography style={{ fontSize: '14px' }} variant="subtitle1">
+              </Fade>
+              <Fade left>
+              <Typography className={classes.undertext} variant="subtitle1">
                 we are commited to contributing to the organization through
                 compatiable guidance.
               </Typography>
+              </Fade>
             </Grid>
             <Grid
               item
@@ -223,21 +277,23 @@ function AboutUs(props) {
               </div>
             </Grid>
             <Grid container className={classes.cardCarosel}>
-              <Grid item xs={12} md={12}>
-                <Typography>From Our Great Clients</Typography>
-              </Grid>
-              <Grid item xs={12} md={12}>
-                <Typography variant="h4" style={{ color: '#0C2D48'  }}>
-                  What clients Say About Us ?
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={12}>
+            <Grid item xs={12} md={12}>
+              <Typography variant="h4" style={{color:"#1687a7",fontFamily: 'Hammersmith One, sans-serif'}}>From Our Great Clients</Typography>
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <Typography variant="h3" style={{ color: '#0C2D48',fontFamily: 'Hammersmith One, sans-serif' }}>
+                What clients Say About Us ?
+              </Typography>
+            </Grid>
+              <Grid item xs={12} md={12} style={{marginBottom:"40px"}}>
                 <DoubleCarosel />
               </Grid>
             </Grid>
             <FooterPage />
-          </Grid>
-        </Grid>
+            </Grid>
+           
+          
+        
       </ThemeProvider>
     </div>
   );

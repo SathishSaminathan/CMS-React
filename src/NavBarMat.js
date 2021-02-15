@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     position:"absolute",
-    top:"16%",
+    top:"20%",
     left:"50%",
     transform:"translate(-50%,-50%)",
     width:"78%",
@@ -64,7 +64,6 @@ const useStyles = makeStyles((theme) => ({
   },
   btn:{
      color:"white",
-     
       
       '&:hover': {
         backgroundColor: '#fff',
@@ -73,6 +72,9 @@ const useStyles = makeStyles((theme) => ({
         borderRadius:"20px"
 
   },
+},
+icons:{
+  marginTop:"10px"
 }
 
  
@@ -108,10 +110,10 @@ function NavBArMat(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar style={{backgroundColor: "#a40606",
+      <AppBar position="static" style={{backgroundColor: "#a40606",
 backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
 }}>
+        <Toolbar >
           
 
           <div className={classes.containerIcons}>
@@ -169,6 +171,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
                 <Button
                   onClick={() => handleButtonClick('/')}
                   className={classes.btn}
+                  size="large"
                 >
                   Home
                 </Button>
@@ -208,9 +211,9 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
                 >
                   Contact
                 </Button>
-                <FacebookIcon />
-                <TwitterIcon />
-                <InstagramIcon />
+                <FacebookIcon className={classes.icons}/>
+                <TwitterIcon  className={classes.icons}/>
+                <InstagramIcon  className={classes.icons}/>
               </div>
             )}
           </div>

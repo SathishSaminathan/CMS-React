@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core';
 import HeaderComponent from '../HeaderComponnent';
 import NavBArMat from '../NavBarMat';
+import Fade from 'react-reveal/Fade';
 
 
 let theme = createMuiTheme();
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     // left: '10%',
     // width: '50%',
     // marginBottom: '10px',
-    marginLeft:"140px",
+    paddingLeft:"12.5em",
     marginBottom:"60px"
   },
   Heading1: {
@@ -63,8 +64,8 @@ const useStyles = makeStyles((theme) => ({
   },
   Heading2:{
       marginLeft:"70px",
-      paddingLeft:"10px",
-      width:"70%",
+      paddingLeft:"10em",
+      width:"100%",
       position:"relative",
   },
   root: {
@@ -123,24 +124,29 @@ function ContactComponent(props) {
             className={classes.Heading1}
             direction="column"
           >
-            <Typography variant="h5" style={{ marginBottom: '-25px' }}>
+            <Fade top delay={2000}>
+            <Typography variant="h3" style={{ marginBottom: '-25px',color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' , }}>
               Get in Touch With Us
             </Typography>
+            </Fade>
             <div className="underline"></div>
-            <Typography style={{width:"50%",marginTop:"20px"}}>
+           
+            <Typography style={{width:"50%",marginTop:"20px",fontSize:"20px"}}>
             Any Kind of business solution and Consulation don't hesitate to contact with us for imidiate customer support.We would love to hear from you
             </Typography>
+           
           </Grid>
+          
           <Grid container md={6} >
           <Grid item xs={12}
-            md={10} 
+            md={8} 
             className={classes.Heading2}
             >
-                    <Typography variant="h5" style={{ marginBottom: '-25px' }}>
+                    <Typography variant="h4" style={{ marginBottom: '-25px', }}>
               Send Us Your Message
             </Typography>
             <div className="underline"></div>
-            <Typography style={{marginTop:"20px"}}>
+            <Typography style={{marginTop:"20px",fontSize:"20px"}}>
               Alternatively,if you'd like for us to get back in touch with you please fill in the form below.
             </Typography>
             <TextField id="outlined-size-small"
@@ -172,7 +178,7 @@ function ContactComponent(props) {
           variant="outlined"
           style={{marginRight:"20px",marginLeft:"0px",marginTop:"20px",marginBlock:"20px"}}/>         
         <Grid item md={12}>
-        <Button style={{color:"white",backgroundColor:"orangered",marginBottom:"40px"}}  variant="outlined">Send Message</Button>
+        <Button style={{color:"white",backgroundColor:"orangered",marginBottom:"40px",borderRadius:"30px",paddingBottom:"15px",paddingTop:"15px"}}  variant="outlined">Send Message</Button>
         </Grid>
           
 
@@ -188,53 +194,63 @@ function ContactComponent(props) {
             direction="column"
           >
             <Paper className={classes.paper}>
+<Fade left delay={2000}>
                 <div style={{marginBottom:"50px"}}>
                 <Typography variant="h6" style={{textAlign:"left",
             paddingLeft:"30px",color:"orangered"}}>Address:</Typography>
-                 <Typography variant="subtitle2" style={{textAlign:"left",
+                 <Typography variant="subtitle1" style={{textAlign:"left",
             paddingLeft:"30px"}}>canton management services,</Typography>
-            <Typography variant="subtitle2" style={{textAlign:"left",
+            <Typography variant="subtitle1" style={{textAlign:"left",
             paddingLeft:"30px"}}>Canton Mixigon,</Typography>
             </div>
+            </Fade>
+            <Fade right delay={2000}>
             <div style={{marginBottom:"50px"}}>
                 <Typography variant="h6" style={{textAlign:"left",
             paddingLeft:"30px",color:"orangered"}}>Phone Number:</Typography>
-                 <Typography variant="subtitle2" style={{textAlign:"left",
+                 <Typography variant="subtitle1" style={{textAlign:"left",
             paddingLeft:"30px"}}>+1(248)842-2805</Typography>
            
             </div>
+            </Fade>
+            <Fade left delay={2000}>
             <div style={{marginBottom:"50px"}}>
                 <Typography variant="h6" style={{textAlign:"left",
             paddingLeft:"30px",color:"orangered"}}>Email Address:</Typography>
-                 <Typography variant="subtitle2" style={{textAlign:"left",
+                 <Typography variant="subtitle1" style={{textAlign:"left",
             paddingLeft:"30px"}}>palani59@gmail.com</Typography>
             
             </div>
+            </Fade>
+            <Fade right delay={2000}>
             <div>
                 <Typography variant="h6" style={{textAlign:"left",
             paddingLeft:"30px",color:"orangered"}}>Watching Hours:</Typography>
-                 <Typography variant="subtitle2" style={{textAlign:"left",
+                 <Typography variant="subtitle1" style={{textAlign:"left",
             paddingLeft:"30px"}}>Mon-Fri:10.00-19.00</Typography>
-            <Typography variant="subtitle2" style={{textAlign:"left",
+            <Typography variant="subtitle1" style={{textAlign:"left",
             paddingLeft:"30px"}}>sat-sun:Holiday</Typography>
             
             </div>
+            </Fade>
             </Paper>
 
           </Grid>
           <Grid container className={classes.lastGrid}>
             <Grid item xs={12} md={6}>
-              <Typography variant="h6" style={{ color: 'white' }}>
+            <Typography variant="h4" style={{ color: 'white',paddingLeft:"50px",fontFamily: 'Hammersmith One, sans-serif' }}>
                 We Help You unlock & unleash the power within your large scale
                 buissness
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Button
+            <Button
                 style={{
                   color: 'white',
                   backgroundColor: 'orangered',
-                  borderRadius: '20px',
+                  borderRadius: '30px',
+                  paddingTop:"15px",
+                  paddingBottom:"15px"
                 }}
               >
                 Book a Consulation

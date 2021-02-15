@@ -17,4 +17,13 @@
     right: 47.5%;
     top:2%;
   }
+  .devicer1 {
+    width: 2em;
+    display: inline-block;
+    height: 5px;
+    background-color: black;
+    margin: 60px auto 0;
+    position: relative;
+    bottom: 10px;
+  }
  

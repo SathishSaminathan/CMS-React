@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   logo: {
-    width: "50%",
+    width: "20%",
     color:"black",
     filter: "invert(48%) sepia(13%) saturate(3207%) hue-rotate(335deg) brightness(95%) contrast(80%)",
       
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     left: "10%",
     top: "0%",
-    width: "20%",
+    width: "15%",
   },
   phoneContainer: {
     position: "absolute",
@@ -56,12 +56,13 @@ const useStyles = makeStyles((theme) => ({
     left: "40px",
     top: "-15px",
     width: "130px",
+   
     [theme.breakpoints.down("md")]: {
       fontSize: "10px",
     },
   },
   phoneNumber: {
-    fontSize: "12px",
+    fontSize: "16px",
     position: "absolute",
     top: "10px",
     right: "2px",
@@ -75,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "-4px",
     left: "60px",
-    fontSize: "13px",
+    fontSize: "16px",
 
     [theme.breakpoints.down("md")]: {
       fontSize: "10px",
@@ -84,14 +85,15 @@ const useStyles = makeStyles((theme) => ({
   emailContainer: {
     position: "absolute",
     left: "50%",
-    top: "20px",
+    top: "35px",
     [theme.breakpoints.down("md")]: {},
   },
   emailText: {
-    fontSize: "13px",
+    fontSize: "16px",
     left: "48px",
     bottom: "24px",
     position: "relative",
+    paddingTop:"10px",
     [theme.breakpoints.down("md")]: {
       fontSize: "12px",
     },
@@ -103,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
 
     left: "80%",
-    top: "1%",
+    top: "3%",
     [theme.breakpoints.down("md")]: {},
   },
 }));
@@ -119,7 +121,6 @@ function Header(props) {
           className={classes.companyImg}
         />
       </div>
-      <Navbar />
 
       <Grid container spacing={3}>
         <Hidden xsDown>
@@ -133,12 +134,12 @@ function Header(props) {
           <Grid item xl={3} md={2} className={classes.phoneContainer}>
             <div className={classes.phoneDetails}>
               <PhoneInTalkOutlinedIcon
-                style={{ position: "relative", top: "15px", right: "50px" }}
+                style={{ position: "relative", top: "19px", right: "50px" }}
               />
               <Typography className={classes.phoneNumber} variant="h6">
                 +1(242)848-2805
               </Typography>
-              <Typography style={{ fontSize: "13px" }}>
+              <Typography style={{ fontSize: "16px",paddingTop:"12px",fontWeight:"500" }}>
                 Give us a call
               </Typography>
             </div>
@@ -151,7 +152,7 @@ function Header(props) {
               <Typography className={classes.email} variant="h6">
                 cantonManagement@gmail.com
               </Typography>
-              <Typography className={classes.emailText}>
+              <Typography style={{fontWeight:"500"}} className={classes.emailText}>
                 Get in Touch
               </Typography>
             </div>
@@ -160,7 +161,8 @@ function Header(props) {
             <Button
               className={classes.touchBtn}
               variant="outlined"
-              size="small"
+              size="medium"
+              style={{borderRadius:"20px",}}
             >
               Get in Touch
             </Button>
