@@ -65,10 +65,11 @@ const useStyles = makeStyles((theme) => ({
         },
       },
       clientH1: {
-        [theme.breakpoints.down('md')]: {},
+        [theme.breakpoints.down('md')]: {
+          paddingLeft:"20px"
+        },
         [theme.breakpoints.down('xs')]: {
-          position: 'absolute',
-          right: '10%',
+         
         },
       },
       HeaderText1: {
@@ -78,14 +79,20 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         width: '100%',
         marginTop: '50px',
-        width: '80%',color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' ,
-        paddingLeft:"8em",
+       color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' ,
+       fontSize:"60px",
+       
         [theme.breakpoints.down('md')]: {
           padding:"0",
           justifyContent: 'center',
           textAlign: 'center',
           alignItems: 'center',
           display: 'flex',
+          fontSize:"40px",
+        },
+        [theme.breakpoints.down('xs')]: {
+        
+          fontSize:"30px",
         },
       },
       paper:{
@@ -108,32 +115,29 @@ const useStyles = makeStyles((theme) => ({
           width:"70%"
       },
       subtext:{
-        textAlign:"center",paddingLeft:"25em",paddingTop:"20px",fontSize:"23px",width:"70%",
-        [theme.breakpoints.down('md')]: {
-          justifyContent:"center",
-          alignContent:"center",
-          alignItems:"center",
-          display:"flex",
-          left:"0",
-          marginTop:"0px",
-          padding:0,
-        },
+        textAlign:"center",
+        paddingTop:"20px",
+        fontSize:"23px",
+       
       },
       logoContainer:{
-      paddingLeft:"20em",
+      
        
        marginTop:"50px"
 ,
 [theme.breakpoints.down('md')]: {
   display:"flex",
-  justifyContent:"center",
+  justifyContent:"space-evenly",
   alignContent:"center",
   alignItems:"center",
-  marginLeft:"40px",
   left:"0",
-  marginTop:"0px"
+  margin:"0"
 },
-      }
+      },
+      consultancysub: {
+       
+     
+      },
       
 }));
 function Client(props) {
@@ -152,10 +156,13 @@ function Client(props) {
               OUR CLIENTS
             </Typography>
           </Grid>
+          
           <Grid item md={12} className={classes.Header1}>
+          <div className={classes.consultancysub}>
             <Typography   variant="h3" className={classes.HeaderText1}>
               Here are just a few examples of client relationships.
             </Typography>
+            </div>
             <div
                 style={{
                   justifyContent: 'center',
@@ -166,33 +173,37 @@ function Client(props) {
                 }}
                 className="underline"
               ></div>
+                <div className={classes.consultancysub}>
               <Typography className={classes.subtext}>
 Our clients are over 400 of the worlds leading organizations,from a wide range of sectors.
-                </Typography></Grid>
-          <Grid container spacing={0} style={{marginBottom:"50px"}} className={classes.logoContainer}>
-        <Grid item xs md={2}>
+                </Typography>
+                </div></Grid>
+          <Grid container direction="row"
+  justify="space-evenly"
+  alignItems="center" spacing={2} style={{marginBottom:"50px"}} className={classes.logoContainer}>
+        <Grid item  sm={6} md={2}>
           <Paper className={classes.paper} elevation={20}>
             <img className={classes.cardimg} src="./images/mspng.png"/>
 
           </Paper>
         </Grid>
-        <Grid item xs md={2}>  
+        <Grid item sm={6} md={2}>  
           <Paper className={classes.paper} elevation={20}>
               
           <img  className={classes.cardimg} src="./images/ibmpng.png"/>
           </Paper>
         </Grid>
-        <Grid item xs md={2}>
+        <Grid item sm={6}  md={2}>
           <Paper className={classes.paper} elevation={20}>
           <img className={classes.cardimg} src="./images/fedexpng.png"/>
           </Paper>
         </Grid>
-        <Grid item xs md={2}>
+        <Grid item sm={6}  md={2}>
           <Paper className={classes.paper} elevation={20}>
           <img className={classes.cardimg} src="./images/nikepng.png"/>
           </Paper>
         </Grid>
-        <Grid item xs md={2}>
+        <Grid item sm={6}  md={2}>
           <Paper className={classes.paper} elevation={20}>
           <img className={classes.cardimg} src="./images/addidaspng.png"/>
           </Paper>
