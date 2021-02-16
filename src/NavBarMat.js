@@ -31,8 +31,13 @@ const useStyles = makeStyles((theme) => ({
     display:"flex",
     justifyContent:"center",
     alignContent:"center",
-    height:"9vh"
-    
+    height:"9vh",
+    [theme.breakpoints.down('md')]: {
+      width:"100%",
+      top:"0%",
+      left:"0%",
+      transform:"none",
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -60,7 +65,8 @@ const useStyles = makeStyles((theme) => ({
   },
   hamburger:{
       display:"flex",
-      justifyContent:"flex-end"
+      justifyContent:"flex-end",
+      paddingBottom:"25px" 
   },
   btn:{
      color:"white",
@@ -75,6 +81,11 @@ const useStyles = makeStyles((theme) => ({
 },
 icons:{
   marginTop:"10px"
+},
+menuicon:{
+  display:"flex",
+  
+  
 }
 
  
@@ -88,8 +99,7 @@ function NavBArMat(props) {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  console.log(isMobile);
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -132,6 +142,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
                   aria-haspopup="true"
                   onClick={handleMenu}
                   color="inherit"
+                  className={classes.menuicon}
                 >
                   <MenuIcon />
                 </IconButton>

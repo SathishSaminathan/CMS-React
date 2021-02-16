@@ -29,18 +29,18 @@ const useStyles = makeStyles((theme) => ({
     bottom: '25%',
     left: '13em',
 
-    [theme.breakpoints.down('md')]: {
-      left: '10%',
+    [theme.breakpoints.down('sm')]: {
+      left:"10px",
       justifyContent: 'center',
       textAlign: 'center',
       bottom: '15%',
+      marginBottom:"20px"
     },
   },
   paperblog1:{
  height: 350,
     width: 400,
     position:"relative",
-    left:"32%",
     [theme.breakpoints.down('md')]: {
       left:"0"
     },
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       height: 350,
          width: 400,
          position:"relative",
-         right:"32%",
+         
          [theme.breakpoints.down('md')]: {
            right:"0"
          },
@@ -75,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       left: '0%',
       marginBottom: '5px',
+      width: 340,
     },
   },
   paper2: {
@@ -90,11 +91,13 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     color:"white",
     [theme.breakpoints.down('md')]: {
       left: '15%',
-      height: 250,
+      height: 350,
+    width: 400,
       top: '10%',
     },
     [theme.breakpoints.down('xs')]: {
       left: '0px',
+      width: 340,
     },
   },
   paper3: {
@@ -114,6 +117,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     },
     [theme.breakpoints.down('xs')]: {
       left: '0px',
+      width: 340,
     },
   },
   card2img: {
@@ -136,6 +140,9 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     [theme.breakpoints.down('xs')]: {
       justifyContent: 'center',
       alignItems: 'center',
+      // marginRight: '0px',
+      paddingRight: '0px',
+      paddingLeft: '0px',
     },
   },
   img1: {
@@ -173,7 +180,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     position: 'relative',
     marginLeft: '10%',
     [theme.breakpoints.down('md')]: {
-      left: '12px',
+      
       marginLeft: '20px',
     },
   },
@@ -194,7 +201,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     alignItems: 'center',
     textAlign: 'center',
    
-    width: '99%',
+    width: '100%',
     height: 'auto',
     display: 'flex',
     justifyContent: 'space-between',
@@ -202,14 +209,14 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     marginLeft: '0px',
     marginRight: '0px',
     position: 'relative',
-    left: '15px',
+    
     marginTop: '10px',
     backgroundColor:"#0C2D48"
   },
   partnerContainer: {
    
     backgroundColor: 'orangered',
-    width: '99%',
+    width: '100%',
     height: 'auto',
     display: 'flex',
     justifyContent: 'space-between',
@@ -217,8 +224,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     marginLeft: '0px',
     marginRight: '0px',
     position: 'relative',
-    left: '15px',
-    marginTop: '13px',
+    marginTop: '12px',
   },
   cardCarosel: {
     display: 'flex',
@@ -234,7 +240,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     marginLeft: '0px',
     marginRight: '0px',
     position: 'relative',
-    left: '15px',
+    left: '0px',
     marginTop: '13px',
   },
   lastGrid: {
@@ -300,7 +306,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     alignItems: 'center',
     textAlign: 'center',
     display: 'flex',
-    marginTop:"50px"
+    marginTop:"70px"
   },
   trustcontainer:{
     marginLeft:"16%",
@@ -320,6 +326,33 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
       justifyContent:"center",
       textAlign:"center"
      },
+  },
+  practicaltext:{
+    marginBottom: '30px',fontFamily: 'Hammersmith One, sans-serif',fontSize:"86px",
+    [theme.breakpoints.down('md')]: {
+      
+      display:"flex",
+      justifyContent:"center",
+      textAlign:"center",
+      fontSize:" 40px",
+     },
+  },
+  clientText:{
+    marginBottom:"20px",
+    [theme.breakpoints.down('md')]: {
+      
+     
+      fontSize:" 25px",
+     },
+  },
+  cardText:{
+    fontSize: '16px', padding: '10px' ,
+
+[theme.breakpoints.down('xs')]: {
+  fontSize: '14px',
+  paddingLeft:"20px"
+      
+     },
   }
 }));
 
@@ -335,12 +368,13 @@ function Home(props) {
        
         <Grid xl="auto" container>
         
+      
           <Grid item spacing={2} xs={12} className={classes.cmsContent}>
           
             <Typography style={{ marginBottom: '30px',fontFamily:"Noto Sans KR, sans-serif" }} variant="h4">
               CMS IS A
             </Typography>
-            <Typography style={{ marginBottom: '30px',fontFamily: 'Hammersmith One, sans-serif',fontSize:"90px" }} variant="h1">
+            <Typography className={classes.practicaltext}  variant="h1">
               PRACTICAL & "SHOW-HOW"
             </Typography>
             <Typography style={{ marginBottom: '30px' }} variant="h5">
@@ -405,7 +439,7 @@ function Home(props) {
                   </Typography>
 
                   <Typography
-                    style={{ fontSize: '16px', padding: '10px' }}
+                  className={classes.cardText}
                     variant="h6"
                   >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -443,8 +477,8 @@ function Home(props) {
                   </Typography>
 
                   <Typography
-                    style={{ fontSize: '16px', padding: '10px' }}
                     variant="h6"
+                    className={classes.cardText}
                   >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Atque dicta incidunt eum. Provident qui sequi fuga illo
@@ -478,14 +512,14 @@ function Home(props) {
                     src="../images/presentation.png"
                   />
                   <Typography
-                    style={{ fontSize: '22px', marginBottom: '10px' }}
+                    className={classes.cardText}
                     variant="h5"
                   >
                     Training Workshops
                   </Typography>
 
                   <Typography
-                    style={{ fontSize: '16px', padding: '10px' }}
+                    className={classes.cardText}
                     variant="h6"
                   >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -665,7 +699,7 @@ function Home(props) {
               <Typography variant="h4" style={{color:"#1687a7",fontFamily: 'Hammersmith One, sans-serif'}}>From Our Great Clients</Typography>
             </Grid>
             <Grid item xs={12} md={12}>
-              <Typography variant="h3" style={{ color: '#0C2D48',fontFamily: 'Hammersmith One, sans-serif' }}>
+              <Typography className={classes.clientText} variant="h3" style={{ color: '#0C2D48',fontFamily: 'Hammersmith One, sans-serif' }}>
                 What clients Say About Us ?
               </Typography>
             </Grid>

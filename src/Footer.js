@@ -22,10 +22,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
-      marginLeft: '0',
+      justifyContent: 'space-evenly',
       display: 'flex',
       justifyContent: 'center',
       textAlign: 'center',
+      marginLeft: '90px',
+    },
+    [theme.breakpoints.down('sm')]: {
+     
+      marginLeft: '30px',
     },
   },
 }));
@@ -81,7 +86,7 @@ const FooterPagePro = () => {
           <hr className="clearfix w-100 d-md-none" />
 
           <hr className="clearfix w-100 d-md-none" />
-          <MDBRow className={classes.termsnp} md="2">
+          <MDBRow className={classes.termsnp} md="5" sm="12">
             <h6 className="text-uppercase mb-4 mt-3 font-weight-bold">
               <Link style={{ paddingRight: '20px' }}>Terms</Link>
             </h6>

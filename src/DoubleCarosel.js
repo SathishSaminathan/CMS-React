@@ -14,6 +14,8 @@ import {
   MDBBtn,
 } from 'mdbreact';
 import  './doublecarosal.css';
+import Hidden from '@material-ui/core/Hidden';
+
 import {
   Grid,
   Typography,
@@ -35,6 +37,13 @@ const useStyles = makeStyles((theme) => ({
     position:"relative",
     top:"-10px",
     left:"8px",
+    [theme.breakpoints.down('md')]: {
+      top:"0px",
+      width:"10%",
+    },[theme.breakpoints.down('xs')]: {
+      top:"0px",
+      width:"20%",
+    },
 
 
   },
@@ -48,13 +57,32 @@ const useStyles = makeStyles((theme) => ({
    position:"relative",
    top:"0px",
    left:"7px",
-   objectFit:"cover"
+   objectFit:"cover",
+   [theme.breakpoints.down('md')]: {
+    left:"0px",
+    width: "100%",
+    height: "119px",
+    display: "flex",
+    position: "relative",
+    objectFit: "fill",
+    alignItems: "left",
+    borderRadius: "50%",
+    justifyContent: "left",
+  },
+   [theme.breakpoints.down('xs')]: {
+    
+
+  },
   },
   card:{
     width:500,
     height:330,
 backgroundColor:"#0C2D48",
-  },
+[theme.breakpoints.down('xs')]: {
+  width: "241px",
+  height: "400px",
+},
+},
   cardTitle:{
     alignItems:"left",
    justifyContent:"left",
@@ -63,7 +91,11 @@ backgroundColor:"#0C2D48",
    fontSize:"22px",
    color:"white",
    position:"relative",
-   left:"10px"
+   left:"10px",
+   [theme.breakpoints.down('md')]: {
+    fontSize:"13px",
+
+  },
   },
   cardsubtitle:{
     alignItems:"left",
@@ -72,14 +104,21 @@ backgroundColor:"#0C2D48",
    
     fontSize:"22px",
     marginLeft:"10px",
-    color:"white"
+    color:"white",
+    [theme.breakpoints.down('md')]: {
+      fontSize:"13px",
+    },
 
   },
   cardContent:{
 color:"white",
 justifyContent:"left",
 textAlign:"left",
-fontSize:"15px"
+fontSize:"15px",
+[theme.breakpoints.down('md')]: {
+  fontSize:"13px",
+
+},
     
   },
   cardContainer2:{
@@ -97,6 +136,15 @@ fontSize:"15px"
     
     marginLeft:"40px"
     },
+    willimgcontainer:{
+      [theme.breakpoints.down('md')]: {
+  
+        width: "77px",
+        height: "119px",
+        borderRadius: "50%",
+        transform:" scale(.76, .5)",
+      },
+    }
     
   }
   
@@ -115,7 +163,7 @@ const DoubleCarosel = () => {
         slide={true}
         showControls={true}
         showIndicators={true}
-        multiItem
+        
       >
         <MDBCarouselInner>
           <MDBRow>
@@ -157,33 +205,39 @@ const DoubleCarosel = () => {
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
                   <Paper className={classes.card}  style={{  padding: '10px' }}>
                    
-                    
+                    <div className={classes.willimgcontainer}>
                        <img
                       className={classes.cardimg}
                       src="./images/willsmith.jpg"
                     />
-                    <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+                    </div>
+                    <Typography className={classes.cardTitle} style={{}}>will Smith1</Typography>
                    <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                    <img className={classes.starimg} src="./images/5star.png"/>
                    <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
                   
                   </Paper>
                 </Grid>
+                <Hidden mdDown>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
+               
                 <Paper className={classes.card}  style={{  padding: '10px' }}>
                    
-                    
+                <div className={classes.willimgcontainer}>
                    <img
                   className={classes.cardimg}
                   src="./images/willsmith.jpg"
                 />
-                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+                </div>
+                <Typography className={classes.cardTitle} style={{}}>will Smith2</Typography>
                <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                <img className={classes.starimg} src="./images/5star.png"/>
                <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
               
               </Paper>
+              
                 </Grid>
+                </Hidden>
                 </Grid>
             </MDBCarouselItem>
             <MDBCarouselItem itemId="2" >
@@ -191,33 +245,38 @@ const DoubleCarosel = () => {
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
                 <Paper className={classes.card}  style={{  padding: '10px' }}>
                    
-                    
+                <div className={classes.willimgcontainer}>
                    <img
                   className={classes.cardimg}
                   src="./images/willsmith.jpg"
                 />
-                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+                </div>
+                <Typography className={classes.cardTitle} style={{}}>will Smith3</Typography>
                <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                <img className={classes.starimg} src="./images/5star.png"/>
                <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
               
               </Paper>
                 </Grid>
+                <Hidden mdDown>
+
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
                 <Paper className={classes.card}  style={{  padding: '10px' }}>
                    
-                    
+                <div className={classes.willimgcontainer}>
                    <img
                   className={classes.cardimg}
                   src="./images/willsmith.jpg"
                 />
-                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+                </div>
+                <Typography className={classes.cardTitle} style={{}}>will Smith4</Typography>
                <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                <img className={classes.starimg} src="./images/5star.png"/>
                <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
               
               </Paper>
                 </Grid>
+                </Hidden>
                 </Grid>
             </MDBCarouselItem>
           </MDBRow>
