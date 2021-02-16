@@ -22,7 +22,7 @@ import {
   Paper,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
+import './simpleCarosel.css'
 const useStyles = makeStyles((theme) => ({
   paper:{
     width:200,
@@ -46,6 +46,11 @@ cardimg:{
   paperContainer:{
   width:"auto"
     
+  },
+  container:{
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft:" 44px",
+      },
   }
 }));
 
@@ -53,7 +58,7 @@ const SimpleCarosel = () => {
   const classes = useStyles();
 
   return (
-    <MDBContainer>
+    <MDBContainer className={classes.container}>
       <MDBCarousel
         activeItem={1}
         length={1}

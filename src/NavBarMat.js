@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   hamburger:{
       display:"flex",
       justifyContent:"flex-end",
-      paddingBottom:"25px" 
+      paddingBottom:"35px" 
   },
   btn:{
      color:"white",
