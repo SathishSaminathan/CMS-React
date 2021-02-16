@@ -354,7 +354,30 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
   paddingLeft:"20px"
       
      },
-  }
+  },
+  btnconsol: {
+    color: 'white',
+    backgroundColor: 'orangered',
+    borderRadius: '30px',
+    paddingTop: '15px',
+    paddingBottom: '15px',
+    [theme.breakpoints.down('md')]: {
+      borderRadius: '20px',
+      paddingTop: '5px',
+      paddingBottom: '5px',
+      paddingRight: '5px',
+      paddingLeft: '5px',
+    },
+  },
+  businesstext: {
+    color: 'white',
+    paddingLeft: '50px',
+    fontFamily: 'Hammersmith One, sans-serif',
+    [theme.breakpoints.down('xs')]: {
+     fontSize:"20px",
+     paddingLeft: '0px',
+    },
+  },
 }));
 
 function Home(props) {
@@ -710,20 +733,14 @@ function Home(props) {
           </Grid>
           <Grid container className={classes.lastGrid}>
             <Grid item xs={12} md={6}>
-              <Typography variant="h4" style={{ color: 'white',paddingLeft:"50px",fontFamily: 'Hammersmith One, sans-serif' }}>
+              <Typography variant="h4" className={classes.businesstext}>
                 We Help You unlock & unleash the power within your large scale
                 buissness
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
               <Button
-                style={{
-                  color: 'white',
-                  backgroundColor: 'orangered',
-                  borderRadius: '30px',
-                  paddingTop:"15px",
-                  paddingBottom:"15px"
-                }}
+                className={classes.btnconsol}
               >
                 Book a Consulation
               </Button>
