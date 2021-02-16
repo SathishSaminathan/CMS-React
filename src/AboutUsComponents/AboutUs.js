@@ -45,10 +45,13 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutText: {
     paddingLeft:"12.5em",
-    [theme.breakpoints.down('md')]: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft:"5px",
+     
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft:"5px",
+     
     },
   },
   contentContainer: {
@@ -70,6 +73,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       width: '100%',
     },
+    [theme.breakpoints.down('xs')]: {
+      top: '0',
+    },[theme.breakpoints.down('sm')]: {
+      top: '0',
+    },
   },
   cantonText: {
     fontSize: '20px',
@@ -79,6 +87,9 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     [theme.breakpoints.down('md')]: {
       width: '100%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '18px',
     },
   },
   cantonTitle: {
@@ -90,6 +101,9 @@ const useStyles = makeStyles((theme) => ({
 
   Aboutimg: {
     width: '80%',
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+    },
   },
 
   playimgcontainer: {
@@ -115,7 +129,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     textAlign: 'center',
     backgroundColor: 'white',
-    width: '99%',
+    width: '100%',
     height: 'auto',
     display: 'flex',
     justifyContent: 'space-between',
@@ -123,7 +137,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '0px',
     marginRight: '0px',
     position: 'relative',
-    left: '15px',
+   
     marginTop: '13px',
   },
   cantonContainer: {
@@ -131,6 +145,13 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:"4em",
     [theme.breakpoints.down('md')]: {
       left: '0',
+    },[theme.breakpoints.down('xs')]: {
+      left: '0',
+      paddingLeft:"5px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      left: '0',
+      paddingLeft:"5px",
     },
   },
   undertext: {
@@ -144,11 +165,18 @@ const useStyles = makeStyles((theme) => ({
     
     width:"100%",
   },
+  [theme.breakpoints.down('xs')]: {
+   
+    fontSize: '17px',
+   
+  },
   },
   gridmain:{
     position:"relative",
-    top:"27em",
-    
+    top:"25em",
+    [theme.breakpoints.down('xs')]: {
+      top:"22em",
+    },
    
   },
   aboutTypo:{
@@ -157,13 +185,26 @@ const useStyles = makeStyles((theme) => ({
   subs:{
     width:"80%",
     paddingLeft:"12.5em",
-    paddingBottom:"2em"
-  }
+    paddingBottom:"2em",
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft:"0",
+      marginTop:"40px",
+      paddingLeft:"5px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft:"0",
+      marginTop:"40px",
+      paddingLeft:"5px",
+    },
+  },
+  
 }));
 
 function AboutUs(props) {
   const classes = useStyles();
-
+  
+  const { width } = props;
+  console.log(width);
   return (
     <div>
       <div>
@@ -174,7 +215,7 @@ function AboutUs(props) {
         <NavBArMat />
         <Grid container className={classes.gridmain}>
           <Grid item md={12} className={classes.aboutText}>
-            <Typography className={classes.aboutTypo} variant="h3">ABOUT US</Typography>
+            <Typography className={classes.aboutTypo} variant="h3">ABOUT US {width}</Typography>
           </Grid>
         
       

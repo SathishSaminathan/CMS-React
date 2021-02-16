@@ -215,7 +215,8 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
   },
   partnerContainer: {
    
-    backgroundColor: 'orangered',
+    backgroundColor: "#a40606",
+backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     width: '100%',
     height: 'auto',
     display: 'flex',

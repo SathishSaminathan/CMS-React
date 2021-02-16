@@ -203,7 +203,7 @@ const DoubleCarosel = () => {
             <MDBCarouselItem itemId="1" >
               <Grid container direction="row" spacing={0} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                  <Paper className={classes.card}  style={{  padding: '10px' }}>
+                  <Paper className={classes.card}  style={{  padding: '10px' }} elevation={4}>
                    
                     <div className={classes.willimgcontainer}>
                        <img
@@ -211,7 +211,7 @@ const DoubleCarosel = () => {
                       src="./images/willsmith.jpg"
                     />
                     </div>
-                    <Typography className={classes.cardTitle} style={{}}>will Smith1</Typography>
+                    <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
                    <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                    <img className={classes.starimg} src="./images/5star.png"/>
                    <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
@@ -221,7 +221,8 @@ const DoubleCarosel = () => {
                 <Hidden mdDown>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
                
-                <Paper className={classes.card}  style={{  padding: '10px' }}>
+                <Paper className={classes.card}  style={{  padding: '10px',backgroundColor: "#a40606",
+backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
                    
                 <div className={classes.willimgcontainer}>
                    <img
@@ -229,10 +230,10 @@ const DoubleCarosel = () => {
                   src="./images/willsmith.jpg"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}>will Smith2</Typography>
-               <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
+                <Typography className={classes.cardTitle} style={{color:"white"}}>will Smith</Typography>
+               <Typography className={classes.cardsubtitle} style={{color:"white"}}>CEO,Canton Management Services</Typography>
                <img className={classes.starimg} src="./images/5star.png"/>
-               <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
+               <Typography className={classes.cardContent}  style={{ padding: '10px',color:"white" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
               
               </Paper>
               
@@ -251,7 +252,7 @@ const DoubleCarosel = () => {
                   src="./images/willsmith.jpg"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}>will Smith3</Typography>
+                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
                <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                <img className={classes.starimg} src="./images/5star.png"/>
                <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
@@ -261,7 +262,8 @@ const DoubleCarosel = () => {
                 <Hidden mdDown>
 
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                <Paper className={classes.card}  style={{  padding: '10px' }}>
+                <Paper className={classes.card}  style={{  padding: '10px',backgroundColor: "#a40606",
+backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)", }}>
                    
                 <div className={classes.willimgcontainer}>
                    <img
@@ -269,7 +271,7 @@ const DoubleCarosel = () => {
                   src="./images/willsmith.jpg"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}>will Smith4</Typography>
+                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
                <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                <img className={classes.starimg} src="./images/5star.png"/>
                <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>

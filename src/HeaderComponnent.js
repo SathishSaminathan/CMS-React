@@ -131,7 +131,7 @@ function HeaderComponent(props) {
              <Grid container spacing={3}>
 
              
-        <Hidden xsDown >
+        <Hidden mdDown >
         <Grid item xl={3} md={2}  className={classes.logoContainer} >
        
             <img className={classes.logo} src="/images/logoBg.png" alt="companylogo"/>
