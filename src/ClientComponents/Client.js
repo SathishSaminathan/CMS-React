@@ -123,15 +123,16 @@ const useStyles = makeStyles((theme) => ({
       logoContainer:{
       
        
-       marginTop:"50px"
-,
+       marginTop:"50px",
+      
 [theme.breakpoints.down('md')]: {
   display:"flex",
   justifyContent:"space-evenly",
   alignContent:"center",
   alignItems:"center",
   left:"0",
-  margin:"0"
+  margin:"0",
+  padding:"0"
 },
       },
       consultancysub: {
@@ -179,8 +180,8 @@ Our clients are over 400 of the worlds leading organizations,from a wide range o
                 </Typography>
                 </div></Grid>
           <Grid container direction="row"
-  justify="space-evenly"
-  alignItems="center" spacing={2} style={{marginBottom:"50px"}} className={classes.logoContainer}>
+  justify="center"
+  alignItems="center" spacing={0} style={{marginBottom:"100px"}} className={classes.logoContainer}>
         <Grid item  sm={6} md={2}>
           <Paper className={classes.paper} elevation={20}>
             <img className={classes.cardimg} src="./images/mspng.png"/>
