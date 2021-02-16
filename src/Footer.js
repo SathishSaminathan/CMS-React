@@ -58,7 +58,7 @@ const FooterPagePro = () => {
                 <li className={classes.li}>United States</li>
                 <li style={{ fontWeight: '800' }} className={classes.li}>
                   Mail us:
-                  <Link href="#" style={{ color: 'orangered' }}>
+                  <Link href="#" style={{ color: 'orangered',fontSize:"22px" }}>
                     palani59@gmail.com
                   </Link>
                 </li>
@@ -86,7 +86,7 @@ const FooterPagePro = () => {
           <hr className="clearfix w-100 d-md-none" />
 
           <hr className="clearfix w-100 d-md-none" />
-          <MDBRow className={classes.termsnp} md="5" sm="12">
+          <MDBRow className={classes.termsnp} md="4" sm="12">
             <h6 className="text-uppercase mb-4 mt-3 font-weight-bold">
               <Link style={{ paddingRight: '20px' }}>Terms</Link>
             </h6>

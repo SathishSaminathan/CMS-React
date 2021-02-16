@@ -8,12 +8,12 @@ import {
   responsiveFontSizes,
   ThemeProvider,
   Paper,
-  TextField,Button
+  TextField,
+  Button,
 } from '@material-ui/core';
 import HeaderComponent from '../HeaderComponnent';
 import NavBArMat from '../NavBarMat';
 import Fade from 'react-reveal/Fade';
-
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -45,14 +45,17 @@ const useStyles = makeStyles((theme) => ({
     // left: '10%',
     // width: '50%',
     // marginBottom: '10px',
-    paddingLeft:"12.5em",
-    marginBottom:"60px"
+    paddingLeft: '12.5em',
+    marginBottom: '60px',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      paddingLeft: '10px',
+      display:"flex",
+      justifyContent:"center",
+    },
   },
   Heading1: {
-
-
-    
-    marginBottom:"60px",
+    marginBottom: '60px',
     // position: 'absolute',
     // top: '60%',
     // left: '25%',
@@ -62,22 +65,26 @@ const useStyles = makeStyles((theme) => ({
     width: '50%',
     alignItems: 'center',
   },
-  Heading2:{
-      marginLeft:"70px",
-      paddingLeft:"10em",
-      width:"100%",
-      position:"relative",
+  Heading2: {
+    marginLeft: '70px',
+    paddingLeft: '10em',
+    width: '100%',
+    position: 'relative',
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '10px',
+      paddingLeft: '29px',
+    },
   },
   root: {
     flexGrow: 1,
   },
-  GridContainer:{
-position:"absolute",
-top:"42%"
+  GridContainer: {
+    position: 'absolute',
+    top: '42%',
   },
-  paper:{
-      width:300,
-      height:470,
+  paper: {
+    width: 300,
+    height: 470,
   },
   lastGrid: {
     display: 'flex',
@@ -98,9 +105,50 @@ top:"42%"
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     height: '35vh',
-    marginBottom:"-25px"
+    marginBottom: '-25px',
   },
- 
+  subtext1: {
+    marginTop: '20px',
+    fontSize: '20px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '16px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '16px',
+      width: '80%',
+    },
+  },
+  head1: {
+    width: '50%',
+    marginTop: '20px',
+    fontSize: '20px',
+    [theme.breakpoints.down('md')]: {
+      width: '80%',
+    },
+  },
+  businesstext: {
+    color: 'white',
+    paddingLeft: '50px',
+    fontFamily: 'Hammersmith One, sans-serif',
+    [theme.breakpoints.down('xs')]: {
+     fontSize:"20px",
+     paddingLeft: '0px',
+    },
+  },
+  btnconsol: {
+    color: 'white',
+    backgroundColor: 'orangered',
+    borderRadius: '30px',
+    paddingTop: '15px',
+    paddingBottom: '15px',
+    [theme.breakpoints.down('md')]: {
+      borderRadius: '20px',
+      paddingTop: '5px',
+      paddingBottom: '5px',
+      paddingRight: '5px',
+      paddingLeft: '5px',
+    },
+  },
 }));
 function ContactComponent(props) {
   const classes = useStyles();
@@ -111,10 +159,10 @@ function ContactComponent(props) {
       </div>
       <ThemeProvider theme={theme}>
         <HeaderComponent />
-        <NavBArMat/>
+        <NavBArMat />
         <Grid container spacing={0} className={classes.GridContainer}>
           <Grid item md={12} className={classes.ContactText}>
-            <Typography variant="h3" >CONTACT</Typography>
+            <Typography variant="h3">CONTACT</Typography>
           </Grid>
 
           <Grid
@@ -125,66 +173,122 @@ function ContactComponent(props) {
             direction="column"
           >
             <Fade top delay={2000}>
-            <Typography variant="h3" style={{ marginBottom: '-25px',color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' , }}>
-              Get in Touch With Us
-            </Typography>
+              <Typography
+                variant="h3"
+                style={{
+                  marginBottom: '-25px',
+                  color: '#0C2D48',
+                  fontFamily: 'Hammersmith One, sans-serif',
+                }}
+              >
+                Get in Touch With Us
+              </Typography>
             </Fade>
             <div className="underline"></div>
-           
-            <Typography style={{width:"50%",marginTop:"20px",fontSize:"20px"}}>
-            Any Kind of business solution and Consulation don't hesitate to contact with us for imidiate customer support.We would love to hear from you
+
+            <Typography className={classes.head1}>
+              Any Kind of business solution and Consulation don't hesitate to
+              contact with us for imidiate customer support.We would love to
+              hear from you
             </Typography>
-           
           </Grid>
-          
-          <Grid container md={6} >
-          <Grid item xs={12}
-            md={8} 
-            className={classes.Heading2}
-            >
-                    <Typography variant="h4" style={{ marginBottom: '-25px', }}>
-              Send Us Your Message
-            </Typography>
-            <div className="underline"></div>
-            <Typography style={{marginTop:"20px",fontSize:"20px"}}>
-              Alternatively,if you'd like for us to get back in touch with you please fill in the form below.
-            </Typography>
-            <TextField id="outlined-size-small"
-          defaultValue=""
-          variant="outlined"
-          size="small" label="Firstname" variant="outlined"  style={{marginRight:"20px",marginLeft:"0px",marginTop:"20px",marginBlock:"20px"}}/>  
-            <TextField id="outlined-size-small"
-          defaultValue=""
-          variant="outlined"
-          size="small" label="LastName" variant="outlined" style={{marginRight:"20px",marginLeft:"0px",marginTop:"20px",marginBlock:"20px"}}/>  
-            <TextField id="outlined-size-small"
-          defaultValue=""
-          variant="outlined"
-          size="small" label="EmailAdress" variant="outlined" style={{marginRight:"20px",marginLeft:"0px",marginTop:"20px",marginBlock:"20px"}}/>  
-            <TextField
-          id="standard-number"
-          label="Number"
-          type="number"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          style={{marginRight:"20px",marginLeft:"0px",marginTop:"20px",marginBlock:"20px"}}/>          
-<TextField
-          id="outlined-multiline-static"
-          label="Multiline"
-          multiline
-          rows={4}
-          defaultValue=""
-          variant="outlined"
-          style={{marginRight:"20px",marginLeft:"0px",marginTop:"20px",marginBlock:"20px"}}/>         
-        <Grid item md={12}>
-        <Button style={{color:"white",backgroundColor:"orangered",marginBottom:"40px",borderRadius:"30px",paddingBottom:"15px",paddingTop:"15px"}}  variant="outlined">Send Message</Button>
-        </Grid>
-          
 
-           </Grid>
-
-         
+          <Grid container md={6}>
+            <Grid item xs={12} md={8} className={classes.Heading2}>
+              <Typography variant="h4" style={{ marginBottom: '-25px' }}>
+                Send Us Your Message
+              </Typography>
+              <div className="underline"></div>
+              <Typography className={classes.subtext1}>
+                Alternatively,if you'd like for us to get back in touch with you
+                please fill in the form below.
+              </Typography>
+              <TextField
+                id="outlined-size-small"
+                defaultValue=""
+                variant="outlined"
+                size="small"
+                label="Firstname"
+                variant="outlined"
+                style={{
+                  marginRight: '20px',
+                  marginLeft: '0px',
+                  marginTop: '20px',
+                  marginBlock: '20px',
+                }}
+              />
+              <TextField
+                id="outlined-size-small"
+                defaultValue=""
+                variant="outlined"
+                size="small"
+                label="LastName"
+                variant="outlined"
+                style={{
+                  marginRight: '20px',
+                  marginLeft: '0px',
+                  marginTop: '20px',
+                  marginBlock: '20px',
+                }}
+              />
+              <TextField
+                id="outlined-size-small"
+                defaultValue=""
+                variant="outlined"
+                size="small"
+                label="EmailAdress"
+                variant="outlined"
+                style={{
+                  marginRight: '20px',
+                  marginLeft: '0px',
+                  marginTop: '20px',
+                  marginBlock: '20px',
+                }}
+              />
+              <TextField
+                id="standard-number"
+                label="Number"
+                type="number"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                style={{
+                  marginRight: '20px',
+                  marginLeft: '0px',
+                  marginTop: '20px',
+                  marginBlock: '20px',
+                }}
+              />
+              <TextField
+                id="outlined-multiline-static"
+                label="Multiline"
+                multiline
+                rows={4}
+                defaultValue=""
+                variant="outlined"
+                style={{
+                  marginRight: '20px',
+                  marginLeft: '0px',
+                  marginTop: '20px',
+                  marginBlock: '20px',
+                }}
+              />
+              <Grid item md={12}>
+                <Button
+                  style={{
+                    color: 'white',
+                    backgroundColor: 'orangered',
+                    marginBottom: '40px',
+                    borderRadius: '30px',
+                    paddingBottom: '15px',
+                    paddingTop: '15px',
+                  }}
+                  variant="outlined"
+                >
+                  Send Message
+                </Button>
+              </Grid>
+            </Grid>
           </Grid>
           <Grid
             item
@@ -194,64 +298,110 @@ function ContactComponent(props) {
             direction="column"
           >
             <Paper className={classes.paper}>
-<Fade left delay={2000}>
-                <div style={{marginBottom:"50px"}}>
-                <Typography variant="h6" style={{textAlign:"left",
-            paddingLeft:"30px",color:"orangered"}}>Address:</Typography>
-                 <Typography variant="subtitle1" style={{textAlign:"left",
-            paddingLeft:"30px"}}>canton management services,</Typography>
-            <Typography variant="subtitle1" style={{textAlign:"left",
-            paddingLeft:"30px"}}>Canton Mixigon,</Typography>
-            </div>
-            </Fade>
-            <Fade right delay={2000}>
-            <div style={{marginBottom:"50px"}}>
-                <Typography variant="h6" style={{textAlign:"left",
-            paddingLeft:"30px",color:"orangered"}}>Phone Number:</Typography>
-                 <Typography variant="subtitle1" style={{textAlign:"left",
-            paddingLeft:"30px"}}>+1(248)842-2805</Typography>
-           
-            </div>
-            </Fade>
-            <Fade left delay={2000}>
-            <div style={{marginBottom:"50px"}}>
-                <Typography variant="h6" style={{textAlign:"left",
-            paddingLeft:"30px",color:"orangered"}}>Email Address:</Typography>
-                 <Typography variant="subtitle1" style={{textAlign:"left",
-            paddingLeft:"30px"}}>palani59@gmail.com</Typography>
-            
-            </div>
-            </Fade>
-            <Fade right delay={2000}>
-            <div>
-                <Typography variant="h6" style={{textAlign:"left",
-            paddingLeft:"30px",color:"orangered"}}>Watching Hours:</Typography>
-                 <Typography variant="subtitle1" style={{textAlign:"left",
-            paddingLeft:"30px"}}>Mon-Fri:10.00-19.00</Typography>
-            <Typography variant="subtitle1" style={{textAlign:"left",
-            paddingLeft:"30px"}}>sat-sun:Holiday</Typography>
-            
-            </div>
-            </Fade>
+              <Fade left delay={2000}>
+                <div style={{ marginBottom: '50px' }}>
+                  <Typography
+                    variant="h6"
+                    style={{
+                      textAlign: 'left',
+                      paddingLeft: '30px',
+                      color: 'orangered',
+                    }}
+                  >
+                    Address:
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ textAlign: 'left', paddingLeft: '30px' }}
+                  >
+                    canton management services,
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ textAlign: 'left', paddingLeft: '30px' }}
+                  >
+                    Canton Mixigon,
+                  </Typography>
+                </div>
+              </Fade>
+              <Fade right delay={2000}>
+                <div style={{ marginBottom: '50px' }}>
+                  <Typography
+                    variant="h6"
+                    style={{
+                      textAlign: 'left',
+                      paddingLeft: '30px',
+                      color: 'orangered',
+                    }}
+                  >
+                    Phone Number:
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ textAlign: 'left', paddingLeft: '30px' }}
+                  >
+                    +1(248)842-2805
+                  </Typography>
+                </div>
+              </Fade>
+              <Fade left delay={2000}>
+                <div style={{ marginBottom: '50px' }}>
+                  <Typography
+                    variant="h6"
+                    style={{
+                      textAlign: 'left',
+                      paddingLeft: '30px',
+                      color: 'orangered',
+                    }}
+                  >
+                    Email Address:
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ textAlign: 'left', paddingLeft: '30px' }}
+                  >
+                    palani59@gmail.com
+                  </Typography>
+                </div>
+              </Fade>
+              <Fade right delay={2000}>
+                <div>
+                  <Typography
+                    variant="h6"
+                    style={{
+                      textAlign: 'left',
+                      paddingLeft: '30px',
+                      color: 'orangered',
+                    }}
+                  >
+                    Watching Hours:
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ textAlign: 'left', paddingLeft: '30px' }}
+                  >
+                    Mon-Fri:10.00-19.00
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ textAlign: 'left', paddingLeft: '30px' }}
+                  >
+                    sat-sun:Holiday
+                  </Typography>
+                </div>
+              </Fade>
             </Paper>
-
           </Grid>
           <Grid container className={classes.lastGrid}>
-            <Grid item xs={12} md={6}>
-            <Typography variant="h4" style={{ color: 'white',paddingLeft:"50px",fontFamily: 'Hammersmith One, sans-serif' }}>
+          <Grid item xs={12} md={6}>
+              <Typography variant="h4" className={classes.businesstext}>
                 We Help You unlock & unleash the power within your large scale
                 buissness
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-            <Button
-                style={{
-                  color: 'white',
-                  backgroundColor: 'orangered',
-                  borderRadius: '30px',
-                  paddingTop:"15px",
-                  paddingBottom:"15px"
-                }}
+              <Button
+                className={classes.btnconsol}
               >
                 Book a Consulation
               </Button>

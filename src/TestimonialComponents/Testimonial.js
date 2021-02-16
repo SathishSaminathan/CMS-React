@@ -261,7 +261,12 @@ fontSize:"15px",
     },
     root:{
       
-        maxWidth: 700
+        maxWidth: 700,
+        marginRight:"40px",
+        [theme.breakpoints.down('sm')]: {
+          marginRight:"10px",
+         
+        },
      
     },
     cardsubtext:{
