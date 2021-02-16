@@ -56,17 +56,19 @@ const useStyles = makeStyles((theme) => ({
         top: '42%',
       },
       ClientText: {
-        paddingLeft:"12.5em"
-      },
-      clientH1: {
-        [theme.breakpoints.down('md')]: {},
-        [theme.breakpoints.down('xs')]: {
-          position: 'absolute',
-          right: '10%',
+        paddingLeft:"12.5em",
+        [theme.breakpoints.down('md')]: {
+          paddingLeft:"20px",
         },
-        
-
-    },
+        [theme.breakpoints.down('sm')]: {
+          paddingLeft:"20px",
+        },
+        [theme.breakpoints.down('xs')]: {
+          paddingLeft:"20px",
+        },
+      },
+      
+     
     HeaderText1: {
         justifyContent: 'center',
         textAlign: 'center',
@@ -93,14 +95,18 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: "5%",
           },
           [theme.breakpoints.down('xs')]: {
-            maxWidth: "8%",
+            maxWidth: "5%",
           },
       },
       paper:{
           paddingLeft:"150px",
           [theme.breakpoints.down('xs')]: {
             paddingLeft:"20px",
-            width:" max-content",
+            width:"auto",
+          },
+          [theme.breakpoints.down('md')]: {
+            paddingLeft:"10px",
+            
           },
       },
       lastGrid: {
@@ -133,19 +139,34 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
           
           padding:"0px",
+          width:"50%"
+          
+        },
+        [theme.breakpoints.down('md')]: {
+          
+          padding:"10px",
           
         },
       },
       typotext:{
-        fontSize:"22px"
+        fontSize:"22px",
+        [theme.breakpoints.down('xs')]: {
+          
+          fontSize:"16px",
+          
+        },
       },
       consultancysub:{
-        width:"78%",paddingLeft:"28em",paddingTop:"1em",
+        paddingTop:"1em",
+        width:"50%",
+        transform:" translate(50%, 50%)",
         [theme.breakpoints.down('md')]: {
-          padding:0,
+          
          display:"flex",
          justifyContent:"center",
          alignItems:"center",
+         width:"100%",
+         transform:"none",
 
         },
       },
@@ -157,17 +178,25 @@ const useStyles = makeStyles((theme) => ({
          display:"flex",
          justifyContent:"center",
          alignItems:"center",
-         width:400,
+         width:"auto",
          height:"auto",
          alignContent:"center"
 
         },
+        [theme.breakpoints.down('xs')]: {
+        
+          width: "301px",
+        },
+
+
+       
 
       },
       secoundpaper:{
         backgroundColor:"transparent",
         paddingLeft:"3em",
-        marginBottom:"40px",
+        marginBottom:"30px",
+        width:450,
         [theme.breakpoints.down('md')]: {
           padding:0,
          display:"flex",
@@ -182,9 +211,15 @@ const useStyles = makeStyles((theme) => ({
        display:"flex",
        justifyContent:"center",
        alignItems:"center",
-       width:"auto",
+       width:"303px",
        height:"auto",
        alignContent:"center"
+    }
+    },
+    paper3:{
+      width:"auto",height:"auto",marginLeft:"50px",marginRight:"20px",
+      [theme.breakpoints.down('xs')]: {
+        marginLeft:"0px"
     }
     }
 
@@ -208,7 +243,7 @@ function Service(props) {
             </Typography>
           </Grid>
           <Grid item md={12} className={classes.Header1}>
-            <Fade top delay={2000}>
+            <Fade top delay={1000}>
             <Typography style={{ color: '#0C2D48',fontFamily: 'Hammersmith One, sans-serif', fontWeight: '400' }} variant="h2" className={classes.HeaderText1} >
                 Consultancy Services
             </Typography>
@@ -225,7 +260,7 @@ function Service(props) {
               ></div>
 
          <div className={classes.consultancysub}>
-         <Fade right delay={2000}>
+         <Fade right delay={1000}>
               <Typography align="center"  style={{fontSize:"22px"}}  variant="subtitle1">Hands-on consultancy guidance on establishment and implementation of the management system,including support services:</Typography>
               </Fade>
              </div>
@@ -235,7 +270,7 @@ function Service(props) {
         <Grid container spacing={0} style={{marginTop:"10%"}}>
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" className={classes.gridcontainer1} >
-              <Fade left delay={2000}>
+              <Fade left delay={1000}>
               <Grid
                 item
                 xs
@@ -447,7 +482,7 @@ QA as a Service(QAaaS)                </Typography>
               </Fade>  
             </Grid>
             <Grid item md={6} xs={12}>
-              <Fade right delay={2000}>
+              <Fade right delay={1000}>
                 <Paper elevation={0} className={classes.firstimgcontainer}><img style={{width:"100%",}} src="./images/onlineL.jpg"/></Paper>
                 </Fade>
             </Grid>
@@ -460,12 +495,12 @@ QA as a Service(QAaaS)                </Typography>
         <Grid container spacing={0} style={{marginTop:"10%"}}>
           <Grid item xs={12} sm container>
           <Grid item md={6} xs={12}>
-          <Fade left delay={2000}>
-                <Paper elevation={0} className={classes.secoundpaper} style={{width:480,height:650,}}><img style={{width:"100%"}} src="./images/onlineT.jpg"/></Paper>
+          <Fade left delay={1000}>
+                <Paper elevation={0} className={classes.secoundpaper} ><img style={{width:"100%"}} src="./images/onlineT.jpg"/></Paper>
                 </Fade>
             </Grid>
             <Grid item xs container direction="column" >
-            <Fade right delay={2000}>
+            <Fade right delay={1000}>
               <Grid
                 item
                 xs
@@ -726,7 +761,7 @@ Documentation of policies ,<span style={{color:"#0C2D48",fontWeight:"600"}}>SOPs
 
       <Paper className={classes.paper} style={{width:"auto",backgroundColor:"#0B132B",marginBottom:"-13px"}} elevation={3}>
       <Grid item md={12} className={classes.Header1}>
-        <Fade bottom delay={2000}>
+        <Fade bottom delay={1000}>
             <Typography style={{ color: 'white',fontFamily: 'Hammersmith One, sans-serif', fontWeight: '400' }} variant="h2" className={classes.HeaderText1}>
                 Consultancy Approach
             </Typography>
@@ -745,7 +780,7 @@ Documentation of policies ,<span style={{color:"#0C2D48",fontWeight:"600"}}>SOPs
         <Grid container spacing={0} style={{marginTop:"5%",marginBottom:"5%"}}>
         
           <Grid item xs={12} sm container>
-          <Fade left delay={2000}>
+          <Fade left delay={1000}>
             <Grid item xs container direction="column" >
               <Grid
                 item
@@ -928,8 +963,8 @@ Periodic submission of a progress report and review with Stake Holders          
             </Grid>
             </Fade>
             <Grid item md={6} xs={12}>
-              <Fade right delay={2000}>
-                <Paper style={{width:"auto",height:"auto",marginLeft:"50px",marginRight:"20px"}}><img style={{width:"100%",}} src="./images/random1.jpg"/></Paper>
+              <Fade right delay={1000}>
+                <Paper className={classes.paper3} style={{}}><img style={{width:"100%",}} src="./images/random1.jpg"/></Paper>
                 </Fade>
             </Grid>
            
