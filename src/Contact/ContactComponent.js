@@ -149,6 +149,14 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: '5px',
     },
   },
+  header:{
+   
+    color: '#0C2D48',
+    fontFamily: 'Hammersmith One, sans-serif',
+    [theme.breakpoints.down('md')]: {
+     fontSize:"26px"
+    },
+  }
 }));
 function ContactComponent(props) {
   const classes = useStyles();
@@ -175,11 +183,8 @@ function ContactComponent(props) {
             <Fade top delay={2000}>
               <Typography
                 variant="h3"
-                style={{
-                  marginBottom: '-25px',
-                  color: '#0C2D48',
-                  fontFamily: 'Hammersmith One, sans-serif',
-                }}
+                className={classes.header}
+              
               >
                 Get in Touch With Us
               </Typography>
@@ -195,7 +200,7 @@ function ContactComponent(props) {
 
           <Grid container md={6}>
             <Grid item xs={12} md={8} className={classes.Heading2}>
-              <Typography variant="h4" style={{ marginBottom: '-25px' }}>
+              <Typography variant="h4" style={{ marginBottom: '-25px',fontSize:"24px" }}>
                 Send Us Your Message
               </Typography>
               <div className="underline"></div>

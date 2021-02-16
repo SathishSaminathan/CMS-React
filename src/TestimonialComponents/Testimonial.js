@@ -262,7 +262,6 @@ fontSize:"15px",
     root:{
       
         maxWidth: 700,
-        marginRight:"40px",
         [theme.breakpoints.down('sm')]: {
           marginRight:"10px",
          
@@ -312,7 +311,7 @@ className={classes.HeaderText1}
             </Fade>
           </Grid>
         
-          <Grid item md={6} className={classes.cardGrid}>
+          <Grid item md={6} sm={12} className={classes.cardGrid}>
                  <div style={{position:"relative"}}>
                 
 
@@ -360,7 +359,7 @@ className={classes.HeaderText1}
 
     
           </Grid>
-          <Grid item md={6} className={classes.cardGrid}>
+          <Grid item md={6} sm={12} className={classes.cardGrid}>
                  <div style={{position:"relative"}}>
                 
 
@@ -408,7 +407,7 @@ className={classes.HeaderText1}
 
     
           </Grid>
-          <Grid item md={6} className={classes.cardGrid}>
+          <Grid item md={6} sm={12} className={classes.cardGrid}>
                  <div style={{position:"relative"}}>
                 
 
@@ -456,7 +455,7 @@ className={classes.HeaderText1}
 
     
           </Grid>
-          <Grid item md={6} className={classes.cardGrid}>
+          <Grid item md={6} sm={12} className={classes.cardGrid}>
                  <div style={{position:"relative"}}>
                 
 
@@ -504,7 +503,7 @@ className={classes.HeaderText1}
 
     
           </Grid>
-          <Grid item md={6} className={classes.cardGrid}>
+          <Grid item md={6} sm={12} className={classes.cardGrid}>
                  <div style={{position:"relative"}}>
                 
 
@@ -552,7 +551,7 @@ className={classes.HeaderText1}
 
     
           </Grid>
-          <Grid item md={6} className={classes.cardGrid}>
+          <Grid item md={6} sm={12} className={classes.cardGrid}>
                  <div style={{position:"relative"}}>
                 
 

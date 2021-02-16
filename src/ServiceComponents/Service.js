@@ -277,7 +277,7 @@ function Service(props) {
               <Fade right delay={1000}>
                 <Typography
                   align="center"
-                  style={{ fontSize: '22px' }}
+                  style={{ fontSize: '18px' }}
                   variant="subtitle1"
                 >
                   Hands-on consultancy guidance on establishment and
