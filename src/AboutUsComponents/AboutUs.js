@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
   bgimg: {
     // margin: 'auto',
-    height: '50vh',
+    height: '60vh',
     width: '100%',
     display: 'block',
     objectFit: 'cover',
@@ -218,7 +218,7 @@ const useStyles = makeStyles((theme) => ({
   subGrid:{
     marginTop:"10em",
     [theme.breakpoints.down('sm')]: {
-      marginTop:"8em",
+      marginTop:"9em",
     },
   }
   
