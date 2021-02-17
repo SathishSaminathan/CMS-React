@@ -24,7 +24,18 @@ import HeaderComponent from '../HeaderComponnent';
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
-  imageContainer: {},
+  imageContainer: {
+    position: "absolute",
+    width: "100%",
+    height: "50vh",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor:" rgba(111,111,111,2.0)",
+    zIndex: -1,
+    background: "linear-gradient(90deg, black, transparent)",
+  },
 
   bgimg: {
     // margin: 'auto',
@@ -59,8 +70,7 @@ const useStyles = makeStyles((theme) => ({
   testimonialH1: {
     [theme.breakpoints.down('md')]: {},
     [theme.breakpoints.down('xs')]: {
-      position: 'absolute',
-      right: '10%',
+      
     },
   },
   willsmith: {
@@ -272,21 +282,32 @@ fontSize:"15px",
       fontSize:"16px",
       fontWeight:"800",
       color:"black"
-    }
+    },
+    testimonialTextContainer: {
+      paddingLeft:"12.8em",
+      
+      [theme.breakpoints.down('md')]: {
+       display:"flex",
+       justifyContent:"center",
+       paddingLeft:"10px",
+       paddingBottom:"50px"
+      },
+     
+    },
 }));
 function Testimonial(props) {
   const classes = useStyles();
 
   return (
     <div>
-      <div>
+      <div className={classes.imageContainer}>
         <img className={classes.bgimg} src="images/thumbsup.jpg" />
       </div>
       <ThemeProvider theme={theme}>
         <HeaderComponent />
 <NavBArMat/>
         <Grid container spacing={0} className={classes.GridContainer}>
-          <Grid item md={12} className={classes.TestimonialText}>
+          <Grid item md={12} className={classes.testimonialTextContainer}>
            
             <Typography variant="h3" className={classes.testimonialH1} style={{fontFamily:"Anton, sans-serif",
     color:"white"}}>

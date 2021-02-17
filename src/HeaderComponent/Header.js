@@ -8,7 +8,20 @@ import Navbar from "./NavBar";
 import "../HomeStyles.css";
 
 const useStyles = makeStyles((theme) => ({
-  imageContainer: {},
+  imageContainer: {
+    position: "absolute",
+    width: "100%",
+    height:" 102vh",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor:" rgba(111,111,111,0.7)",
+    zIndex: -1,
+    background: "linear-gradient(90deg, black, transparent)",
+
+
+  },
 
   root: {
     flexGrow: 1,
@@ -27,13 +40,13 @@ const useStyles = makeStyles((theme) => ({
       height: "103%",
     },
     [theme.breakpoints.down("xs")]: {
-      height: "83%",
+      height: "103%",
     },
   },
   logo: {
     width: "20%",
-    color:"black",
-    filter: "invert(48%) sepia(13%) saturate(3207%) hue-rotate(335deg) brightness(95%) contrast(80%)",
+    color:"white",
+    // filter: "invert(48%) sepia(13%) saturate(3207%) hue-rotate(335deg) brightness(95%) contrast(80%)",
       
     [theme.breakpoints.down("xl")]: {
       width: "50%",
@@ -67,6 +80,7 @@ const useStyles = makeStyles((theme) => ({
     top: "10px",
     right: "2px",
     width: "100%",
+    color:"white",
     
     [theme.breakpoints.down("md")]: {
       fontSize: "10px",
@@ -77,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-4px",
     left: "60px",
     fontSize: "16px",
-
+    color:"white",
     [theme.breakpoints.down("md")]: {
       fontSize: "10px",
     },
@@ -94,6 +108,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: "24px",
     position: "relative",
     paddingTop:"10px",
+    color:"white",
     [theme.breakpoints.down("md")]: {
       fontSize: "12px",
     },
@@ -101,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
   touchBtn: {
     paddingTop:"10px",
     paddingBottom:"10px",
-    
+    color:"white",
         
         [theme.breakpoints.down("md")]: {
     
@@ -141,12 +156,12 @@ function Header(props) {
           <Grid item xl={3} md={2} className={classes.phoneContainer}>
             <div className={classes.phoneDetails}>
               <PhoneInTalkOutlinedIcon
-                style={{ position: "relative", top: "19px", right: "50px" }}
+                style={{ position: "relative", top: "19px", right: "50px",color:"white" }}
               />
               <Typography className={classes.phoneNumber} variant="h6">
                 +1(242)848-2805
               </Typography>
-              <Typography style={{ fontSize: "16px",paddingTop:"12px",fontWeight:"500" }}>
+              <Typography style={{ fontSize: "16px",paddingTop:"12px",fontWeight:"500",color:"white" }}>
                 Give us a call
               </Typography>
             </div>
@@ -154,7 +169,7 @@ function Header(props) {
           <Grid item xl={3} md={2} className={classes.emailContainer}>
             <div className={classes.emailDetails}>
               <EmailOutlinedIcon
-                style={{ position: "relative", top: "-10px" }}
+                style={{ position: "relative", top: "-10px",color:"white" }}
               />
               <Typography className={classes.email} variant="h6">
                 cantonManagement@gmail.com
@@ -169,7 +184,7 @@ function Header(props) {
               className={classes.touchBtn}
               variant="outlined"
               size="medium"
-              style={{borderRadius:"20px",}}
+              style={{borderRadius:"20px",  borderColor:"white"}}
             >
               Get in Touch
             </Button>

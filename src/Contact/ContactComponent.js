@@ -18,7 +18,19 @@ import Fade from 'react-reveal/Fade';
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
-  imageContainer: {},
+  imageContainer: {
+    position: "absolute",
+    width: "100%",
+    height: "50vh",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor:" rgba(111,111,111,2.0)",
+    zIndex: -1,
+    background: "linear-gradient(90deg, black, transparent)",
+    
+  },
 
   bgimg: {
     // margin: 'auto',
@@ -162,7 +174,7 @@ function ContactComponent(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div>
+      <div className={classes.imageContainer}>
         <img className={classes.bgimg} src="images/telphone.jpg" />
       </div>
       <ThemeProvider theme={theme}>

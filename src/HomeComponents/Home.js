@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
       textAlign: 'center',
       bottom: '15%',
-      marginBottom:"20px"
+      marginBottom:"20px",
+      
     },
     // [theme.breakpoints.down('md')]: {
     //   display: "flex",
@@ -154,6 +155,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
       // marginRight: '0px',
       paddingRight: '0px',
       paddingLeft: '0px',
+      top: '110%',
     },
   },
   img1: {
@@ -341,6 +343,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
   },
   practicaltext:{
     marginBottom: '30px',fontFamily: 'Hammersmith One, sans-serif',fontSize:"86px",
+    color:"white",
     [theme.breakpoints.down('md')]: {
       
       display:"flex",
@@ -406,13 +409,13 @@ function Home(props) {
       
           <Grid item spacing={2} xs={12} className={classes.cmsContent}>
           
-            <Typography style={{ marginBottom: '30px',fontFamily:"Noto Sans KR, sans-serif" }} variant="h4">
+            <Typography style={{ marginBottom: '30px',fontFamily:"Noto Sans KR, sans-serif",color: 'white', }} variant="h4">
               CMS IS A
             </Typography>
             <Typography className={classes.practicaltext}  variant="h1">
               PRACTICAL & "SHOW-HOW"
             </Typography>
-            <Typography style={{ marginBottom: '30px' }} variant="h5">
+            <Typography style={{ marginBottom: '30px' ,color: 'white',}} variant="h5">
               type of consultancy services organization
             </Typography>
             <Button
@@ -437,7 +440,7 @@ function Home(props) {
                
                 marginRight: '20px',
                 borderRadius: '30px',
-                color: 'black',
+                color: 'white',
                 marginBottom: '10px',
                 paddingTop:"15px",
                 paddingBottom:"15px",
