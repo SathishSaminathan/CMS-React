@@ -57,22 +57,8 @@ const useStyles = makeStyles((theme) => ({
   TestimonialText: {
    paddingLeft:"12.5em"
   },
-  header1: {
-    justifyContent: 'center',
-    textAlign: 'center',
-    alignItems: 'center',
-    display: 'flex',
-    width: '100%',
-    marginTop: '50px',
-    color:"#0C2D48",
-    fontFamily: 'Hammersmith One, sans-serif' ,
-  },
-  testimonialH1: {
-    [theme.breakpoints.down('md')]: {},
-    [theme.breakpoints.down('xs')]: {
-      
-    },
-  },
+  
+  
   willsmith: {
     width: '8%',
     height: '7vh',
@@ -271,7 +257,7 @@ fontSize:"15px",
     },
     root:{
       
-        maxWidth: 700,
+        maxWidth: 600,
         [theme.breakpoints.down('sm')]: {
           marginRight:"10px",
          
@@ -284,16 +270,40 @@ fontSize:"15px",
       color:"black"
     },
     testimonialTextContainer: {
-      paddingLeft:"12.8em",
-      
-      [theme.breakpoints.down('md')]: {
-       display:"flex",
-       justifyContent:"center",
-       paddingLeft:"10px",
-       paddingBottom:"50px"
+      position:"absolute",
+      left:"11%",
+      marginBottom: '60px',
+      paddingBottom:"80px",
+      [theme.breakpoints.down('sm')]: {
+        left:"2%",
       },
      
     },
+    header1: {
+      marginTop:"10em",
+      justifyContent: 'center',
+      textAlign: 'center',
+      alignItems: 'center',
+      display: 'flex',
+      width: '100%',
+      color:"#0C2D48",
+      fontFamily: 'Hammersmith One, sans-serif' ,
+      [theme.breakpoints.down('xs')]: {
+        justifyContent: 'space-evenly',
+      },
+    },
+    secoundaryGrid:{
+      maxWidth: "80%",
+   
+    position: "relative",
+    left: "12%",
+    
+    [theme.breakpoints.down('md')]: {
+      position: "revert",
+      left: "0",
+      maxWidth: "100%",
+    },
+    }
 }));
 function Testimonial(props) {
   const classes = useStyles();
@@ -332,7 +342,11 @@ className={classes.HeaderText1}
             </Typography>
             </Fade>
           </Grid>
-        
+        <Grid container md={12} sm={12} spacing={1}  direction="row"
+  justify="center"
+  alignItems="center"
+  className={classes.secoundaryGrid}
+  >
           <Grid item md={6} sm={12} className={classes.cardGrid}>
                  <div style={{position:"relative"}}>
                 
@@ -621,151 +635,9 @@ className={classes.HeaderText1}
 
     
           </Grid>
+          </Grid>
        
-          {/* <Grid item md={6} className={classes.cardGrid}>
-            <Paper className={classes.paper}>
-              <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-
-              <img className={classes.willsmith} src="./images/willsmith.jpg" />
-              <div className={classes.detailContainer}>
-                <Typography style={{ color: '#0d335d' }} variant="subtitle1">
-                  Will Smith
-                </Typography>
-                <Typography style={{ color: 'orangered' }} variant="h6">
-                  CEO,Cantan Management Services
-                </Typography>
-                <img className={classes.starimg} src="./images/5star.png" />
-              </div>
-
-              <Typography className={classes.cardContent}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-                assumenda minima distinctio id tempore corrupti ea nihil
-                architecto mollitia aperiam, odio maxime eaque nulla error
-                cupiditate, aut non corporis nesciunt.
-              </Typography>
-            </Paper>
-          </Grid> */}
-          {/* <Grid item md={6} className={classes.cardGrid}>
-            <div className={classes.box}></div>
-            <Paper
-              className={classes.paper}
-              style={{ backgroundColor: '#0C2D48' }}
-            >
-              <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-
-              <img className={classes.willsmith} src="./images/willsmith.jpg" />
-              <div className={classes.detailContainer}>
-                <Typography style={{ color: 'white' }} variant="subtitle1">
-                  Will Smith
-                </Typography>
-                <Typography style={{ color: 'orangered' }} variant="h6">
-                  CEO,Cantan Management Services
-                </Typography>
-                <img className={classes.starimg} src="./images/5star.png" />
-              </div>
-
-              <Typography
-                style={{ color: 'white' }}
-                className={classes.cardContent}
-              >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-                assumenda minima distinctio id tempore corrupti ea nihil
-                architecto mollitia aperiam, odio maxime eaque nulla error
-                cupiditate, aut non corporis nesciunt.
-              </Typography>
-            </Paper>
-          </Grid> */}
-          {/* <Grid item md={6} className={classes.cardGrid}>
-            <Paper className={classes.paper}>
-              <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-
-              <img className={classes.willsmith} src="./images/willsmith.jpg" />
-              <div className={classes.detailContainer}>
-                <Typography style={{ color: '#0d335d' }} variant="subtitle1">
-                  Will Smith
-                </Typography>
-                <Typography style={{ color: 'orangered' }} variant="h6">
-                  CEO,Cantan Management Services
-                </Typography>
-                <img className={classes.starimg} src="./images/5star.png" />
-              </div>
-
-              <Typography className={classes.cardContent}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-                assumenda minima distinctio id tempore corrupti ea nihil
-                architecto mollitia aperiam, odio maxime eaque nulla error
-                cupiditate, aut non corporis nesciunt.
-              </Typography>
-            </Paper>
-          </Grid> */}
-          {/* <Grid item md={6} className={classes.cardGrid}>
-            <div className={classes.box}></div>
-            <Paper
-              className={classes.paper}
-              style={{ backgroundColor: '#0C2D48' }}
-            >
-              <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-
-              <img className={classes.willsmith} src="./images/willsmith.jpg" />
-              <div className={classes.detailContainer}>
-                <Typography style={{ color: 'white' }} variant="subtitle1">
-                  Will Smith
-                </Typography>
-                <Typography style={{ color: 'orangered' }} variant="h6">
-                  CEO,Cantan Management Services
-                </Typography>
-                <img className={classes.starimg} src="./images/5star.png" />
-              </div>
-
-              <Typography
-                style={{ color: 'white' }}
-                className={classes.cardContent}
-              >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-                assumenda minima distinctio id tempore corrupti ea nihil
-                architecto mollitia aperiam, odio maxime eaque nulla error
-                cupiditate, aut non corporis nesciunt.
-              </Typography>
-            </Paper>
-          </Grid> */}
-          {/* <Grid item md={6} className={classes.cardGrid}>
-            <Paper className={classes.paper}>
-              <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-
-              <img className={classes.willsmith} src="./images/willsmith.jpg" />
-              <div className={classes.detailContainer}>
-                <Typography style={{ color: '#0d335d' }} variant="subtitle1">
-                  Will Smith
-                </Typography>
-                <Typography style={{ color: 'orangered' }} variant="h6">
-                  CEO,Cantan Management Services
-                </Typography>
-                <img className={classes.starimg} src="./images/5star.png" />
-              </div>
-
-              <Typography className={classes.cardContent}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-                assumenda minima distinctio id tempore corrupti ea nihil
-                architecto mollitia aperiam, odio maxime eaque nulla error
-                cupiditate, aut non corporis nesciunt.
-              </Typography>
-            </Paper>
-          </Grid> */}
+          
           <FooterPage />
         </Grid>
       </ThemeProvider>

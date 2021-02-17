@@ -8,10 +8,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '22px',
   },
   addressDetails: {
-    marginLeft: '10px',
+    
   },
   [theme.breakpoints.down('md')]: {
-    marginLeft: '0',
+    margin: '0',
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'center',
@@ -33,6 +33,23 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '30px',
     },
   },
+  cantonHeader:{
+    fontFamily: "Yanone Kaffeesatz, sans-serif",
+    fontSize:"30px",
+    paddingLeft:"40px",
+    [theme.breakpoints.down('sm')]: {
+     
+      padding:"0px",
+    },
+  },
+  ulcontainer:{
+    listStyleType: 'none',
+    [theme.breakpoints.down('sm')]: {
+     
+      padding:"0px",
+    },
+  }
+  
 }));
 const FooterPagePro = () => {
   const classes = useStyles();
@@ -47,13 +64,12 @@ const FooterPagePro = () => {
         <MDBRow>
           <MDBCol md="5">
             <h5
-              style={{ fontSize: '24px' }}
-              className="text-uppercase mb-4 mt-3 ml-5 font-weight-bold"
+              className={classes.cantonHeader}
             >
               Canton Management Services
             </h5>
             <Typography className={classes.addressDetails}>
-              <ul style={{ listStyleType: 'none' }}>
+              <ul className={classes.ulcontainer}>
                 <li className={classes.li}>Canton,Michigan,</li>
                 <li className={classes.li}>United States</li>
                 <li style={{ fontWeight: '800' }} className={classes.li}>

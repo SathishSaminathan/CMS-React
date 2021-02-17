@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   cmsContent: {
     position: 'absolute',
     bottom: '25%',
-    left: '13em',
+    left: '11%',
 
     [theme.breakpoints.down('sm')]: {
       left:"10px",
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#0C2D48',
     position: 'relative',
     top: '10px',
-    left: '22%',
+    left: '13%',
     justifyContent: 'center',
     textAlign: 'center',
     color:"white",
@@ -117,7 +117,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
     width: 400,
     position: 'relative',
     top: '10px',
-    left: '8.4%',
+    left: '12.4%',
     justifyContent: 'center',
     textAlign: 'center',
     backgroundColor: '#2E8BC0',
@@ -455,11 +455,11 @@ function Home(props) {
           </Grid>
         </Grid>
 
-        <Grid container className={classes.root} spacing={2}>
+        <Grid container className={classes.root} spacing={0}>
           <Grid item xs={12}>
-            <Grid container justify="center" spacing={2}>
+            <Grid container justify="center" spacing={0}>
               <Grid item>
-              <Fade left delay={1000}>
+              <Fade left >
                 <Paper className={classes.paper1} elevation={0} >
                   <img
                     style={{
@@ -500,7 +500,7 @@ function Home(props) {
               </Grid>
              
               <Grid item>
-              <Fade bottom delay={1000}>
+              <Fade bottom >
                 <Paper className={classes.paper2} elevation={0} >
                   <img
                     className={classes.card2img}
@@ -539,7 +539,7 @@ function Home(props) {
              
               
               <Grid item>
-              <Fade right delay={1000}>
+              <Fade right >
                 <Paper className={classes.paper3} elevation={0} >
                   <img
                     style={{
@@ -583,7 +583,7 @@ function Home(props) {
           </Grid>
 
           <Grid item xs={12} md={6} className={classes.image1Container}>
-          <Fade left delay={1000}>
+          <Fade left >
             <img className={classes.img1} src="../images/looking.jpg" />
 
             <img className={classes.img2} src="../images/working.jpg" />

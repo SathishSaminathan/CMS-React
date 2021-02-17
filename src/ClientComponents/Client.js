@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
       },
       clientH1: {
         [theme.breakpoints.down('md')]: {
-          paddingLeft:"20px"
+         
         },
         [theme.breakpoints.down('xs')]: {
          
@@ -151,17 +151,27 @@ const useStyles = makeStyles((theme) => ({
      
       },
       clientTextContainer: {
-        paddingLeft:"12.8em",
+        position:"absolute",
+        left:"11%",
+        marginBottom: '60px',
+        paddingBottom:"80px",
         
-        [theme.breakpoints.down('md')]: {
-         display:"flex",
-         justifyContent:"center",
-         paddingLeft:"10px",
-         paddingBottom:"50px"
+        [theme.breakpoints.down('xs')]: {
+          left:"2%",
         },
        
       },
-      
+      Header1: {
+        marginTop:"10em",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        [theme.breakpoints.down('xs')]: {
+          justifyContent: 'space-evenly',
+          marginTop:"1em",
+        },
+      },
 }));
 function Client(props) {
     const classes = useStyles();
@@ -191,8 +201,7 @@ function Client(props) {
                 style={{
                   justifyContent: 'center',
                   alignItems: 'center',
-                  position: 'relative',
-                  left: '46%',
+                
                   
                 }}
                 className="underline"

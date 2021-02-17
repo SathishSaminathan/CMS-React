@@ -159,7 +159,7 @@ const useStyles = makeStyles((theme) => ({
   consultancysub: {
     paddingTop: '1em',
     width: '50%',
-    transform: ' translate(50%, 50%)',
+   
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       justifyContent: 'center',
@@ -253,6 +253,12 @@ const useStyles = makeStyles((theme) => ({
     },
    
   },
+  Header1:{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  }
 }));
 function Service(props) {
   const classes = useStyles();
@@ -273,7 +279,7 @@ function Service(props) {
             </Typography>
           </Grid>
           <Grid item md={12} className={classes.Header1}>
-            <Fade top delay={1000}>
+            <Fade top >
               <Typography
                 style={{
                   color: '#0C2D48',
@@ -290,14 +296,12 @@ function Service(props) {
               style={{
                 justifyContent: 'center',
                 alignItems: 'center',
-                position: 'relative',
-                left: '45%',
               }}
               className="underline"
             ></div>
 
             <div className={classes.consultancysub}>
-              <Fade right delay={1000}>
+              <Fade right >
                 <Typography
                   align="center"
                   style={{ fontSize: '18px' }}
@@ -772,7 +776,7 @@ function Service(props) {
             elevation={3}
           >
             <Grid item md={12} className={classes.Header1}>
-              <Fade bottom delay={1000}>
+              <Fade bottom >
                 <Typography
                   style={{
                     color: 'white',
@@ -789,8 +793,6 @@ function Service(props) {
                 style={{
                   justifyContent: 'center',
                   alignItems: 'center',
-                  position: 'relative',
-                  left: '45%',
                 }}
                 className="underline"
               ></div>

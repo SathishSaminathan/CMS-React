@@ -57,12 +57,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   aboutText: {
-    paddingLeft:"12.8em",
-    
-    [theme.breakpoints.down('md')]: {
-     display:"flex",
-     justifyContent:"center",
-     paddingLeft:"0",
+    position:"absolute",
+    left:"11%",
+    marginBottom: '60px',
+    paddingBottom:"80px",
+    [theme.breakpoints.down('sm')]: {
+      left:"2%",
     },
    
   },
@@ -211,6 +211,12 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft:"5px",
     },
   },
+  subGrid:{
+    marginTop:"10em",
+    [theme.breakpoints.down('sm')]: {
+      marginTop:"3em",
+    },
+  }
   
 }));
 
@@ -233,7 +239,7 @@ function AboutUs(props) {
           </Grid>
         
       
-          
+          <Grid container className={classes.subGrid}>
             <Grid item xs={12} md={6} className={classes.cantonContainer}>
               <Fade left>
               <Typography variant="h2" className={classes.cantonTitle}>
@@ -343,6 +349,7 @@ function AboutUs(props) {
               <Grid item xs={12} md={12} style={{marginBottom:"40px"}}>
                 <DoubleCarosel />
               </Grid>
+            </Grid>
             </Grid>
             <FooterPage />
             </Grid>

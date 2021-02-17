@@ -50,13 +50,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   BlogText: {
-    paddingLeft: '12.5em',
-    marginBottom: '60px',
+   
+    
     [theme.breakpoints.down('md')]: {
-      paddingLeft: '60px',
+      
     },
     [theme.breakpoints.down('sm')]: {
-      paddingLeft: '20px',
+    
     },
   },
   GridContainer: {
@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '10px',
     },
     [theme.breakpoints.down('xs')]: {
-      maxWidth: 300,
+      maxWidth:  "100%",
       marginBottom: '120px',
     },
   },
@@ -127,8 +127,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   category: {
+    marginTop:"10em",
     [theme.breakpoints.down('xs')]: {
-      justifyContent: 'center',
+      justifyContent: 'space-evenly',
     },
   },
   btn: {
@@ -144,17 +145,16 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '10px',
     paddingLeft:"10px",
     paddingRight:"10px",
-    marginLeft:"25px"
+ 
     },
   },
   BlogTextContainer: {
-    paddingLeft:"12.8em",
+    position:"absolute",
+    left:"11%",
+    marginBottom: '60px',
     paddingBottom:"80px",
-    [theme.breakpoints.down('md')]: {
-     display:"flex",
-     justifyContent:"center",
-     paddingLeft:"10px",
-     paddingBottom:"50px"
+    [theme.breakpoints.down('sm')]: {
+      left:"2%",
     },
    
   },
@@ -184,24 +184,25 @@ function Blog(props) {
         <HeaderComponent />
         <NavBArMat />
         <Grid container spacing={0} className={classes.GridContainer}>
-          <Grid item md={12} className={classes.BlogTextContainer}>
+          <Grid item md={12} sm={12} xs={12} className={classes.BlogTextContainer}>
             <Typography style={{ fontFamily:"Anton, sans-serif",
     color:"white"}}  variant="h3">Blog</Typography>
           </Grid>
           <Grid
             container
             direction="row"
-            justify="flex-end"
+            justify="space-evenly"
             alignItems="center"
             className={classes.category}
+            
           >
             <Grid item md={2}>
-              <Typography style={{ paddingRight: '20px' }} variant="body1">
-                showing 50 post
+              <Typography style={{ paddingRight: '20px',fontWeight:"500" }} variant="body1">
+                SHOWING 50 POST
               </Typography>
             </Grid>
             <Grid item md={1}>
-              <InputLabel id="demo-controlled-open-select-label">
+              <InputLabel id="demo-controlled-open-select-label" style={{margin:"0"}}>
                 Filter Category
               </InputLabel>
             </Grid>
@@ -225,152 +226,7 @@ function Blog(props) {
             </Grid>
           </Grid>
 
-          {/* <Grid item xs={12} md={3} sm={6} className={classes.blogCard} >
-              <Paper
-                style={{
-                 
-                  backgroundColor: 'transparent',
-                }}
-                className={classes.paper}
-                elevation={0}
-              >
-                <img className={classes.blogImg1} src="../images/bman.jpg" />
-                <Typography className={classes.authorText} variant="subtitle1">
-                  BY AUTHOR PUBLISHED ON JULY 9,2020
-                </Typography>
-                <Typography className={classes.blogTitleText} variant="h5">
-                  blog Title Goes here
-                </Typography>
-                <Typography className={classes.blogContent} variant="h6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia unde provident, earum perspiciatis dolor ratione
-                  molestiae velit iusto obcaecati debitis repellat error libero
-                  neque similique saepe eius veniam illo consequatur.
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
-              <Paper
-                style={{
-                
-                  backgroundColor: 'transparent',
-                }}
-                className={classes.paper}
-                elevation={0}
-              >
-                <img className={classes.blogImg1} src="../images/bwomen.jpg" />
-                <Typography className={classes.authorText} variant="subtitle1">
-                BY AUTHOR PUBLISHED ON JULY 9,2020
-                </Typography>
-                <Typography className={classes.blogTitleText} variant="h5">
-                  blog Title Goes here
-                </Typography>
-                <Typography className={classes.blogContent} variant="h6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia unde provident, earum perspiciatis dolor ratione
-                  molestiae velit iusto obcaecati debitis repellat error libero
-                  neque similique saepe eius veniam illo consequatur.
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
-              <Paper
-                style={{
-                 
-                  backgroundColor: 'transparent',
-                }}
-                className={classes.paper}
-                elevation={0}
-              >
-                <img className={classes.blogImg1} src="../images/training.jpg" />
-                <Typography className={classes.authorText} variant="subtitle1">
-                BY AUTHOR PUBLISHED ON JULY 9,2020
-                </Typography>
-                <Typography className={classes.blogTitleText} variant="h5">
-                  blog Title Goes here
-                </Typography>
-                <Typography className={classes.blogContent} variant="h6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia unde provident, earum perspiciatis dolor ratione
-                  molestiae velit iusto obcaecati debitis repellat error libero
-                  neque similique saepe eius veniam illo consequatur.
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
-              <Paper
-                style={{
-                  backgroundColor: 'transparent',
-                }}
-                className={classes.paper}
-                elevation={0}
-              >
-                <img className={classes.blogImg1} src="../images/bman.jpg" />
-                <Typography className={classes.authorText} variant="subtitle1">
-                BY AUTHOR PUBLISHED ON JULY 9,2020
-                </Typography>
-                <Typography className={classes.blogTitleText} variant="h5">
-                  blog Title Goes here
-                </Typography>
-                <Typography className={classes.blogContent} variant="h6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia unde provident, earum perspiciatis dolor ratione
-                  molestiae velit iusto obcaecati debitis repellat error libero
-                  neque similique saepe eius veniam illo consequatur.
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={3} sm={6} className={classes.blogCard}>
-              <Paper
-                style={{
-                 
-                  backgroundColor: 'transparent',
-                }}
-                className={classes.paper}
-                elevation={0}
-              >
-                <img className={classes.blogImg1} src="../images/bwomen.jpg" />
-                <Typography className={classes.authorText} variant="subtitle1">
-                BY AUTHOR PUBLISHED ON JULY 9,2020
-                </Typography>
-                <Typography className={classes.blogTitleText} variant="h5">
-                  blog Title Goes here
-                </Typography>
-                <Typography className={classes.blogContent} variant="h6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia unde provident, earum perspiciatis dolor ratione
-                  molestiae velit iusto obcaecati debitis repellat error libero
-                  neque similique saepe eius veniam illo consequatur.
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4} sm={6} className={classes.blogCard}>
-              <Paper
-                style={{
-                  
-                  backgroundColor: 'transparent',
-                }}
-                className={classes.paper}
-                elevation={0}
-              >
-                <img className={classes.blogImg1} src="../images/ourclients.jpg" />
-                <Typography className={classes.authorText} variant="subtitle1">
-                BY AUTHOR PUBLISHED ON JULY 9,2020
-                </Typography>
-                <Typography className={classes.blogTitleText} variant="h5">
-                  blog Title Goes here
-                </Typography>
-                <Typography className={classes.blogContent} variant="h6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia unde provident, earum perspiciatis dolor ratione
-                  molestiae velit iusto obcaecati debitis repellat error libero
-                  neque similique saepe eius veniam illo consequatur.
-                </Typography>
-              </Paper>
-              
-            </Grid> */}
-
-          <Grid container spacing={2} className={classes.paperGrid}>
+          <Grid container spacing={0} className={classes.paperGrid}>
             <Grid item xs>
               <Paper
                 style={{
@@ -524,8 +380,8 @@ function Blog(props) {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              paddingRight: '50px',
-              paddingLeft: '50px',
+              width:"100%",
+              marginTop:"50px"
             }}
           >
             <Button variant="outlined" className={classes.btn}>
