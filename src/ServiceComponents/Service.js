@@ -301,7 +301,7 @@ function Service(props) {
             ></div>
 
             <div className={classes.consultancysub}>
-              <Fade right >
+              <Fade bottom >
                 <Typography
                   align="center"
                   style={{ fontSize: '18px' }}
@@ -324,7 +324,7 @@ function Service(props) {
                   direction="column"
                   className={classes.gridcontainer1}
                 >
-                  <Fade left delay={1000}>
+                  <Fade top >
                     <Grid item xs>
                       <Typography
                         gutterBottom
@@ -515,7 +515,7 @@ function Service(props) {
                   </Fade>
                 </Grid>
                 <Grid item md={6} xs={12}>
-                  <Fade right delay={1000}>
+                  <Fade bottom>
                     <Paper elevation={0} className={classes.firstimgcontainer}>
                       <img
                         style={{ width: '100%' }}
@@ -541,7 +541,7 @@ function Service(props) {
                   </Fade>
                 </Grid>
                 <Grid item xs container direction="column">
-                  <Fade right delay={1000}>
+                  <Fade top>
                     <Grid item xs>
                       <Typography
                         gutterBottom
@@ -803,7 +803,7 @@ function Service(props) {
               style={{ marginTop: '5%', marginBottom: '5%' }}
             >
               <Grid item xs={12} sm container>
-                <Fade left delay={1000}>
+                <Fade top>
                   <Grid item xs container direction="column">
                     <Grid item xs>
                       <Typography
@@ -953,7 +953,7 @@ function Service(props) {
                   </Grid>
                 </Fade>
                 <Grid item md={6} xs={12}>
-                  <Fade right delay={1000}>
+                  <Fade bottom>
                     <Paper className={classes.paper3} style={{}}>
                       <img
                         style={{ width: '100%' }}

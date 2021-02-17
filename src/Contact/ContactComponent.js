@@ -48,43 +48,42 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   ContactText: {
-    // display: 'flex',
-    // flexDirection: 'column',
-    // justifyContent: 'space-evenly',
-    // alignItems: 'flex-start',
-    // position: 'absolute',
-    // top: '40%',
-    // left: '10%',
-    // width: '50%',
-    // marginBottom: '10px',
-    paddingLeft: '12.5em',
+    position:"absolute",
+    left:"11%",
     marginBottom: '60px',
-    [theme.breakpoints.down('md')]: {
-      width: '100%',
-      paddingLeft: '10px',
-      display:"flex",
-      justifyContent:"center",
+    paddingBottom:"80px",
+    [theme.breakpoints.down('sm')]: {
+      left:"2%",
     },
+   
   },
   Heading1: {
-    marginBottom: '60px',
-    // position: 'absolute',
-    // top: '60%',
-    // left: '25%',
-    display: 'flex',
-    justifyContent: 'center',
-    textAlign: 'center',
-    width: '50%',
-    alignItems: 'center',
+    marginTop:"10em",
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"center",
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'space-evenly',
+    },
   },
   Heading2: {
     marginLeft: '70px',
     paddingLeft: '10em',
     width: '100%',
+    marginTop: "4em",
     position: 'relative',
     [theme.breakpoints.down('md')]: {
-      marginLeft: '10px',
-      paddingLeft: '29px',
+      width: '100%',
+      marginTop: "4em",
+      position: 'relative',
+      display:"flex",
+      textAlign:"center",
+      alignItems:"center",
+      justifyContent:"center",
+      flexDirection:"column",
+      marginLeft: '0px',
+      paddingLeft: '0',
     },
   },
   root: {
@@ -131,11 +130,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   head1: {
-    width: '50%',
+   width:"50%",
+   textAlign:"center",
     marginTop: '20px',
     fontSize: '20px',
     [theme.breakpoints.down('md')]: {
-      width: '80%',
+      width:"100%",
     },
   },
   businesstext: {
@@ -193,7 +193,7 @@ function ContactComponent(props) {
             className={classes.Heading1}
             direction="column"
           >
-            <Fade top delay={2000}>
+            <Fade top >
               <Typography
                 variant="h3"
                 className={classes.header}
@@ -212,7 +212,7 @@ function ContactComponent(props) {
           </Grid>
 
           <Grid container md={6}>
-            <Grid item xs={12} md={8} className={classes.Heading2}>
+            <Grid item xs={12} md={12} className={classes.Heading2}>
               <Typography variant="h4" style={{ marginBottom: '-25px',fontSize:"24px" }}>
                 Send Us Your Message
               </Typography>
@@ -316,7 +316,7 @@ function ContactComponent(props) {
             direction="column"
           >
             <Paper className={classes.paper}>
-              <Fade left delay={2000}>
+              <Fade left >
                 <div style={{ marginBottom: '50px' }}>
                   <Typography
                     variant="h6"
@@ -342,7 +342,7 @@ function ContactComponent(props) {
                   </Typography>
                 </div>
               </Fade>
-              <Fade right delay={2000}>
+              <Fade right >
                 <div style={{ marginBottom: '50px' }}>
                   <Typography
                     variant="h6"
@@ -362,7 +362,7 @@ function ContactComponent(props) {
                   </Typography>
                 </div>
               </Fade>
-              <Fade left delay={2000}>
+              <Fade left >
                 <div style={{ marginBottom: '50px' }}>
                   <Typography
                     variant="h6"
@@ -382,7 +382,7 @@ function ContactComponent(props) {
                   </Typography>
                 </div>
               </Fade>
-              <Fade right delay={2000}>
+              <Fade right >
                 <div>
                   <Typography
                     variant="h6"

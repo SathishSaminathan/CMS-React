@@ -241,13 +241,13 @@ function AboutUs(props) {
       
           <Grid container className={classes.subGrid}>
             <Grid item xs={12} md={6} className={classes.cantonContainer}>
-              <Fade left>
+              <Fade bottom>
               <Typography variant="h2" className={classes.cantonTitle}>
                 Canton Management Service
               </Typography>
               </Fade>
               <div className="underline"></div>
-              <Fade left>
+              <Fade top>
               <Typography variant="h6" className={classes.cantonText}>
                 Canton Management Services,Inc was established in 2008,CMS is a
                 practical and{' '}
@@ -262,7 +262,7 @@ function AboutUs(props) {
                 </span>
               </Typography>
               </Fade>
-              <Fade left>
+              <Fade bottom>
               <Typography variant="subtitle1" className={classes.cantonText}>
                 We provide consultancy services to
                 Automotive,Tire,Steel,Foundries,Paint and Electrical &
@@ -275,7 +275,7 @@ function AboutUs(props) {
             </Grid>
             
             <Grid item className={classes.aboutimgcontainer} md={6} xs={12}>
-              <Fade right>
+              <Fade top>
               <img className={classes.Aboutimg} src="../images/Aboutus.jpg" />
               </Fade>
             </Grid>
@@ -294,7 +294,7 @@ function AboutUs(props) {
                 . and Conctinual improvement.
               </Typography>
               </Fade>
-              <Fade left>
+              <Fade bottom>
               <Typography variant="subtitle1" className={classes.undertext}>
                 We are well qualified,very experienced and holds certification
                 on Auditing,
@@ -304,7 +304,7 @@ function AboutUs(props) {
                 ,Lean and Siz Sigma Black Belts
               </Typography>
               </Fade>
-              <Fade left>
+              <Fade top>
               <Typography className={classes.undertext} variant="subtitle1">
                 we are commited to contributing to the organization through
                 compatiable guidance.

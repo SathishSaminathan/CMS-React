@@ -583,7 +583,7 @@ function Home(props) {
           </Grid>
 
           <Grid item xs={12} md={6} className={classes.image1Container}>
-          <Fade left >
+          <Fade bottom >
             <img className={classes.img1} src="../images/looking.jpg" />
 
             <img className={classes.img2} src="../images/working.jpg" />
@@ -594,7 +594,7 @@ function Home(props) {
            
             <div class="devicer"></div>
             <Typography variant="h4" style={{ marginLeft: '40px',color:"orangered" }}>About Us</Typography>
-            <Fade right>
+            <Fade top>
             <Typography
               style={{ width: '50%',color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' }}
               variant="h2"

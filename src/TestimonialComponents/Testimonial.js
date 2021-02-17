@@ -125,6 +125,11 @@ const useStyles = makeStyles((theme) => ({
    
     
    color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' ,
+   display:"flex",
+   flexDirection:"column",
+   justifyContent:"center",
+   alignContent:"center",
+   alignItems:"center",
    
     [theme.breakpoints.down('md')]: {
       paddingTop:"50px"
@@ -293,10 +298,10 @@ fontSize:"15px",
       },
     },
     secoundaryGrid:{
-      maxWidth: "80%",
+      maxWidth: "90%",
    
     position: "relative",
-    left: "12%",
+    left: "7%",
     
     [theme.breakpoints.down('md')]: {
       position: "revert",
@@ -334,9 +339,7 @@ className={classes.HeaderText1}
             >
               What Client Says About Us?
               <div
-                style={{
-                  marginLeft:"5em"
-                }}
+               
                 className="underline"
               ></div>
             </Typography>
