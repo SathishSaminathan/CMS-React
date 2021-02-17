@@ -245,7 +245,8 @@ function Service(props) {
         <NavBArMat />
         <Grid container spacing={0} className={classes.GridContainer}>
           <Grid item md={12} className={classes.ClientText}>
-            <Typography variant="h3" className={classes.clientH1}>
+            <Typography variant="h3"  className={classes.clientH1} style={{fontFamily:"Anton, sans-serif",
+    color:"white"}}>
               OUR SERVICE
             </Typography>
           </Grid>

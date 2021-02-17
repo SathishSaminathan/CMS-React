@@ -49,7 +49,7 @@ logo: {
     position: "absolute",
     left: "10%",
     top: "0%",
-    width: "15%",
+    width: "20%",
   },
   phoneContainer: {
     position: "absolute",
@@ -104,14 +104,23 @@ logo: {
     },
   },
   touchBtn: {
-    [theme.breakpoints.down("md")]: {},
+paddingTop:"10px",
+paddingBottom:"10px",
+
+    
+    [theme.breakpoints.down("md")]: {
+
+
+    },
   },
   inTouchBtn: {
     position: "absolute",
 
-    left: "80%",
+    left: "78%",
     top: "3%",
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+     
+    },
   },
    
   }));

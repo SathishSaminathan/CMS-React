@@ -44,15 +44,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   aboutText: {
-    paddingLeft:"12.5em",
-    [theme.breakpoints.down('xs')]: {
-      paddingLeft:"5px",
-     
+    paddingLeft:"12.8em",
+    
+    [theme.breakpoints.down('md')]: {
+     display:"flex",
+     justifyContent:"center",
+     paddingLeft:"0",
     },
-    [theme.breakpoints.down('sm')]: {
-      paddingLeft:"5px",
-     
-    },
+   
   },
   contentContainer: {
    width:"100%",
@@ -173,14 +172,16 @@ const useStyles = makeStyles((theme) => ({
   },
   gridmain:{
     position:"relative",
-    top:"25em",
+    top:"23em",
     [theme.breakpoints.down('xs')]: {
       top:"19em",
     },
    
+   
   },
   aboutTypo:{
-    
+    fontFamily:"Anton, sans-serif",
+    color:"white"
   },
   subs:{
     width:"80%",

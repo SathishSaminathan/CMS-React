@@ -288,7 +288,8 @@ function Testimonial(props) {
         <Grid container spacing={0} className={classes.GridContainer}>
           <Grid item md={12} className={classes.TestimonialText}>
            
-            <Typography variant="h3" className={classes.testimonialH1}>
+            <Typography variant="h3" className={classes.testimonialH1} style={{fontFamily:"Anton, sans-serif",
+    color:"white"}}>
               TESTIMONIALS
             </Typography>
            

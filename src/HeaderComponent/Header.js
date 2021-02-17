@@ -99,8 +99,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   touchBtn: {
-    [theme.breakpoints.down("md")]: {},
-  },
+    paddingTop:"10px",
+    paddingBottom:"10px",
+    
+        
+        [theme.breakpoints.down("md")]: {
+    
+    
+        },
+      },
   inTouchBtn: {
     position: "absolute",
 

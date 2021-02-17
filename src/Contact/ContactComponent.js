@@ -170,7 +170,8 @@ function ContactComponent(props) {
         <NavBArMat />
         <Grid container spacing={0} className={classes.GridContainer}>
           <Grid item md={12} className={classes.ContactText}>
-            <Typography variant="h3">CONTACT</Typography>
+            <Typography variant="h3" style={{fontFamily:"Anton, sans-serif",
+    color:"white"}}>CONTACT</Typography>
           </Grid>
 
           <Grid

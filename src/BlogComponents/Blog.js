@@ -162,7 +162,8 @@ function Blog(props) {
         <NavBArMat />
         <Grid container spacing={0} className={classes.GridContainer}>
           <Grid item md={12} className={classes.BlogText}>
-            <Typography variant="h3">Blog</Typography>
+            <Typography style={{ fontFamily:"Anton, sans-serif",
+    color:"white"}} variant="h3">Blog</Typography>
           </Grid>
           <Grid
             container

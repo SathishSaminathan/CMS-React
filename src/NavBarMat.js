@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   },
 },
 icons:{
-  marginTop:"10px"
+  marginTop:"5px"
 },
 menuicon:{
   display:"flex",

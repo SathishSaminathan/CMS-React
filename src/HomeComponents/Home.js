@@ -36,6 +36,17 @@ const useStyles = makeStyles((theme) => ({
       bottom: '15%',
       marginBottom:"20px"
     },
+    // [theme.breakpoints.down('md')]: {
+    //   display: "flex",
+    // flexDirection: "column",
+    // justifyContent: "center",
+    // alignIitems: "center",
+    // paddingTop: "21em",
+    // bottom: '0',
+    // left: '0',
+    // position:"initial"
+    // },
+   
   },
   paperblog1:{
  height: 350,
