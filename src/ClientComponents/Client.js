@@ -169,7 +169,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         [theme.breakpoints.down('xs')]: {
           justifyContent: 'space-evenly',
-          marginTop:"1em",
+          marginTop:"3em",
         },
       },
 }));
