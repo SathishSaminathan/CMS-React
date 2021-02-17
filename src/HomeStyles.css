@@ -26,4 +26,7 @@
     position: relative;
     bottom: 10px;
   }
- 
+  button:focus {
+
+    outline: 0px auto -webkit-focus-ring-color;
+}

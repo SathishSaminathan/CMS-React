@@ -145,7 +145,7 @@ function Header(props) {
       </div>
 
       <Grid container spacing={3}>
-        <Hidden xsDown>
+        <Hidden mdDown>
           <Grid item xl={3} md={2} className={classes.logoContainer}>
             <img
               className={classes.logo}

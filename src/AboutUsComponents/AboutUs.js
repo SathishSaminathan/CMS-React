@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
     position: "absolute",
     width: "100%",
-    height: "50vh",
+    height: "60vh",
     top: 0,
     left: 0,
     right: 0,
@@ -54,15 +54,19 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: ' 0 -500px',
     [theme.breakpoints.down('md')]: {
       width: '100%',
+    },[theme.breakpoints.down('xs')]: {
+      height: '60vh',
     },
   },
   aboutText: {
     position:"absolute",
     left:"11%",
+    
     marginBottom: '60px',
     paddingBottom:"80px",
     [theme.breakpoints.down('sm')]: {
       left:"2%",
+      top:"1%",
     },
    
   },
@@ -185,7 +189,7 @@ const useStyles = makeStyles((theme) => ({
   },
   gridmain:{
     position:"relative",
-    top:"23em",
+    top:"27em",
     [theme.breakpoints.down('xs')]: {
       top:"19em",
     },
@@ -214,7 +218,7 @@ const useStyles = makeStyles((theme) => ({
   subGrid:{
     marginTop:"10em",
     [theme.breakpoints.down('sm')]: {
-      marginTop:"3em",
+      marginTop:"8em",
     },
   }
   

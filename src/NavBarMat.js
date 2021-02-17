@@ -14,11 +14,13 @@ import Menu from '@material-ui/core/Menu';
 import { withRouter } from 'react-router-dom';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import './NavMatStyles.css';
+import Divider from '@material-ui/core/Divider';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -69,14 +71,34 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom:"35px" 
   },
   btn:{
-     color:"white",
-      
-      '&:hover': {
-        backgroundColor: '#fff',
-        color: '#000',
-        transition:"none",
-        borderRadius:"20px"
+     
+   
+    fontSize: "17px",
+    fontFamily: "Work Sans, sans-serif",
+  //     color: "white !important",
+  //     position:"relative",
+  //     '&::before': {
+  //       content: "",
+  //       position: "absolute",
+  //       width: "100%",
+  //       height: "2px",
+  //       bottom: 0,
+  //       left: 0,
+  //       backgroundColor: "#FFF",
+  //       visibility: "hidden",
+  //       transform: "scaleX(0)",
+  //       transition: "all 0.3s ease-in-out",
+  //     },
+  //     '&:hover:before':{
+  //       visibility: "visible",
+  // transform: "scaleX(1)",
+  //     },
 
+
+      '&:hover': {
+        borderBottom: "white 0.140em solid",
+        transition: "width 0.3s ease 1s, left 0.3s ease 0s",
+      
   },
 },
 icons:{
@@ -136,6 +158,9 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
             {isMobile ? (
               <>
               <div className={classes.hamburger}>
+                <div
+                style={{position:"absolute",left:"4%",paddingTop:"4px"}}><img style={{width:"60%",  filter: "brightness(0) invert(1)",opacity:"0.8"}}  src="./images/logosmall.png"/></div>
+                
                 <IconButton
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
@@ -179,51 +204,58 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
               </>
             ) : (
               <div className={classes.options}>
-                <Button
+                <Link
                   onClick={() => handleButtonClick('/')}
-                  className={classes.btn}
+                 className={classes.btn}
                   size="large"
+
                 >
                   Home
-                </Button>
-                <Button
+                </Link>
+                <Link
                   onClick={() => handleButtonClick('/about')}
                   className={classes.btn}
                 >
                   About
-                </Button>
-                <Button
+                </Link>
+                <Link
                   onClick={() => handleButtonClick('/service')}
                   className={classes.btn}
                 >
                   Our Services
-                </Button>
-                <Button
+                </Link>
+                <Link
                   onClick={() => handleButtonClick('/blog')}
                   className={classes.btn}
                 >
                   News & Blog
-                </Button>
-                <Button
+                </Link>
+                <Link
                   onClick={() => handleButtonClick('/client')}
                   className={classes.btn}
                 >
                   Our Clients
-                </Button>
-                <Button
+                </Link>
+                <Link
                   onClick={() => handleButtonClick('/testimonial')}
                   className={classes.btn}
                 >
                   Testimonials
-                </Button>
-                <Button
+                </Link>
+                <Link
                   onClick={() => handleButtonClick('/contact')}
                   className={classes.btn}
                 >
                   Contact
-                </Button>
+                </Link>
+                <Divider orientation="vertical" flexItem />
+
                 <FacebookIcon className={classes.icons}/>
+                <Divider orientation="vertical" flexItem />
+
                 <TwitterIcon  className={classes.icons}/>
+                <Divider orientation="vertical" flexItem />
+
                 <InstagramIcon  className={classes.icons}/>
               </div>
             )}
