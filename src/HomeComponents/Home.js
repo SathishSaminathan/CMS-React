@@ -339,6 +339,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     display: 'flex',
     marginTop: '70px',
+    marginBottom:"1em"
   },
   trustcontainer: {
     marginLeft: '16%',

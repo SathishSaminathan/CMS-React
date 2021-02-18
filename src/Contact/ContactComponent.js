@@ -97,7 +97,14 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     width: 300,
-    height: 470,
+    height: 470,  
+    marginTop: "4em",
+    marginLeft: "12em",
+    [theme.breakpoints.down('sm')]: {
+    
+      margin: '0px',
+      padding: '0',
+    },
     '&:hover, &:focus': {
       transform: 'scale(1.03)',
       boxShadow:
@@ -175,6 +182,20 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Hammersmith One, sans-serif',
     [theme.breakpoints.down('md')]: {
      fontSize:"26px"
+    },
+  },
+  paperContainer:{
+    [theme.breakpoints.down('md')]: {
+      
+      marginTop: "4em",
+     
+      display:"flex",
+      textAlign:"center",
+      alignItems:"center",
+      justifyContent:"center",
+      flexDirection:"column",
+      margin: '0',
+      padding: '0',
     },
   }
 }));
@@ -321,12 +342,12 @@ function ContactComponent(props) {
             item
             xs={12}
             md={6}
-            className={classes.Heading1}
+            className={classes.paperContainer}
             direction="column"
           >
             <Paper className={classes.paper}>
               <Fade left >
-                <div style={{ marginBottom: '50px' }}>
+                <div style={{ }}>
                   <Typography
                     variant="h6"
                     style={{

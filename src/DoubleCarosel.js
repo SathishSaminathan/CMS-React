@@ -37,12 +37,14 @@ const useStyles = makeStyles((theme) => ({
     position:"relative",
     top:"-10px",
     left:"8px",
+    paddingTop:"20px",
     [theme.breakpoints.down('md')]: {
       top:"0px",
       width:"10%",
     },[theme.breakpoints.down('xs')]: {
       top:"0px",
       width:"20%",
+      paddingTop:"5px",
     },
 
 
