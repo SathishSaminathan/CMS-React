@@ -48,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
      
       padding:"0px",
     },
+  },
+  logo:{
+    
   }
   
 }));
@@ -94,7 +97,7 @@ const FooterPagePro = () => {
             <div className="text-center py-3">
               <ul className="list-unstyled list-inline mb-0">
                 <li className="list-inline-item">
-                  <img src="./images/logoBg.png" />
+                  <img className={classes.logo} src="./images/logoBg.png" />
                 </li>
               </ul>
             </div>
