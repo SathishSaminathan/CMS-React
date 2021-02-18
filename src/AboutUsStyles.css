@@ -7,3 +7,12 @@ footer.page-footer{
     width:100%;
     
 }
+.MuiButton-root:hover {
+    background-color: orangered;
+  }
+  
+  
+  .MuiButton-root:hover {
+   
+    background-color: orangered;
+  }

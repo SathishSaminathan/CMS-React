@@ -122,6 +122,7 @@ function NavBArMat(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+ 
 
   const handleChange = (event) => {
     setAuth(event.target.checked);

@@ -79,8 +79,8 @@ const useStyles = makeStyles((theme) => ({
     height:330,
 backgroundColor:"#0C2D48",
 [theme.breakpoints.down('xs')]: {
-  width: "241px",
-  height: "400px",
+  width: "301px",
+  height: "352px",
 },
 },
   cardTitle:{
@@ -134,7 +134,7 @@ fontSize:"15px",
     },
     cardContainerMain:{
     
-    marginLeft:"40px"
+   
     },
     willimgcontainer:{
       [theme.breakpoints.down('md')]: {
@@ -144,6 +144,13 @@ fontSize:"15px",
         borderRadius: "50%",
         transform:" scale(.76, .5)",
       },
+    },
+    caroselinner:{
+      
+        
+        display: "flex",
+        justifyContent: "center",
+ 
     }
     
   }
@@ -165,7 +172,7 @@ const DoubleCarosel = () => {
         showIndicators={true}
         
       >
-        <MDBCarouselInner>
+        <MDBCarouselInner className={classes.caroselinner}>
           <MDBRow>
             {/* <MDBCarouselItem itemId="1" >
               <Grid container direction="row" spacing={2} alignContent='space-around' style={{marginLeft:"10px"}}>
@@ -201,9 +208,9 @@ const DoubleCarosel = () => {
             </MDBCarouselItem> */}
            
             <MDBCarouselItem itemId="1" >
-              <Grid container direction="row" spacing={0} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
+              <Grid container direction="row" spacing={2} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                  <Paper className={classes.card}  style={{  padding: '10px' }} elevation={4}>
+                  <Paper className={classes.card}  style={{  padding: '10px' }} elevation={0}>
                    
                     <div className={classes.willimgcontainer}>
                        <img
@@ -221,7 +228,7 @@ const DoubleCarosel = () => {
                 <Hidden mdDown>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
                
-                <Paper className={classes.card}  style={{  padding: '10px',backgroundColor: "#a40606",
+                <Paper className={classes.card} elevation={0}  style={{  padding: '10px',backgroundColor: "#a40606",
 backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
                    
                 <div className={classes.willimgcontainer}>
@@ -244,7 +251,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
             <MDBCarouselItem itemId="2" >
               <Grid container direction="row" spacing={2} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                <Paper className={classes.card}  style={{  padding: '10px' }}>
+                <Paper className={classes.card} elevation={0} style={{  padding: '10px' }}>
                    
                 <div className={classes.willimgcontainer}>
                    <img
@@ -252,7 +259,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
                   src="./images/willsmith.jpg"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+                <Typography className={classes.cardTitle} style={{}}>will SmithB</Typography>
                <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                <img className={classes.starimg} src="./images/5star.png"/>
                <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
@@ -262,7 +269,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
                 <Hidden mdDown>
 
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                <Paper className={classes.card}  style={{  padding: '10px',backgroundColor: "#a40606",
+                <Paper className={classes.card} elevation={0}  style={{  padding: '10px',backgroundColor: "#a40606",
 backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)", }}>
                    
                 <div className={classes.willimgcontainer}>
@@ -271,7 +278,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)", }}>
                   src="./images/willsmith.jpg"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
+                <Typography className={classes.cardTitle} style={{}}>will SmithA</Typography>
                <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
                <img className={classes.starimg} src="./images/5star.png"/>
                <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
