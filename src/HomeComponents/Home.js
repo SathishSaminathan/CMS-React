@@ -551,7 +551,7 @@ function Home(props) {
 
               <Grid item>
                 <Fade right>
-                  <Paper className={classes.paper3} elevation={0}>
+                  <Paper  className={classes.paper3} elevation={0}>
                     <img
                       style={{
                         width: '90px',
@@ -560,7 +560,7 @@ function Home(props) {
                       }}
                       src="../images/presentation.png"
                     />
-                    <Typography className={classes.cardText} variant="h5">
+                    <Typography  style={{ fontSize: '22px', marginBottom: '10px' }} className={classes.cardText} variant="h5">
                       Training Workshops
                     </Typography>
 
