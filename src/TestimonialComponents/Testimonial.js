@@ -119,6 +119,9 @@ const useStyles = makeStyles((theme) => ({
     zIndex: '-1',
    top:"-10px",
    left:"-23px",
+   [theme.breakpoints.down('xs')]: {
+    left:"-10px",
+  },
    
   },
   HeaderText1: {
@@ -267,6 +270,11 @@ fontSize:"15px",
           marginRight:"10px",
          
         },
+        [theme.breakpoints.down('xs')]: {
+          marginLeft:"15px"
+         
+        },
+
      
     },
     cardsubtext:{
