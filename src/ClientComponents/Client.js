@@ -13,7 +13,9 @@ import {
   Button,
 } from '@material-ui/core';
 import NavBArMat from '../NavBarMat';
-
+import ScrollUp from '../ScrollUp';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import Fab from "@material-ui/core/Fab";
 import HeaderComponent from '../HeaderComponnent';
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -183,7 +185,7 @@ function Client(props) {
     const classes = useStyles();
     return (
         <div >
-            <div className={classes.imageContainer}>
+            <div className={classes.imageContainer}  id="back-to-top-anchor">
         <img className={classes.bgimg}  src={clientimg} />
       </div>
       <ThemeProvider theme={theme}>
@@ -253,6 +255,12 @@ Our clients are over 400 of the worlds leading organizations,from a wide range o
           </Grid>
           
         </ThemeProvider>
+        <ScrollUp {...props}>
+        <Fab style={{  backgroundColor: '#a40606',
+    backgroundImage: ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',opacity: "0.5"}} size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollUp>
         </div>
     );
 }

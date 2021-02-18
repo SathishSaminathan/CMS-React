@@ -20,6 +20,9 @@ import FooterPage from '../Footer';
 import NavBArMat from '../NavBarMat';
 import Fade from 'react-reveal/Fade';
 import { MDBMask, MDBView } from 'mdbreact';
+import ScrollUp from '../ScrollUp';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import Fab from "@material-ui/core/Fab";
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -414,10 +417,10 @@ function Home(props) {
     <div>
       <ThemeProvider theme={theme}>
         <Header />
-        <NavBArMat />
+        <NavBArMat  />
 
-        <Grid xl="auto" container>
-          <Grid item spacing={2} xs={12} className={classes.cmsContent}>
+        <Grid xl="auto" container id="back-to-top-anchor">
+          <Grid item spacing={2} xs={12}  className={classes.cmsContent}>
             <Typography
               style={{
                 marginBottom: '30px',
@@ -819,6 +822,12 @@ function Home(props) {
           <FooterPage />
         </Grid>
       </ThemeProvider>
+      <ScrollUp {...props}>
+        <Fab style={{  backgroundColor: '#a40606',
+    backgroundImage: ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',    opacity: "0.5"}} size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollUp>
     </div>
   );
 }

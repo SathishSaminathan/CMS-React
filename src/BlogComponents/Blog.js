@@ -16,7 +16,9 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import NavBArMat from '../NavBarMat';
-
+import ScrollUp from '../ScrollUp';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import Fab from "@material-ui/core/Fab";
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
@@ -177,7 +179,7 @@ function Blog(props) {
   };
   return (
     <div>
-      <div className={classes.imageContainer}>
+      <div className={classes.imageContainer} id="back-to-top-anchor">
         <img className={classes.bgimg} src="images/Blog.jpg" />
       </div>
       <ThemeProvider theme={theme}>
@@ -392,6 +394,12 @@ function Blog(props) {
           <FooterPage />
         </Grid>
       </ThemeProvider>
+      <ScrollUp {...props}>
+        <Fab style={{  backgroundColor: '#a40606',
+    backgroundImage: ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',opacity: "0.5"}} size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollUp>
     </div>
   );
 }

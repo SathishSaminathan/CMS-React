@@ -14,7 +14,9 @@ import {
 import HeaderComponent from '../HeaderComponnent';
 import NavBArMat from '../NavBarMat';
 import Fade from 'react-reveal/Fade';
-
+import ScrollUp from '../ScrollUp';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import Fab from "@material-ui/core/Fab";
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
@@ -180,7 +182,7 @@ function ContactComponent(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.imageContainer}>
+      <div className={classes.imageContainer} id="back-to-top-anchor">
         <img className={classes.bgimg} src="images/telphone.jpg" />
       </div>
       <ThemeProvider theme={theme}>
@@ -218,7 +220,7 @@ function ContactComponent(props) {
           </Grid>
 
           <Grid container md={6}>
-            <Grid item xs={12} md={12} className={classes.Heading2}>
+            <Grid item xs={12} md={9} className={classes.Heading2}>
               <Typography variant="h4" style={{ marginBottom: '-25px',fontSize:"24px" }}>
                 Send Us Your Message
               </Typography>
@@ -302,10 +304,11 @@ function ContactComponent(props) {
                   style={{
                     color: 'white',
                     backgroundColor: 'orangered',
-                    marginBottom: '40px',
+                    marginBottom: '20px',
                     borderRadius: '30px',
                     paddingBottom: '15px',
                     paddingTop: '15px',
+                   marginTop:"1em"
                   }}
                   variant="outlined"
                 >
@@ -434,6 +437,12 @@ function ContactComponent(props) {
           <FooterPage />
         </Grid>
       </ThemeProvider>
+      <ScrollUp {...props}>
+        <Fab style={{  backgroundColor: '#a40606',
+    backgroundImage: ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',opacity: "0.5"}} size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollUp>
     </div>
   );
 }

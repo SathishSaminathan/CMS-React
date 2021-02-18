@@ -18,7 +18,9 @@ import DoubleCarosel from '../DoubleCarosel';
 import FooterPagePro from '../Footer';
 import NavBArMat from '../NavBarMat';
 import Fade from 'react-reveal/Fade';
-
+import ScrollUp from '../ScrollUp';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import Fab from "@material-ui/core/Fab";
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
@@ -231,13 +233,13 @@ function AboutUs(props) {
   console.log(width);
   return (
     <div>
-      <div className={classes.imageContainer}>
+      <div className={classes.imageContainer} id="back-to-top-anchor">
         <img className={classes.bgimg} src="images/handshake.jpg" />
       </div>
       <ThemeProvider theme={theme}>
         <HeaderComponent />
         <NavBArMat />
-        <Grid container className={classes.gridmain}>
+        <Grid container  className={classes.gridmain}>
           <Grid item md={12} className={classes.aboutText}>
             <Typography className={classes.aboutTypo} variant="h3">ABOUT US {width}</Typography>
           </Grid>
@@ -361,6 +363,12 @@ function AboutUs(props) {
           
         
       </ThemeProvider>
+      <ScrollUp {...props}>
+        <Fab style={{  backgroundColor: '#a40606',
+    backgroundImage: ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',opacity: "0.5"}} size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollUp>
     </div>
   );
 }
