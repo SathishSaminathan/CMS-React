@@ -1,11 +1,13 @@
-import React from "react";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-import { Box, Button, Hidden, Typography } from "@material-ui/core";
-import PhoneInTalkOutlinedIcon from "@material-ui/icons/PhoneInTalkOutlined";
-import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
-import Navbar from "./NavBar";
 import "../HomeStyles.css";
+
+import { Box, Button, Hidden, Typography } from "@material-ui/core";
+
+import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
+import Grid from "@material-ui/core/Grid";
+import Navbar from "./NavBar";
+import PhoneInTalkOutlinedIcon from "@material-ui/icons/PhoneInTalkOutlined";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
@@ -49,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     // filter: "invert(48%) sepia(13%) saturate(3207%) hue-rotate(335deg) brightness(95%) contrast(80%)",
       
     [theme.breakpoints.down("xl")]: {
-      width: "50%",
+      width: "135px",
     },
   },
 
@@ -130,6 +132,20 @@ const useStyles = makeStyles((theme) => ({
     top: "3%",
     [theme.breakpoints.down("md")]: {},
   },
+  textContainer:{
+    paddingLeft:15
+  },
+  text:{
+    fontSize: "16px",
+    color:"white",
+    fontFamily:"Poppins",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "12px",
+    },
+  },
+  icons:{
+    color:"white"
+  }
 }));
 
 function Header(props) {
@@ -144,7 +160,7 @@ function Header(props) {
         />
       </div>
 
-      <Grid container spacing={3}>
+      {/* <Grid container spacing={3}>
         <Hidden mdDown>
           <Grid item xl={3} md={2} className={classes.logoContainer}>
             <img
@@ -171,12 +187,14 @@ function Header(props) {
               <EmailOutlinedIcon
                 style={{ position: "relative", top: "-10px",color:"white" }}
               />
+              <div className={classes.emailContainer}>
               <Typography className={classes.email} variant="h6">
                 cantonManagement@gmail.com
               </Typography>
               <Typography style={{fontWeight:"500"}} className={classes.emailText}>
                 Get in Touch
               </Typography>
+              </div>
             </div>
           </Grid>
           <Grid item xl={3} md={2} className={classes.inTouchBtn}>
@@ -190,7 +208,48 @@ function Header(props) {
             </Button>
           </Grid>
         </Hidden>
-      </Grid>
+      </Grid> */}
+      <div style={{display: 'flex',justifyContent: 'center'}}>
+      <div style={{width:"78%"}}>
+      <Hidden mdDown>
+        <div style={{display:"flex", flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
+        <div>
+          <img src="/images/logoBg.png" alt="" style={{width:"135px"}}/>
+        </div>
+        <div style={{display:"flex", flexDirection:"row",paddingTop:"15px"}}>
+        <div>
+        <PhoneInTalkOutlinedIcon className={classes.icons}/>
+        </div>
+        <div className={classes.textContainer}>
+          <Typography className={classes.text}>+1(242)848-2805</Typography>
+          <Typography  className={classes.text}>Give us a call</Typography>
+        </div>
+        </div>
+        <div style={{display:"flex", flexDirection:"row",paddingTop:"15px"}}>
+        <div>
+        <EmailOutlinedIcon className={classes.icons}
+              />
+        </div>
+        <div className={classes.textContainer}>
+          <Typography  className={classes.text}>cantonManagement@gmail.com</Typography>
+          <Typography  className={classes.text}>Get in Touch</Typography>
+        </div>
+        </div>
+
+      <div style={{paddingTop:"10px"}}>
+      <Button
+              className={classes.touchBtn}
+              variant="outlined"
+              size="medium"
+              style={{borderRadius:"20px",  borderColor:"white"}}
+            >
+              Get in Touch
+            </Button>
+      </div>
+        </div>
+</Hidden>
+      </div>
+    </div>
     </div>
   );
 }
