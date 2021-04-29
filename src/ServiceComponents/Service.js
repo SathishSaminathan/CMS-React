@@ -1,21 +1,23 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import FooterPage from '../Footer';
-import clientimg from '../assets/images/clients1.jpg';
+import '../workshopStyles.css';
+
 import {
+  Button,
   Grid,
+  Paper,
+  TextField,
+  ThemeProvider,
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-  ThemeProvider,
-  Paper,
-  TextField,
-  Button,
 } from '@material-ui/core';
-import '../workshopStyles.css';
+
+import Fade from 'react-reveal/Fade';
+import FooterPage from '../Footer';
 import HeaderComponent from '../HeaderComponnent';
 import NavBArMat from '../NavBarMat';
-import Fade from 'react-reveal/Fade';
+import React from 'react';
+import clientimg from '../assets/images/clients1.jpg';
+import { makeStyles } from '@material-ui/core/styles';
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -974,7 +976,7 @@ function Service(props) {
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Button className={classes.btnconsol}>Book a Consulation</Button>
+              <Button className={classes.btnconsol}>Book a Consultation</Button>
             </Grid>
           </Grid>
           <FooterPage />

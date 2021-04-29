@@ -1,26 +1,28 @@
-import React from 'react';
-import Header from '../HeaderComponent/Header';
-import { makeStyles } from '@material-ui/core/styles';
-import FooterPage from '../Footer';
+import '../AboutUsStyles.css';
 
 import {
   Grid,
+  Paper,
+  ThemeProvider,
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-  ThemeProvider,
-  Paper,
 } from '@material-ui/core';
-import HeaderComponent from '../HeaderComponnent';
-import '../AboutUsStyles.css';
+
 import AlbumOutlinedIcon from '@material-ui/icons/AlbumOutlined';
 import DoubleCarosel from '../DoubleCarosel';
-import FooterPagePro from '../Footer';
-import NavBArMat from '../NavBarMat';
-import Fade from 'react-reveal/Fade';
-import ScrollUp from '../ScrollUp';
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Fab from "@material-ui/core/Fab";
+import Fade from 'react-reveal/Fade';
+import FooterPage from '../Footer';
+import FooterPagePro from '../Footer';
+import Header from '../HeaderComponent/Header';
+import HeaderComponent from '../HeaderComponnent';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import NavBArMat from '../NavBarMat';
+import React from 'react';
+import ScrollUp from '../ScrollUp';
+import { makeStyles } from '@material-ui/core/styles';
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
@@ -63,9 +65,9 @@ const useStyles = makeStyles((theme) => ({
   aboutText: {
     position:"absolute",
     left:"11%",
-    
-    marginBottom: '60px',
-    paddingBottom:"80px",
+    // marginBottom: '60px',
+    // paddingBottom:"80px",
+    top:"-5%",
     [theme.breakpoints.down('sm')]: {
       left:"2%",
       top:"1%",

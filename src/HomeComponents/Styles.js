@@ -282,7 +282,7 @@ let useStyles = makeStyles((theme) => ({
     },
     authorText: {
       fontSize: '14px',
-  
+      padding:"10px 0px",
       color: 'white',
     },
     blogTitleText: {

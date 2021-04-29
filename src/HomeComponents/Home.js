@@ -57,7 +57,7 @@ function Home(props) {
               style={{ marginBottom: '30px', color: 'white' }}
               variant="h5"
             >
-              type of consultancy services organization
+              Type of consultancy services organization
             </Typography>
             <Button
             onClick={()=>history.push("./service")}
@@ -132,7 +132,6 @@ function Home(props) {
                       }}
                       variant="h6"
                     >
-                      Read More
                     </Typography>
                   </Paper>
                 </Fade>
@@ -167,7 +166,6 @@ function Home(props) {
                       }}
                       variant="h6"
                     >
-                      Read More
                     </Typography>
                   </Paper>
                 </Fade>
@@ -202,7 +200,6 @@ function Home(props) {
                       }}
                       variant="h6"
                     >
-                      Read More
                     </Typography>
                   </Paper>
                 </Fade>
@@ -368,6 +365,7 @@ function Home(props) {
 
             <Grid item xs={12} md={12} xl={12} className={classes.blogBtn}>
               <Button
+              onClick={()=>history.push("/blog")}
                 variant="outlined"
                 style={{
                   color: 'black',
@@ -402,7 +400,7 @@ function Home(props) {
             </Grid>
           </Grid>
           <Grid container className={classes.cardCarosel}>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12} md={12} style={{paddingTop:60}}>
               <Typography
                 variant="h4"
                 style={{
@@ -425,7 +423,7 @@ function Home(props) {
                 What clients Say About Us ?
               </Typography>
             </Grid>
-            <Grid item xs={12} md={12} style={{ marginBottom: '25px' }}>
+            <Grid item xs={12} md={12} style={{ marginBottom: '60px' }}>
               <DoubleCarosel />
             </Grid>
           </Grid>
@@ -437,7 +435,7 @@ function Home(props) {
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Button className={classes.btnconsol}>Book a Consulation</Button>
+              <Button className={classes.btnconsol}>Book a Consultation</Button>
             </Grid>
           </Grid>
           <FooterPage />

@@ -1,22 +1,24 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import FooterPage from '../Footer';
 import {
+  Button,
   Grid,
+  Paper,
+  TextField,
+  ThemeProvider,
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-  ThemeProvider,
-  Paper,
-  TextField,
-  Button,
 } from '@material-ui/core';
-import HeaderComponent from '../HeaderComponnent';
-import NavBArMat from '../NavBarMat';
-import Fade from 'react-reveal/Fade';
-import ScrollUp from '../ScrollUp';
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+
 import Fab from "@material-ui/core/Fab";
+import Fade from 'react-reveal/Fade';
+import FooterPage from '../Footer';
+import HeaderComponent from '../HeaderComponnent';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import NavBArMat from '../NavBarMat';
+import React from 'react';
+import ScrollUp from '../ScrollUp';
+import { makeStyles } from '@material-ui/core/styles';
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
@@ -65,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection:"column",
     justifyContent:"center",
     alignItems:"center",
+    marginBottom:"4em",
     [theme.breakpoints.down('xs')]: {
       justifyContent: 'space-evenly',
     },
@@ -132,6 +135,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     height: '35vh',
     marginBottom: '-25px',
+    marginTop: '6em'
   },
   subtext1: {
     marginTop: '20px',
@@ -296,6 +300,8 @@ function ContactComponent(props) {
                 id="standard-number"
                 label="Number"
                 type="number"
+                size="small"
+                variant="outlined"
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -308,7 +314,7 @@ function ContactComponent(props) {
               />
               <TextField
                 id="outlined-multiline-static"
-                label="Multiline"
+                label="Message"
                 multiline
                 rows={4}
                 defaultValue=""
@@ -347,7 +353,7 @@ function ContactComponent(props) {
           >
             <Paper className={classes.paper}>
               <Fade left >
-                <div style={{ }}>
+                <div style={{ marginBottom: "37px"}}>
                   <Typography
                     variant="h6"
                     style={{
@@ -451,7 +457,7 @@ function ContactComponent(props) {
               <Button
                 className={classes.btnconsol}
               >
-                Book a Consulation
+                Book a Consultation
               </Button>
             </Grid>
           </Grid>

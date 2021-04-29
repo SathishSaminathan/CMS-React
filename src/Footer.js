@@ -1,11 +1,14 @@
-import React from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdbreact';
+import { MDBCol, MDBContainer, MDBFooter, MDBRow } from 'mdbreact';
+
 import Link from '@material-ui/core/Link';
+import React from 'react';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+
 const useStyles = makeStyles((theme) => ({
   li: {
     fontSize: '22px',
+    fontFamily:"Poppins"
   },
   addressDetails: {
     
@@ -34,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cantonHeader:{
-    fontFamily: "Yanone Kaffeesatz, sans-serif",
+    fontFamily:"Poppins",
+    fontWeight:600,
     fontSize:"30px",
     paddingLeft:"40px",
     [theme.breakpoints.down('sm')]: {
@@ -61,11 +65,11 @@ const FooterPagePro = () => {
     <MDBFooter
       color="bg-dark"
       className="page-footer font-small pt-4 mt-4"
-      style={{ width: '100%', backgroundColor: '1e212d' }}
+      style={{ width: '100%', backgroundColor: '1e212d',paddingTop: '40px'}}
     >
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
-          <MDBCol md="5">
+          <MDBCol md="5" style={{paddingTop: '40px'}}>
             <h5
               className={classes.cantonHeader}
             >
@@ -75,18 +79,18 @@ const FooterPagePro = () => {
               <ul className={classes.ulcontainer}>
                 <li className={classes.li}>Canton,Michigan,</li>
                 <li className={classes.li}>United States</li>
-                <li style={{ fontWeight: '800' }} className={classes.li}>
+                <li style={{fontFamily:"Poppins", fontWeight: '600' }} className={classes.li}>
                   Mail us:
                   <Link href="#" style={{ color: 'orangered',fontSize:"22px" }}>
-                    palani59@gmail.com
+                     palani59@gmail.com
                   </Link>
                 </li>
-                <li style={{ fontWeight: '800' }} className={classes.li}>
+                <li style={{ fontFamily:"Poppins", fontWeight: '600' }} className={classes.li}>
                   Call us:
                   <Typography
                     style={{ fontSize: '20px', display: 'inline-block' }}
                   >
-                    +1(248)842 - 2805
+                     +1(242)848-2805
                   </Typography>
                 </li>
               </ul>
@@ -151,8 +155,8 @@ const FooterPagePro = () => {
       </div>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright:{' '}
-          <a href=""> CantonManagement.com </a>
+         
+          <a href="" style={{fontFamily:"Poppins"}}>© 2021 CANTON MANAGEMENT SERVICES.ALL RIGHTS RESERVED. </a>
         </MDBContainer>
       </div>
     </MDBFooter>

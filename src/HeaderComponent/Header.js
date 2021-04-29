@@ -139,6 +139,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     color:"white",
     fontFamily:"Poppins",
+    fontWeight:500,
+
     [theme.breakpoints.down("md")]: {
       fontSize: "12px",
     },
@@ -159,56 +161,6 @@ function Header(props) {
           className={classes.companyImg}
         />
       </div>
-
-      {/* <Grid container spacing={3}>
-        <Hidden mdDown>
-          <Grid item xl={3} md={2} className={classes.logoContainer}>
-            <img
-              className={classes.logo}
-              src="/images/logoBg.png"
-              alt="companylogo"
-            />
-          </Grid>
-          <Grid item xl={3} md={2} className={classes.phoneContainer}>
-            <div className={classes.phoneDetails}>
-              <PhoneInTalkOutlinedIcon
-                style={{ position: "relative", top: "19px", right: "50px",color:"white" }}
-              />
-              <Typography className={classes.phoneNumber} variant="h6">
-                +1(242)848-2805
-              </Typography>
-              <Typography style={{ fontSize: "16px",paddingTop:"12px",fontWeight:"500",color:"white" }}>
-                Give us a call
-              </Typography>
-            </div>
-          </Grid>
-          <Grid item xl={3} md={2} className={classes.emailContainer}>
-            <div className={classes.emailDetails}>
-              <EmailOutlinedIcon
-                style={{ position: "relative", top: "-10px",color:"white" }}
-              />
-              <div className={classes.emailContainer}>
-              <Typography className={classes.email} variant="h6">
-                cantonManagement@gmail.com
-              </Typography>
-              <Typography style={{fontWeight:"500"}} className={classes.emailText}>
-                Get in Touch
-              </Typography>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xl={3} md={2} className={classes.inTouchBtn}>
-            <Button
-              className={classes.touchBtn}
-              variant="outlined"
-              size="medium"
-              style={{borderRadius:"20px",  borderColor:"white"}}
-            >
-              Get in Touch
-            </Button>
-          </Grid>
-        </Hidden>
-      </Grid> */}
       <div style={{display: 'flex',justifyContent: 'center'}}>
       <div style={{width:"78%"}}>
       <Hidden mdDown>
@@ -217,7 +169,7 @@ function Header(props) {
           <img src="/images/logoBg.png" alt="" style={{width:"135px"}}/>
         </div>
         <div style={{display:"flex", flexDirection:"row",paddingTop:"15px"}}>
-        <div>
+        <div style={{display:"flex",alignItems:"center"}}>
         <PhoneInTalkOutlinedIcon className={classes.icons}/>
         </div>
         <div className={classes.textContainer}>
@@ -226,13 +178,13 @@ function Header(props) {
         </div>
         </div>
         <div style={{display:"flex", flexDirection:"row",paddingTop:"15px"}}>
-        <div>
+        <div style={{display:"flex",alignItems:"center"}}>
         <EmailOutlinedIcon className={classes.icons}
               />
         </div>
         <div className={classes.textContainer}>
           <Typography  className={classes.text}>cantonManagement@gmail.com</Typography>
-          <Typography  className={classes.text}>Get in Touch</Typography>
+          {/* <Typography  className={classes.text}>Get in Touch</Typography> */}
         </div>
         </div>
 

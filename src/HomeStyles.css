@@ -39,3 +39,6 @@
  
   background-color: orangered;
 }
+.carousel-indicators{
+  display: none
+}
