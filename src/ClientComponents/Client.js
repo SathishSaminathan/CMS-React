@@ -1,22 +1,24 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import FooterPage from '../Footer';
-import clientimg from '../assets/images/clients1.jpg'
 import {
+  Button,
   Grid,
+  Paper,
+  TextField,
+  ThemeProvider,
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-  ThemeProvider,
-  Paper,
-  TextField,
-  Button,
 } from '@material-ui/core';
-import NavBArMat from '../NavBarMat';
-import ScrollUp from '../ScrollUp';
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+
 import Fab from "@material-ui/core/Fab";
+import FooterPage from '../Footer';
 import HeaderComponent from '../HeaderComponnent';
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import NavBArMat from '../NavBarMat';
+import React from 'react';
+import ScrollUp from '../ScrollUp';
+import clientimg from '../assets/images/clients1.jpg'
+import { makeStyles } from '@material-ui/core/styles';
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
@@ -216,7 +218,7 @@ function Client(props) {
               ></div>
                 <div className={classes.consultancysub}>
               <Typography className={classes.subtext}>
-Our clients are over 400 of the worlds leading organizations,from a wide range of sectors.
+Our clients are over 400 of the worlds leading organizations, from a wide range of sectors.
                 </Typography>
                 </div></Grid>
           <Grid container direction="row"

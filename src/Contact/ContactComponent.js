@@ -1,3 +1,6 @@
+import "../../src/"
+import "../HomeStyles.css";
+
 import {
   Button,
   Grid,
@@ -287,7 +290,7 @@ function ContactComponent(props) {
                 defaultValue=""
                 variant="outlined"
                 size="small"
-                label="EmailAdress"
+                label="EmailAddress"
                 variant="outlined"
                 style={{
                   marginRight: '20px',
@@ -368,13 +371,13 @@ function ContactComponent(props) {
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    canton management services,
+                    Canton Management Services,
                   </Typography>
                   <Typography
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    Canton Mixigon,
+                    Canton Michigan,
                   </Typography>
                 </div>
               </Fade>
@@ -434,13 +437,13 @@ function ContactComponent(props) {
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    Mon-Fri:10.00-19.00
+                    Mon-Fri: 10.00-19.00
                   </Typography>
                   <Typography
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    sat-sun:Holiday
+                    Sat-Sun: Holiday
                   </Typography>
                 </div>
               </Fade>

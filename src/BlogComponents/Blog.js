@@ -1,24 +1,26 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import FooterPage from '../Footer';
 import {
+  Button,
   Grid,
+  Paper,
+  TextField,
+  ThemeProvider,
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-  ThemeProvider,
-  Paper,
-  TextField,
-  Button,
 } from '@material-ui/core';
+
+import Fab from "@material-ui/core/Fab";
+import FooterPage from '../Footer';
 import HeaderComponent from '../HeaderComponnent';
 import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
-import NavBArMat from '../NavBarMat';
-import ScrollUp from '../ScrollUp';
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import Fab from "@material-ui/core/Fab";
+import MenuItem from '@material-ui/core/MenuItem';
+import NavBArMat from '../NavBarMat';
+import React from 'react';
+import ScrollUp from '../ScrollUp';
+import Select from '@material-ui/core/Select';
+import { makeStyles } from '@material-ui/core/styles';
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
@@ -130,6 +132,11 @@ const useStyles = makeStyles((theme) => ({
   },
   category: {
     marginTop:"10em",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding:"0px 110px",
+    width:"100%",
     [theme.breakpoints.down('xs')]: {
       justifyContent: 'space-evenly',
     },
@@ -166,8 +173,9 @@ function Blog(props) {
   const classes = useStyles();
   const [age, setAge] = React.useState('');
   const [open, setOpen] = React.useState(false);
+  const [numBlog,setNumBlog]=React.useState(10);
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setNumBlog(event.target.value);
   };
 
   const handleClose = () => {
@@ -190,25 +198,19 @@ function Blog(props) {
             <Typography style={{ fontFamily:"Anton, sans-serif",
     color:"white"}}  variant="h3">Blog</Typography>
           </Grid>
-          <Grid
-            container
-            direction="row"
-            justify="space-evenly"
-            alignItems="center"
-            className={classes.category}
-            
-          >
-            <Grid item md={2}>
-              <Typography style={{ paddingRight: '20px',fontWeight:"500" }} variant="body1">
-                SHOWING 50 POST
+          <div  className={classes.category}>
+          <div>
+              <Typography style={{ paddingRight: '20px',fontWeight:"600",textAlign:"center",fontFamily:"Poppins",fontSize:18 }} variant="body1">
+                SHOWING {numBlog} POST
               </Typography>
-            </Grid>
-            <Grid item md={1}>
-              <InputLabel id="demo-controlled-open-select-label" style={{margin:"0"}}>
+              </div>
+              <div style={{display: 'flex',
+    flexDirection: 'row'}}>
+              <div style={{width:"100%"}}> <InputLabel id="demo-controlled-open-select-label" style={{margin:"0"}}>
                 Filter Category
               </InputLabel>
-            </Grid>
-            <Grid item md={1}>
+              </div>
+              <div>
               <Select
                 labelId="demo-controlled-open-select-label"
                 id="demo-controlled-open-select"
@@ -218,15 +220,24 @@ function Blog(props) {
                 value={age}
                 onChange={handleChange}
               >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
+              
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
                 <MenuItem value={30}>Thirty</MenuItem>
               </Select>
-            </Grid>
-          </Grid>
+              </div>
+              </div>
+            </div>
+        
+          
+           
+             
+           
+         
+            {/* <Grid item md={1}>
+            
+            </Grid> */}
+         
 
           <Grid container spacing={0} className={classes.paperGrid}>
             <Grid item xs>
