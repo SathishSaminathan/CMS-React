@@ -228,12 +228,7 @@ function Blog(props) {
               </div>
               </div>
             </div>
-        
-          
-           
-             
-           
-         
+
             {/* <Grid item md={1}>
             
             </Grid> */}

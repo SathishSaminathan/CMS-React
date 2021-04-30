@@ -79,13 +79,13 @@ const FooterPagePro = () => {
               <ul className={classes.ulcontainer}>
                 <li className={classes.li}>Canton,Michigan,</li>
                 <li className={classes.li}>United States</li>
-                <li style={{fontFamily:"Poppins", fontWeight: '600' }} className={classes.li}>
+                <li style={{fontFamily:"Poppins" }} className={classes.li}>
                   Mail us:
                   <Link href="#" style={{ color: 'orangered',fontSize:"22px" }}>
                      palani59@gmail.com
                   </Link>
                 </li>
-                <li style={{ fontFamily:"Poppins", fontWeight: '600' }} className={classes.li}>
+                <li style={{ fontFamily:"Poppins" }} className={classes.li}>
                   Call us:
                   <Typography
                     style={{ fontSize: '20px', display: 'inline-block' }}
@@ -156,7 +156,7 @@ const FooterPagePro = () => {
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
          
-          <a href="" style={{fontFamily:"Poppins"}}>© 2021 CANTON MANAGEMENT SERVICES.ALL RIGHTS RESERVED. </a>
+          <a href="" style={{fontFamily:"Poppins"}}>©2021 Canton Management Services.all rights reserved.</a>
         </MDBContainer>
       </div>
     </MDBFooter>
