@@ -81,12 +81,13 @@ const FooterPagePro = () => {
             </h5>
             <Typography className={classes.addressDetails}>
               <ul className={classes.ulcontainer}>
-                <li className={classes.li}>Canton, Michigan,</li>
+                <li className={classes.li}>46060 Ashton Woods Ct, Canton,</li>
+                <li className={classes.li}>Michigan 48187, </li>
                 <li className={classes.li}>United States</li>
                 <li style={{fontFamily:"Poppins" }} className={classes.li}>
                   Mail us: {''}
                   <Link href="#" style={{ color: 'orangered',fontSize:"22px" }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
-                     palani59@gmail.com
+                  pmasilamani@canton-management.com
                   </Link>
                 </li>
                 <li style={{ fontFamily:"Poppins"}} className={classes.li}>
@@ -94,7 +95,7 @@ const FooterPagePro = () => {
                   <Typography
                     style={{ fontSize: '20px', display: 'inline-block' }}
                   >
-                     +1(242)848-2805
+                    +1248.842.2805
                   </Typography>
                 </li>
               </ul>

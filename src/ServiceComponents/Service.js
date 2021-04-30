@@ -341,7 +341,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Stratergic buissness planning
+                        Strategic business planning
                       </Typography>
                     </Grid>
                     <Grid item xs>
@@ -392,7 +392,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Facultication of Kaizen/Operational Excellence Events{' '}
+                        Facilitation of Kaizen/Operational Excellence Events{' '}
                       </Typography>
                     </Grid>
                     <Grid item xs>
@@ -511,7 +511,7 @@ function Service(props) {
                           ISO/IEC 17025
                         </span>
                         - General requirements for the competency of testing and
-                        callibration laboratories
+                        calibration laboratories
                       </Typography>
                     </Grid>
                   </Fade>
@@ -560,7 +560,7 @@ function Service(props) {
                         </span>
                         Implementation of{' '}
                         <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                          APQP,FMEA,MSA,SPC & PPAP for specific projects
+                          APQP, FMEA, MSA, SPC & PPAP for specific projects
                         </span>{' '}
                       </Typography>
                     </Grid>
@@ -663,7 +663,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Perform risk-based IT aduits
+                        Perform risk-based IT audits
                       </Typography>
                     </Grid>
                     <Grid item xs>
@@ -697,7 +697,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Perform Applicaton control review
+                        Perform Application control review
                       </Typography>
                     </Grid>
                     <Grid item xs>
@@ -717,7 +717,7 @@ function Service(props) {
                         Perform{' '}
                         <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                           IQ/QQ/PQ(software validation) per ICH Guidelines and{' '}
-                          <span>21CFR Part 11 complaince requirements</span>
+                          <span>21CFR Part 11 compliance requirements</span>
                         </span>{' '}
                       </Typography>
                     </Grid>
@@ -840,7 +840,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Perform "AS IS" assesment to understand the baseline
+                        Perform "AS IS" assessment to understand the baseline
                       </Typography>
                     </Grid>
                     <Grid item xs>

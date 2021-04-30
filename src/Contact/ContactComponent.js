@@ -375,13 +375,19 @@ function ContactComponent(props) {
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    Canton Management Services,
+                    46060 Ashton Woods Ct, Canton,
                   </Typography>
                   <Typography
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    Canton Michigan,
+                    Michigan 48187,
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ textAlign: 'left', paddingLeft: '30px' }}
+                  >
+                    United States
                   </Typography>
                 </div>
               </Fade>
