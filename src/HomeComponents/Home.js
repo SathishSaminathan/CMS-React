@@ -119,10 +119,7 @@ function Home(props) {
                     </Typography>
 
                     <Typography className={classes.cardText} variant="h6">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Atque dicta incidunt eum. Provident qui sequi fuga illo
-                      rerum iusto eius officia perferendis. Nisi, quam unde.
-                      Facilis cum delectus pariatur voluptatem?
+                    Hands-on consultancy guidance on establishment and implementation of the management system, including support services.
                     </Typography>
                     <Typography
                       style={{
