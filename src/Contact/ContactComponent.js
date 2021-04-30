@@ -457,7 +457,7 @@ function ContactComponent(props) {
           <Grid item xs={12} md={6}>
               <Typography variant="h4" className={classes.businesstext}>
                 We Help You unlock & unleash the power within your large scale
-                buissness
+                business
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>

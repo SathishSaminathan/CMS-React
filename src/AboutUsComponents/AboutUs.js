@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     left:"11%",
     // marginBottom: '60px',
     // paddingBottom:"80px",
-    top:"-6%",
+    top:"-8.5%",
     [theme.breakpoints.down('sm')]: {
       left:"2%",
       top:"1%",
@@ -311,7 +311,7 @@ function AboutUs(props) {
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                 {' '}CISA, ITIL
                 </span>
-                , Lean and Siz Sigma Black Belts.
+                , Lean and Siz Sigma Black Belts
               </Typography>
               </Fade>
               <Fade top>
@@ -348,7 +348,7 @@ function AboutUs(props) {
               </div>
             </Grid>
             <Grid container className={classes.cardCarosel}>
-            <Grid item xs={12} md={12} style={{paddingTop:"4em"}}>
+            <Grid item xs={12} md={12}>
               <Typography variant="h4" style={{color:"#1687a7",fontFamily: 'Hammersmith One, sans-serif'}}>From Our Great Clients</Typography>
             </Grid>
             <Grid item xs={12} md={12}>
@@ -356,7 +356,7 @@ function AboutUs(props) {
                 What clients Say About Us ?
               </Typography>
             </Grid>
-              <Grid item xs={12} md={12} style={{marginBottom:"80px"}}>
+              <Grid item xs={12} md={12} style={{marginBottom:"40px"}}>
                 <DoubleCarosel />
               </Grid>
             </Grid>
