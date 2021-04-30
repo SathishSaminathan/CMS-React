@@ -1,30 +1,33 @@
-import React from 'react';
-import {
-  MDBCarousel,
-  MDBCarouselInner,
-  MDBCarouselItem,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBBtn,
-} from 'mdbreact';
 import  './doublecarosal.css';
-import Hidden from '@material-ui/core/Hidden';
 
 import {
   Grid,
+  Paper,
+  ThemeProvider,
   Typography,
   createMuiTheme,
-  responsiveFontSizes,
-  ThemeProvider,
-  Paper,
+  responsiveFontSizes
 } from '@material-ui/core';
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardText,
+  MDBCardTitle,
+  MDBCarousel,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBCol,
+  MDBContainer,
+  MDBRow,
+} from 'mdbreact';
+
+import Hidden from '@material-ui/core/Hidden';
+import {Link} from "react-router-dom";
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
@@ -48,6 +51,14 @@ const useStyles = makeStyles((theme) => ({
     },
 
 
+  },
+  redmore:{
+    fontWeight:"600",
+    color:"white",
+"&:hover":{
+  textDecoration:"underline",
+
+}
   },
   cardimg:{
     width:"20%",
@@ -220,10 +231,12 @@ const DoubleCarosel = () => {
                       src="./images/willsmith.jpg"
                     />
                     </div>
-                    <Typography className={classes.cardTitle} style={{}}>will Smith</Typography>
-                   <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
+                    <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
+                   <Typography className={classes.cardsubtitle}>Business Controller, EMAG LLC</Typography>
                    <img className={classes.starimg} src="./images/5star.png"/>
-                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
+Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
+surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
                   
                   </Paper>
                 </Grid>
@@ -239,11 +252,12 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
                   src="./images/willsmith.jpg"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{color:"white"}}>will Smith</Typography>
-               <Typography className={classes.cardsubtitle} style={{color:"white"}}>CEO,Canton Management Services</Typography>
-               <img className={classes.starimg} src="./images/5star.png"/>
-               <Typography className={classes.cardContent}  style={{ padding: '10px',color:"white" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
-              
+                <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
+                   <Typography className={classes.cardsubtitle}>Business Controller, EMAG LLC</Typography>
+                   <img className={classes.starimg} src="./images/5star.png"/>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
+Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
+surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
               </Paper>
               
                 </Grid>
@@ -261,11 +275,12 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
                   src="./images/willsmith.jpg"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}>will SmithB</Typography>
-               <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
-               <img className={classes.starimg} src="./images/5star.png"/>
-               <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
-              
+                <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
+                   <Typography className={classes.cardsubtitle}>Business Controller, EMAG LLC</Typography>
+                   <img className={classes.starimg} src="./images/5star.png"/>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
+Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
+surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
               </Paper>
                 </Grid>
                 <Hidden mdDown>
@@ -280,11 +295,12 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)", }}>
                   src="./images/willsmith.jpg"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}>will SmithA</Typography>
-               <Typography className={classes.cardsubtitle}>CEO,Canton Management Services</Typography>
-               <img className={classes.starimg} src="./images/5star.png"/>
-               <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat laboriosam, officia eveniet enim fuga doloribus blanditiis recusandae suscipit dicta nostrum nam dolorem sunt numquam unde laborum, id, explicabo amet?</Typography>
-              
+                <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
+                   <Typography className={classes.cardsubtitle}>Business Controller, EMAG LLC</Typography>
+                   <img className={classes.starimg} src="./images/5star.png"/>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
+Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
+surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
               </Paper>
                 </Grid>
                 </Hidden>
