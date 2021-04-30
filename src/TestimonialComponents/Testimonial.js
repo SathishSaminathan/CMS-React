@@ -1,323 +1,32 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import FooterPage from '../Footer';
+import '../testimonialStyles.css';
+
 import {
+  Button,
   Grid,
+  Paper,
+  TextField,
+  ThemeProvider,
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-  ThemeProvider,
-  Paper,
-  TextField,
-  Button,
 } from '@material-ui/core';
-import '../testimonialStyles.css';
-import NavBArMat from '../NavBarMat';
-import Fade from 'react-reveal/Fade';
+
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-
+import Fade from 'react-reveal/Fade';
+import FooterPage from '../Footer';
 import HeaderComponent from '../HeaderComponnent';
+import NavBArMat from '../NavBarMat';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import {useStyles} from "./TestimonialStyles.js";
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
-const useStyles = makeStyles((theme) => ({
-  imageContainer: {
-    position: "absolute",
-    width: "100%",
-    height: "50vh",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor:" rgba(111,111,111,2.0)",
-    zIndex: -1,
-    background: "linear-gradient(90deg, black, transparent)",
-  },
 
-  bgimg: {
-    // margin: 'auto',
-    height: '50vh',
-    width: '100%',
-    display: 'block',
-    objectFit: 'cover',
-    position: 'absolute',
-    top: '0',
-    left: 0,
-    opacity: '0.5',
-    backgroundPosition: ' 0 -500px',
-    [theme.breakpoints.down('xs')]: {},
-  },
-  GridContainer: {
-    position: 'absolute',
-    top: '42%',
-  },
-  TestimonialText: {
-   paddingLeft:"12.5em"
-  },
-  
-  
-  willsmith: {
-    width: '8%',
-    height: '7vh',
-    borderRadius: '50%',
-    marginTop: '15px',
-    marginLeft: '0px',
-    position: 'relative',
-    right: '64px',
-    objectFit:"cover",
-    [theme.breakpoints.down('md')]: {
-      right: '20px',
-      height:"6vh",
-      
-    },
-  },
-  starimg: {
-    width: '20%',
-   
-  },
-  detailContainer: {
-    paddingLeft: '6em',
-    position: 'relative',
-    bottom: '70px',
-    paddingBottom:"20px"
-  },
-  paper: {
-    backgroundColor: 'white',
-    width:"70%",
-    height:290,
-    marginTop: '10px',
-  },
-  cardContent: {
-    fontSize: '15px',
-    paddingLeft: '25px',
-    paddingRight: '10px',
-    paddingBottom: '10px',
-    position: 'relative',
-    bottom: '35%',
-    paddingTop: '10px',
-    color: 'black',
-  },
-  cardGrid: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginBottom: '10px',
-    marginTop: '80px',
-   
-   
-    [theme.breakpoints.down('md')]: {
-      paddingLeft: '5px',
-      marginRight:"0px",
-      marginLeft:"0",
-    },
-  },
-  orangebox: {
-    width: '10%',
-    position: 'absolute',
-    zIndex: '-1',
-   top:"-10px",
-   left:"-23px",
-   [theme.breakpoints.down('xs')]: {
-    left:"-10px",
-  },
-   
-  },
-  HeaderText1: {
-   
-    
-   color:"#0C2D48",fontFamily: 'Hammersmith One, sans-serif' ,
-   display:"flex",
-   flexDirection:"column",
-   justifyContent:"center",
-   alignContent:"center",
-   alignItems:"center",
-   
-    [theme.breakpoints.down('md')]: {
-      paddingTop:"50px"
-      
-    },
-  },
-  // starimg:{
-  //   width:"20%",
-  //   alignItems:"left",
-  //   justifyContent:"left",
-  //   display:"flex",
-  //   position:"relative",
-  //   top:"-10px",
-  //   left:"8px",
-  //   [theme.breakpoints.down('md')]: {
-  //     top:"0px",
-  //     width:"10%",
-  //   },[theme.breakpoints.down('xs')]: {
-  //     top:"0px",
-  //     width:"20%",
-  //   },
-
-
-  // },
-  cardimg:{
-    width:"20%",
-    height:"90px",
-    borderRadius:"50%",
-   alignItems:"left",
-   justifyContent:"left",
-   display:"flex",
-   position:"relative",
-   top:"0",
-   left:"0",
-   objectFit:"cover",
-   [theme.breakpoints.down('md')]: {
-    left:"0px",
-    width: "100%",
-    height: "119px",
-    display: "flex",
-    position: "relative",
-    objectFit: "fill",
-    alignItems: "left",
-    borderRadius: "50%",
-    justifyContent: "left",
-  },
-   [theme.breakpoints.down('xs')]: {
-    
-
-  },
-  },
-  card:{
-    width:650,
-    height:330,
-backgroundColor:"#0C2D48",
-[theme.breakpoints.down('xs')]: {
-  width: "241px",
-  height: "400px",
-},
-},
-  cardTitle:{
-    alignItems:"left",
-   justifyContent:"left",
-   display:"flex",
-  
-   fontSize:"22px",
-   color:"white",
-   position:"relative",
-   left:"10px",
-   [theme.breakpoints.down('md')]: {
-    fontSize:"13px",
-
-  },
-  },
-  cardsubtitle:{
-    alignItems:"left",
-    justifyContent:"left",
-    display:"flex",
-   
-    fontSize:"22px",
-    marginLeft:"10px",
-    color:"white",
-    [theme.breakpoints.down('md')]: {
-      fontSize:"13px",
-    },
-
-  },
-  cardContent:{
-color:"white",
-justifyContent:"left",
-textAlign:"left",
-fontSize:"15px",
-[theme.breakpoints.down('md')]: {
-  fontSize:"13px",
-
-},
-    
-  },
-  cardContainer2:{
-   
-     
-    },
-   
-  
-  cardContainer1:{
-  
-      
-      
-    },
-    cardContainerMain:{
-    
-    marginLeft:"40px"
-    },
-    willimgcontainer:{
-      position:"relative",
-      [theme.breakpoints.down('md')]: {
-  
-        width: "77px",
-        height: "119px",
-        borderRadius: "50%",
-        transform:" scale(.76, .5)",
-      },
-    },
-    media: {
-      height: 140,
-      verticalAlign: " middle",
-      width: "50px",
-      height: "50px",
-      borderRadius: " 50%"
-    },
-    root:{
-      
-        maxWidth: 600,
-        [theme.breakpoints.down('sm')]: {
-          marginRight:"10px",
-         
-        },
-        [theme.breakpoints.down('xs')]: {
-          marginLeft:"15px"
-         
-        },
-
-     
-    },
-    cardsubtext:{
-      fontSize:"16px",
-      fontWeight:"800",
-      color:"black"
-    },
-    testimonialTextContainer: {
-      position:"absolute",
-      left:"11%",
-      marginBottom: '60px',
-      paddingBottom:"80px",
-      [theme.breakpoints.down('sm')]: {
-        left:"2%",
-      },
-     
-    },
-    header1: {
-      marginTop:"10em",
-      justifyContent: 'center',
-      textAlign: 'center',
-      alignItems: 'center',
-      display: 'flex',
-      width: '100%',
-      color:"#0C2D48",
-      fontFamily: 'Hammersmith One, sans-serif' ,
-      [theme.breakpoints.down('xs')]: {
-        justifyContent: 'space-evenly',
-      },
-    },
-    secoundaryGrid:{
-      maxWidth: "90%",
-   
-    position: "relative",
-    left: "7%",
-    
-    [theme.breakpoints.down('md')]: {
-      position: "revert",
-      left: "0",
-      maxWidth: "100%",
-    },
-    }
-}));
 function Testimonial(props) {
   const classes = useStyles();
 
@@ -358,31 +67,19 @@ className={classes.HeaderText1}
   alignItems="center"
   className={classes.secoundaryGrid}
   >
-          <Grid item md={6} sm={12} className={classes.cardGrid}>
+          <Grid item md={12} sm={12} className={classes.cardGrid}>
                  <div style={{position:"relative"}}>
-                
-
-                 
-                  <Card className={classes.root}   style={{ backgroundColor: '#0C2D48' }}>
-               
-      <CardActionArea>
-        
-      
-    
-        <CardContent>
-        <CardMedia
+                  <Paper className={classes.root}   style={{ backgroundColor: '#0C2D48' }}>     
+     
+        {/* <CardMedia
           className={classes.media}
           image="./images/willsmith.jpg"
           title="profile"
-          gutterBottom
         />
-        
           <img
           className={classes.starimg}
           src="./images/5star.png"
         />
-       
-        
           <Typography gutterBottom variant="h5" component="h2" style={{ color: 'white' }}>
             Will smith
           </Typography>
@@ -394,261 +91,72 @@ className={classes.HeaderText1}
             assumenda minima distinctio id tempore corrupti ea nihil architecto
             mollitia aperiam, odio maxime eaque nulla error cupiditate, aut non
             corporis nesciunt.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-    </div>
-
-    
-          </Grid>
-          <Grid item md={6} sm={12} className={classes.cardGrid}>
-                 <div style={{position:"relative"}}>
-                
-
-                 
-                  <Card className={classes.root}>
-               
-      <CardActionArea>
-        
-      
-    
-        <CardContent>
-        <CardMedia
-          className={classes.media}
-          image="./images/willsmith.jpg"
-          title="profile"
-          gutterBottom
-        />
-        
-          <img
+          </Typography> */}
+          <div>
+            <div style={{display:"flex",flexDirection:"row",alignItems:"center",width:"100%"}}>
+              <div style={{width:"100%"}}>
+                <img src="./images/willsmith.jpg" className={classes.media} alt=""/>
+              </div>
+              <div style={{width:"100%",justifyContent:"flex-end",display:"flex"}}>
+              <img
           className={classes.starimg}
           src="./images/5star.png"
         />
-       
-        
-          <Typography gutterBottom variant="h5" component="h2" style={{ color: '#0d335d' }}>
-            Will smith
+              </div>
+            </div>
+            <div>
+            <Typography gutterBottom variant="h5" component="h2" style={{ color: 'white' }}>
+            G. Walker
+          </Typography>
+           
+           
+            <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
+            Business Controller, EMAG LLC
           </Typography>
           <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
-            CEO,Cantan Management Services
+          Farmington Hills, MI
           </Typography>
-          <Typography className={classes.cardsubtext} variant="body2" color="textSecondary" component="p">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-            assumenda minima distinctio id tempore corrupti ea nihil architecto
-            mollitia aperiam, odio maxime eaque nulla error cupiditate, aut non
-            corporis nesciunt.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+          <p style={{ color: 'white', fontSize:"16px",fontFamily:"Poppins",fontWeight:"500" }} >
+          Palani has worked with our company less than one year in a consulting capacity involving both ISO
+Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
+surveillance audit for each standard.
+<br/>
+He is professional, courteous, and focused on the substantive matters at hand.
+Palani’s practical and make-it-work approach has been especially helpful with our Managers.
+The most critical decision we made in pursuing 3 ISO certifications simultaneously was to hire
+[Palani/Company Name]. We were able to organize quickly, construct an effective management system,
+and pass all three audits in under 4 months. Remarkable.
+<br/>
+Shawn Etheridge, SVP<br/>
+ECCO Select<br/>
+
+I am pleased to endorse Palani Masilamani without reservation.  My company is an IT staffing and
+services business that had an urgent need for ISO certification.  While many vendors said they could not
+meet our timeline, Palani agreed to aid us.  As part of his consultancy and evidence of willingness to see
+us succeed he outlined responsibilities and risks so all parties understood what was required.  Over the
+course of the certification evolution Palani quickly understood our industry and existing business
+practices and provided exceptional subject matter expertise backed by unparalleled support.  The result
+of Palani’s work with us was a flawless Stage 2 audit on the demanding timeline we had and we simply
+could not be more pleased with the outcome.
+We will continue to work with Palani in the future as his work ethic and commitment to client success
+make him an absolute must have for any ISO or CMMI work.
+<br/>
+<br/>
+Russ McDowell<br/>
+Director, Technology Services<br/>
+ECCO Select Corporation<br/>
+          </p>
+          </div>
+    </div>
+    
+    </Paper>
     <img
                 className={classes.orangebox}
                 src="../images/orangebox.png"
               />
     </div>
-
-    
-          </Grid>
-          <Grid item md={6} sm={12} className={classes.cardGrid}>
-                 <div style={{position:"relative"}}>
-                
-
-                 
-                  <Card className={classes.root}>
-               
-      <CardActionArea>
-        
-      
-    
-        <CardContent>
-        <CardMedia
-          className={classes.media}
-          image="./images/willsmith.jpg"
-          title="profile"
-          gutterBottom
-        />
-        
-          <img
-          className={classes.starimg}
-          src="./images/5star.png"
-        />
-       
-        
-          <Typography gutterBottom variant="h5" component="h2" style={{ color: '#0d335d' }}>
-            Will smith
-          </Typography>
-          <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
-            CEO,Cantan Management Services
-          </Typography>
-          <Typography  className={classes.cardsubtext}variant="body2" color="textSecondary" component="p">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-            assumenda minima distinctio id tempore corrupti ea nihil architecto
-            mollitia aperiam, odio maxime eaque nulla error cupiditate, aut non
-            corporis nesciunt.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-    </div>
-
-    
-          </Grid>
-          <Grid item md={6} sm={12} className={classes.cardGrid}>
-                 <div style={{position:"relative"}}>
-                
-
-                 
-                  <Card className={classes.root}>
-               
-      <CardActionArea>
-        
-      
-    
-        <CardContent>
-        <CardMedia
-          className={classes.media}
-          image="./images/willsmith.jpg"
-          title="profile"
-          gutterBottom
-        />
-        
-          <img
-          className={classes.starimg}
-          src="./images/5star.png"
-        />
-       
-        
-          <Typography gutterBottom variant="h5" component="h2" style={{ color: '#0d335d' }}>
-            Will smith
-          </Typography>
-          <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
-            CEO,Cantan Management Services
-          </Typography>
-          <Typography  className={classes.cardsubtext} variant="body2" color="textSecondary" component="p">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-            assumenda minima distinctio id tempore corrupti ea nihil architecto
-            mollitia aperiam, odio maxime eaque nulla error cupiditate, aut non
-            corporis nesciunt.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-    </div>
-
-    
-          </Grid>
-          <Grid item md={6} sm={12} className={classes.cardGrid}>
-                 <div style={{position:"relative"}}>
-                
-
-                 
-                  <Card className={classes.root}>
-               
-      <CardActionArea>
-        
-      
-    
-        <CardContent>
-        <CardMedia
-          className={classes.media}
-          image="./images/willsmith.jpg"
-          title="profile"
-          gutterBottom
-        />
-        
-          <img
-          className={classes.starimg}
-          src="./images/5star.png"
-        />
-       
-        
-          <Typography gutterBottom variant="h5" component="h2" style={{ color: '#0d335d' }}>
-            Will smith
-          </Typography>
-          <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
-            CEO,Cantan Management Services
-          </Typography>
-          <Typography  className={classes.cardsubtext} variant="body2" color="textSecondary" component="p">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-            assumenda minima distinctio id tempore corrupti ea nihil architecto
-            mollitia aperiam, odio maxime eaque nulla error cupiditate, aut non
-            corporis nesciunt.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-    </div>
-
-    
-          </Grid>
-          <Grid item md={6} sm={12} className={classes.cardGrid}>
-                 <div style={{position:"relative"}}>
-                
-
-                 
-                  <Card className={classes.root}>
-               
-      <CardActionArea>
-        
-      
-    
-        <CardContent>
-        <CardMedia
-          className={classes.media}
-          image="./images/willsmith.jpg"
-          title="profile"
-          gutterBottom
-        />
-        
-          <img
-          className={classes.starimg}
-          src="./images/5star.png"
-        />
-       
-        
-          <Typography gutterBottom variant="h5" component="h2" style={{ color: '#0d335d' }}>
-            Will smith
-          </Typography>
-          <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
-            CEO,Cantan Management Services
-          </Typography>
-          <Typography className={classes.cardsubtext} variant="body2" color="textSecondary" component="p">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-            assumenda minima distinctio id tempore corrupti ea nihil architecto
-            mollitia aperiam, odio maxime eaque nulla error cupiditate, aut non
-            corporis nesciunt.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <img
-                className={classes.orangebox}
-                src="../images/orangebox.png"
-              />
-    </div>
-
-    
           </Grid>
           </Grid>
-       
-          
           <FooterPage />
         </Grid>
       </ThemeProvider>

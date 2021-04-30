@@ -167,6 +167,9 @@ const useStyles = makeStyles((theme) => ({
     },
    
   },
+  optionSelect:{
+    // height:"10px"
+  }
 }));
 
 function Blog(props) {
@@ -206,18 +209,19 @@ function Blog(props) {
               </div>
               <div style={{display: 'flex',
     flexDirection: 'row'}}>
-              <div style={{width:"100%"}}> <InputLabel id="demo-controlled-open-select-label" style={{margin:"0"}}>
+              <div style={{width:"100%",display: 'flex',alignItems: 'center',paddingRight: '10px'}}> <InputLabel id="demo-controlled-open-select-label" style={{margin:"0"}}>
                 Filter Category
               </InputLabel>
               </div>
               <div>
               <Select
-                labelId="demo-controlled-open-select-label"
-                id="demo-controlled-open-select"
+                 labelId="demo-simple-select-label"
+                 id="demo-simple-select"
                 open={open}
                 onClose={handleClose}
                 onOpen={handleOpen}
-                value={age}
+                value={numBlog}
+className={classes.optionSelect}
                 onChange={handleChange}
               >
               

@@ -42,7 +42,7 @@ function Home(props) {
           <Grid item spacing={2} xs={12}  className={classes.cmsContent}>
             <Typography
               style={{
-                marginBottom: '30px',
+                marginBottom: '10px',
                 fontFamily: 'Noto Sans KR, sans-serif',
                 color: 'white',
               }}
@@ -54,7 +54,7 @@ function Home(props) {
               PRACTICAL & "SHOW-HOW"
             </Typography>
             <Typography
-              style={{ marginBottom: '30px', color: 'white' }}
+              style={{ marginBottom: '20px', color: 'white' }}
               variant="h5"
             >
               Type of consultancy services organization
@@ -431,7 +431,7 @@ function Home(props) {
             <Grid item xs={12} md={6}>
               <Typography variant="h4" className={classes.businesstext}>
                 We Help You unlock & unleash the power within your large scale
-                buissness
+                business
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>

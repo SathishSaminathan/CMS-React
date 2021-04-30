@@ -204,10 +204,56 @@ const useStyles = makeStyles((theme) => ({
       margin: '0',
       padding: '0',
     },
+  },
+  textField:{
+    width:"100%",
+    height:"40px",
+    border:"1px solid #E3E3E3",
+    backgroundColor:"#F2F2F2",
+    padding:20,
+    marginBottom:20,
+    marginRight:10,   fontFamily:"Poppins",
+
+  },
+  textFieldMessage:{
+    width:"100%",
+    height:"150px",
+    border:"1px solid #E3E3E3",
+    backgroundColor:"#F2F2F2",
+    padding:20,
+    marginBottom:20,
+    marginRight:10,   fontFamily:"Poppins",
+
+  },
+  textFieldNumberContainer:{
+    width:"100%",
+    height:"40px",
+    border:"1px solid #E3E3E3",
+    backgroundColor:"#F2F2F2",
+    marginBottom:20,
+    marginRight:10,
+  },
+  textFieldNumber:{
+    width:"100%",
+    border:"none",
+    backgroundColor:"#F2F2F2",
+   outline:"none",
+   fontFamily:"Poppins",
+  
+  },
+  select:{
+    padding:"0px 10px",
+    border:"none",
+    backgroundColor:"#F2F2F2",
+    color:"#8d7775"
+  },
+  options:{
+    
   }
 }));
 function ContactComponent(props) {
   const classes = useStyles();
+  let img="images/download.png";
   return (
     <div className={classes.root}>
       <div className={classes.imageContainer} id="back-to-top-anchor">
@@ -247,7 +293,7 @@ function ContactComponent(props) {
             </Typography>
           </Grid>
 
-          <Grid container md={6}>
+          <Grid container md={7}>
             <Grid item xs={12} md={9} className={classes.Heading2}>
               <Typography variant="h4" style={{ marginBottom: '-25px',fontSize:"24px" }}>
                 Send Us Your Message
@@ -257,79 +303,37 @@ function ContactComponent(props) {
                 Alternatively,if you'd like for us to get back in touch with you
                 please fill in the form below.
               </Typography>
-              <TextField
-                id="outlined-size-small"
-                defaultValue=""
-                variant="outlined"
-                size="small"
-                label="Firstname"
-                variant="outlined"
-                style={{
-                  marginRight: '20px',
-                  marginLeft: '0px',
-                  marginTop: '20px',
-                  marginBlock: '20px',
-                }}
-              />
-              <TextField
-                id="outlined-size-small"
-                defaultValue=""
-                variant="outlined"
-                size="small"
-                label="LastName"
-                variant="outlined"
-                style={{
-                  marginRight: '20px',
-                  marginLeft: '0px',
-                  marginTop: '20px',
-                  marginBlock: '20px',
-                }}
-              />
-              <TextField
-                id="outlined-size-small"
-                defaultValue=""
-                variant="outlined"
-                size="small"
-                label="EmailAddress"
-                variant="outlined"
-                style={{
-                  marginRight: '20px',
-                  marginLeft: '0px',
-                  marginTop: '20px',
-                  marginBlock: '20px',
-                }}
-              />
-              <TextField
-                id="standard-number"
-                label="Number"
-                type="number"
-                size="small"
-                variant="outlined"
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                style={{
-                  marginRight: '20px',
-                  marginLeft: '0px',
-                  marginTop: '20px',
-                  marginBlock: '20px',
-                }}
-              />
-              <TextField
-                id="outlined-multiline-static"
-                label="Message"
-                multiline
-                rows={4}
-                defaultValue=""
-                variant="outlined"
-                style={{
-                  marginRight: '20px',
-                  marginLeft: '0px',
-                  marginTop: '20px',
-                  marginBlock: '20px',
-                }}
-              />
-              <Grid item md={12}>
+             <div style={{marginTop: '20px'}}>
+               <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                 <div style={{width:"50%",marginRight:10}}>
+                   <input placeholder="First Name" type="text" className={classes.textField}/>
+                 </div>
+                 <div style={{width:"50%",marginRight:10}}>
+                   <input placeholder="Last Name" type="text" className={classes.textField}/>
+                 </div>
+               </div>
+               <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                 <div style={{width:"50%",marginRight:10}}>
+                   <input placeholder="Email Address" type="email" className={classes.textField}/>
+                 </div>
+                 <div  className={classes.textFieldNumberContainer} style={{width:"50%",marginRight:10,display:"flex",flexDirection:"row",justifyContent:"flex-start",alignItems:"center"}}>
+                   <div >
+                   <select className={classes.select}>
+                   <option value="0" className={classes.options}>USA</option>
+    <option value="1" className={classes.options}>CN</option>
+    <option value="2"className={classes.options}>IN</option>
+                   </select>
+                   </div>
+                   <div style={{width:"100%"}}>
+                   <input  type="number"  placeholder="+1" className={classes.textFieldNumber}/>
+                   </div>
+                 </div>
+               </div>
+               <div style={{marginRight:10}}>
+                 <input type="text" placeholder="Message" className={classes.textFieldMessage}/>
+               </div>
+             </div>
+              <Grid item md={12} style={{width:"100%",display:"flex",justifyContent:"center"}}>
                 <Button
                   style={{
                     color: 'white',
@@ -350,7 +354,7 @@ function ContactComponent(props) {
           <Grid
             item
             xs={12}
-            md={6}
+            md={5}
             className={classes.paperContainer}
             direction="column"
           >

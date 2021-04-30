@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     left:"11%",
     // marginBottom: '60px',
     // paddingBottom:"80px",
-    top:"-5%",
+    top:"-6%",
     [theme.breakpoints.down('sm')]: {
       left:"2%",
       top:"1%",
@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '20px',
     paddingTop: '20px',
     paddingRight: '20px',
-    width: '80%',
+    fontFamily: 'Poppins',
     [theme.breakpoints.down('md')]: {
       width: '100%',
     },
@@ -121,6 +121,8 @@ const useStyles = makeStyles((theme) => ({
 
   Aboutimg: {
     width: '80%',
+    height:"80%",
+    objectFit:"cover",
     [theme.breakpoints.down('xs')]: {
       width: '100%',
     },
@@ -251,32 +253,32 @@ function AboutUs(props) {
             <Grid item xs={12} md={6} className={classes.cantonContainer}>
               <Fade bottom>
               <Typography variant="h2" className={classes.cantonTitle}>
-                Canton Management Service
+                Canton Management Services
               </Typography>
               </Fade>
               <div className="underline"></div>
               <Fade top>
-              <Typography variant="h6" className={classes.cantonText}>
-                Canton Management Services,Inc was established in 2008,CMS is a
+              <Typography variant="subtitle1" className={classes.cantonText}>
+                Canton Management Services, Inc was established in 2008, CMS is a
                 practical and{' '}
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                   "SHOW-HOW"
                 </span>{' '}
-                type of Consultancy Services organization.it has been
+                type of Consultancy Services organization. It has been
                 instrumental in bringing a{' '}
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                  perceptible change in the companies'outlook image and
-                  performance
+                  perceptible change in the companies outlook image and
+                  performance.
                 </span>
               </Typography>
               </Fade>
               <Fade bottom>
               <Typography variant="subtitle1" className={classes.cantonText}>
                 We provide consultancy services to
-                Automotive,Tire,Steel,Foundries,Paint and Electrical &
-                Electronics in Manufacturing and Software development,data
-                processing centers,cinical reseearch organizations ,asset
-                recovery centers,utilizing kitting,3PL providers and Banks in
+                Automotive, Tire, Steel, Foundries, Paint and Electrical &
+                Electronics in Manufacturing and Software development, data
+                processing centers, conical research organizations, asset
+                recovery centers, utilizing kitting, 3PL providers and Banks in
                 Service industries.
               </Typography>
               </Fade>
@@ -295,27 +297,27 @@ function AboutUs(props) {
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                   (IMS)
                 </span>
-                .Busineess Process{' '}
+                .Business Process{' '}
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                  Re-Engineering
+                  Re-Engineering{' '}
                 </span>
-                . and Conctinual improvement.
+                 and Continual improvement.
               </Typography>
               </Fade>
               <Fade bottom>
               <Typography variant="subtitle1" className={classes.undertext}>
-                We are well qualified,very experienced and holds certification
+                We are well qualified, very experienced and holds certification
                 on Auditing,
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                  CISA,ITIL
+                {' '}CISA, ITIL
                 </span>
-                ,Lean and Siz Sigma Black Belts
+                , Lean and Siz Sigma Black Belts.
               </Typography>
               </Fade>
               <Fade top>
               <Typography className={classes.undertext} variant="subtitle1">
-                we are commited to contributing to the organization through
-                compatiable guidance.
+                we are committed to contributing to the organization through
+                compatible guidance.
               </Typography>
               </Fade>
             </Grid>
@@ -346,7 +348,7 @@ function AboutUs(props) {
               </div>
             </Grid>
             <Grid container className={classes.cardCarosel}>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12} md={12} style={{paddingTop:"4em"}}>
               <Typography variant="h4" style={{color:"#1687a7",fontFamily: 'Hammersmith One, sans-serif'}}>From Our Great Clients</Typography>
             </Grid>
             <Grid item xs={12} md={12}>
@@ -354,7 +356,7 @@ function AboutUs(props) {
                 What clients Say About Us ?
               </Typography>
             </Grid>
-              <Grid item xs={12} md={12} style={{marginBottom:"40px"}}>
+              <Grid item xs={12} md={12} style={{marginBottom:"80px"}}>
                 <DoubleCarosel />
               </Grid>
             </Grid>

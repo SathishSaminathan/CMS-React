@@ -334,7 +334,7 @@ let useStyles = makeStyles((theme) => ({
       },
     },
     practicaltext: {
-      marginBottom: '30px',
+      marginBottom: '5px',
       fontFamily: 'Hammersmith One, sans-serif',
       fontSize: '86px',
       color: 'white',

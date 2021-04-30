@@ -1,14 +1,18 @@
 import { MDBCol, MDBContainer, MDBFooter, MDBRow } from 'mdbreact';
 
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import Link from '@material-ui/core/Link';
 import React from 'react';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   li: {
     fontSize: '22px',
-    fontFamily:"Poppins"
+    fontFamily:"Poppins",
+  padding:"2px 0px"
   },
   addressDetails: {
     
@@ -77,16 +81,16 @@ const FooterPagePro = () => {
             </h5>
             <Typography className={classes.addressDetails}>
               <ul className={classes.ulcontainer}>
-                <li className={classes.li}>Canton,Michigan,</li>
+                <li className={classes.li}>Canton, Michigan,</li>
                 <li className={classes.li}>United States</li>
                 <li style={{fontFamily:"Poppins" }} className={classes.li}>
-                  Mail us:
-                  <Link href="#" style={{ color: 'orangered',fontSize:"22px" }}>
+                  Mail us: {''}
+                  <Link href="#" style={{ color: 'orangered',fontSize:"22px" }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
                      palani59@gmail.com
                   </Link>
                 </li>
-                <li style={{ fontFamily:"Poppins" }} className={classes.li}>
-                  Call us:
+                <li style={{ fontFamily:"Poppins"}} className={classes.li}>
+                  Call us: {''}
                   <Typography
                     style={{ fontSize: '20px', display: 'inline-block' }}
                   >
@@ -128,28 +132,16 @@ const FooterPagePro = () => {
         <ul className="list-unstyled list-inline">
           <li className="list-inline-item">
             <a className="btn-floating btn-sm btn-fb mx-1">
-              <i className="fab fa-facebook-f"> </i>
+              <FacebookIcon style={{color:"#ff4500"}}/>
             </a>
           </li>
           <li className="list-inline-item">
             <a className="btn-floating btn-sm btn-tw mx-1">
-              <i className="fab fa-twitter"> </i>
-            </a>
-          </li>
-          <li className="list-inline-item">
-            <a className="btn-floating btn-sm btn-gplus mx-1">
-              <i className="fab fa-google-plus"> </i>
-            </a>
-          </li>
-          <li className="list-inline-item">
-            <a className="btn-floating btn-sm btn-li mx-1">
-              <i className="fab fa-linkedin-in"> </i>
-            </a>
+<TwitterIcon/>            </a>
           </li>
           <li className="list-inline-item">
             <a className="btn-floating btn-sm btn-dribbble mx-1">
-              <i className="fab fa-dribbble"> </i>
-            </a>
+<InstagramIcon/>            </a>
           </li>
         </ul>
       </div>
