@@ -156,7 +156,7 @@ const FooterPagePro = () => {
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
          
-          <a href="" style={{fontFamily:"Poppins"}}>©2021 Canton Management Services.all rights reserved.</a>
+          <a href="" style={{fontFamily:"Poppins"}}>©2021 Canton Management Services, all rights reserved.</a>
         </MDBContainer>
       </div>
     </MDBFooter>
