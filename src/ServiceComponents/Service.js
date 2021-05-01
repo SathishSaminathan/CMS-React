@@ -16,8 +16,10 @@ import FooterPage from '../Footer';
 import HeaderComponent from '../HeaderComponnent';
 import NavBArMat from '../NavBarMat';
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor'
 import clientimg from '../assets/images/clients1.jpg';
 import { makeStyles } from '@material-ui/core/styles';
+import {useHistory} from "react-router-dom";
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -264,7 +266,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 function Service(props) {
   const classes = useStyles();
-
+  let history = useHistory();
   return (
     <div>
       <div className={classes.imageContainer}>
@@ -282,6 +284,7 @@ function Service(props) {
           </Grid>
           <Grid item md={12} className={classes.Header1}>
             <Fade top >
+            <ScrollableAnchor id={'services'}>
               <Typography
                 style={{
                   color: '#0C2D48',
@@ -293,6 +296,7 @@ function Service(props) {
               >
                 Consultancy Services
               </Typography>
+              </ScrollableAnchor>
             </Fade>
             <div
               style={{
@@ -777,6 +781,7 @@ function Service(props) {
           >
             <Grid item md={12} className={classes.Header1}>
               <Fade bottom >
+              <ScrollableAnchor id={'approach'}>
                 <Typography
                   style={{
                     color: 'white',
@@ -788,6 +793,7 @@ function Service(props) {
                 >
                   Consultancy Approach
                 </Typography>
+                </ScrollableAnchor>
               </Fade>
               <div
                 style={{
@@ -974,7 +980,7 @@ function Service(props) {
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Button className={classes.btnconsol}>Book a Consultation</Button>
+              <Button className={classes.btnconsol} onClick={() =>history.push("./contact#message")}>Book a Consultation</Button>
             </Grid>
           </Grid>
           <FooterPage />

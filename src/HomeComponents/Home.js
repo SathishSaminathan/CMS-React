@@ -131,7 +131,7 @@ function Home(props) {
                       variant="h6"
                     >
                     </Typography> */}
-                    <Link to="./service" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
+                    <Link to="./service#services" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
                   </Paper>
                 </Fade>
               </Grid>
@@ -163,7 +163,7 @@ function Home(props) {
                       variant="h6"
                     >
                     </Typography> */}
-                    <Link to="./service" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
+                    <Link to="./service#approach" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
 
                   </Paper>
                 </Fade>
@@ -424,7 +424,7 @@ function Home(props) {
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Button className={classes.btnconsol}>Book a Consultation</Button>
+              <Button className={classes.btnconsol} onClick={() =>history.push("./contact#message")}>Book a Consultation</Button>
             </Grid>
           </Grid>
           <FooterPage />

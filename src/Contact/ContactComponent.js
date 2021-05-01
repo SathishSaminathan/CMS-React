@@ -13,13 +13,14 @@ import {
 } from '@material-ui/core';
 
 import Fab from "@material-ui/core/Fab";
-import Fade from 'react-reveal/Fade';
+import Fade   from 'react-reveal/Fade';
 import FooterPage from '../Footer';
 import HeaderComponent from '../HeaderComponnent';
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import NavBArMat from '../NavBarMat';
 import React from 'react';
 import ScrollUp from '../ScrollUp';
+import ScrollableAnchor from 'react-scrollable-anchor'
 import { makeStyles } from '@material-ui/core/styles';
 
 let theme = createMuiTheme();
@@ -295,9 +296,11 @@ function ContactComponent(props) {
 
           <Grid container md={7}>
             <Grid item xs={12} md={9} className={classes.Heading2}>
-              <Typography variant="h4" style={{ marginBottom: '-25px',fontSize:"24px" }}>
+            <ScrollableAnchor id={'message'}>
+              <Typography variant="h4" style={{ marginBottom: '-25px',fontSize:"24px" }} >
                 Send Us Your Message
               </Typography>
+              </ScrollableAnchor>
               <div className="underline"></div>
               <Typography className={classes.subtext1}>
                 Alternatively,if you'd like for us to get back in touch with you

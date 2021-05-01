@@ -236,7 +236,7 @@ const DoubleCarosel = () => {
                    <img className={classes.starimg} src="./images/5star.png"/>
                    <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
 Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
-surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
+surveillance audit for each standard.<Link to="./testimonial#Walker" className={classes.redmore}>...Read More</Link></Typography>
                   
                   </Paper>
                 </Grid>
@@ -256,7 +256,7 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
                    <Typography className={classes.cardsubtitle}>SVP, ECCO Select Corporation</Typography>
                    <img className={classes.starimg} src="./images/5star.png"/>
                    <Typography className={classes.cardContent}  style={{ padding: '10px' }}>The most critical decision we made in pursuing 3 ISO certifications simultaneously was to hire
-Canton Management Services. <Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
+Canton Management Services. <Link to="./testimonial#Shawn" className={classes.redmore}>...Read More</Link></Typography>
               </Paper>
               
                 </Grid>
@@ -279,7 +279,7 @@ Canton Management Services. <Link to="./testimonial" className={classes.redmore}
                    <img className={classes.starimg} src="./images/5star.png"/>
                    <Typography className={classes.cardContent}  style={{ padding: '10px' }}> I am pleased to endorse Palani Masilamani without reservation.  My company is an IT staffing and
 services business that had an urgent need for ISO certification.  While many vendors said they could not
-meet our timeline, Palani agreed to aid us. <Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
+meet our timeline, Palani agreed to aid us. <Link to="./testimonial#Russ" className={classes.redmore}>...Read More</Link></Typography>
               </Paper>
                 </Grid>
                 <Hidden mdDown>
@@ -298,7 +298,7 @@ meet our timeline, Palani agreed to aid us. <Link to="./testimonial" className=
                    <img className={classes.starimg} src="./images/5star.png"/>
                    <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
 Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
-surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
+surveillance audit for each standard.<Link to="./testimonial#Walker" className={classes.redmore}>...Read More</Link></Typography>
                   
                   </Paper>
                 </Grid>
