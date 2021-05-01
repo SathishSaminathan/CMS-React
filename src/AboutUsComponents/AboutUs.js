@@ -259,27 +259,12 @@ function AboutUs(props) {
               <div className="underline"></div>
               <Fade top>
               <Typography variant="subtitle1" className={classes.cantonText}>
-                Canton Management Services, Inc was established in 2008, CMS is a
-                practical and{' '}
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                  "SHOW-HOW"
-                </span>{' '}
-                type of Consultancy Services organization. It has been
-                instrumental in bringing a{' '}
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                  perceptible change in the companies outlook image and
-                  performance.
-                </span>
+              Canton Management Services, Inc was established in 2008. CMS is a practical and "SHOW-HOW" type of Consultancy Services organization. It has been instrumental in bringing a perceptible change in the company’s outlook image and performance.
               </Typography>
               </Fade>
               <Fade bottom>
               <Typography variant="subtitle1" className={classes.cantonText}>
-                We provide consultancy services to
-                Automotive, Tire, Steel, Foundries, Paint and Electrical &
-                Electronics in Manufacturing and Software development, data
-                processing centers, conical research organizations, asset
-                recovery centers, utilizing kitting, 3PL providers and Banks in
-                Service industries.
+              We provide consultancy services to Automotive, Tire & Steel Foundries, Paint and Electrical & Electronics manufacturing companies, Software Development companies, Data Processing Centers, Conical Research Organizations, and Asset Recovery Centers utilizing Kitting, 3PL providers and Banks in Service industries.
               </Typography>
               </Fade>
             </Grid>
