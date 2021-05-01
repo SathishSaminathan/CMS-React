@@ -314,7 +314,7 @@ function Service(props) {
                   variant="subtitle1"
                 >
                   Hands-on consultancy guidance on establishment and
-                  implementation of the management system,including support
+                  implementation of the management system, including support
                   services
                 </Typography>
               </Fade>

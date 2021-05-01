@@ -2,7 +2,7 @@ import { MDBCol, MDBContainer, MDBFooter, MDBRow } from 'mdbreact';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import Link from '@material-ui/core/Link';
+import {Link} from 'react-router-dom';
 import React from 'react';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { Typography } from '@material-ui/core';
@@ -132,7 +132,7 @@ const FooterPagePro = () => {
               <Link style={{ paddingRight: '20px' }}>Privacy Policy</Link>
             </h6>
             <h6 className="text-uppercase mb-4 mt-3 font-weight-bold">
-              <Link>Contact</Link>
+              <Link to="./contact">Contact</Link>
             </h6>
           </MDBRow>
         </MDBRow>

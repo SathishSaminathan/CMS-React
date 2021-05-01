@@ -1,25 +1,26 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import './NavMatStyles.css';
+
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Switch from '@material-ui/core/Switch';
+import AppBar from '@material-ui/core/AppBar';
+import Divider from '@material-ui/core/Divider';
+import FacebookIcon from '@material-ui/icons/Facebook';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
-import MenuItem from '@material-ui/core/MenuItem';
+import IconButton from '@material-ui/core/IconButton';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import Link from '@material-ui/core/Link';
 import Menu from '@material-ui/core/Menu';
-import { withRouter } from 'react-router-dom';
+import MenuIcon from '@material-ui/icons/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import React from 'react';
+import Switch from '@material-ui/core/Switch';
+import Toolbar from '@material-ui/core/Toolbar';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import './NavMatStyles.css';
-import Divider from '@material-ui/core/Divider';
+import { withRouter } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -250,11 +251,11 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
                   Contact
                 </Link>
                 <Divider orientation="vertical" flexItem />
-
-                <FacebookIcon className={classes.icons}/>
-                <Divider orientation="vertical" flexItem />
-
                 <TwitterIcon  className={classes.icons}/>
+
+                <Divider orientation="vertical" flexItem />
+                <FacebookIcon className={classes.icons}/>
+
                 <Divider orientation="vertical" flexItem />
 
                 <InstagramIcon  className={classes.icons}/>

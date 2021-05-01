@@ -21,7 +21,9 @@ import NavBArMat from '../NavBarMat';
 import React from 'react';
 import ScrollUp from '../ScrollUp';
 import ScrollableAnchor from 'react-scrollable-anchor'
+import { goToAnchor } from 'react-scrollable-anchor'
 import { makeStyles } from '@material-ui/core/styles';
+import {useHistory} from "react-router-dom"
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -255,6 +257,7 @@ const useStyles = makeStyles((theme) => ({
 function ContactComponent(props) {
   const classes = useStyles();
   let img="images/download.png";
+  let history=useHistory();
   return (
     <div className={classes.root}>
       <div className={classes.imageContainer} id="back-to-top-anchor">
@@ -295,12 +298,14 @@ function ContactComponent(props) {
           </Grid>
 
           <Grid container md={7}>
-          <ScrollableAnchor id={'message'}>
+        
 
             <Grid item xs={12} md={9} className={classes.Heading2}>
+            <ScrollableAnchor id={'message'}>
               <Typography variant="h4" style={{ marginBottom: '-25px',fontSize:"24px" }} >
                 Send Us Your Message
               </Typography>
+              </ScrollableAnchor>
               <div className="underline"></div>
               <Typography className={classes.subtext1}>
                 Alternatively,if you'd like for us to get back in touch with you
@@ -353,7 +358,7 @@ function ContactComponent(props) {
                 </Button>
               </Grid>
             </Grid>
-            </ScrollableAnchor>
+         
 
           </Grid>
           <Grid
@@ -482,6 +487,12 @@ function ContactComponent(props) {
             </Grid>
             <Grid item xs={12} md={6}>
               <Button
+
+              onClick={() =>{
+               
+                goToAnchor('message')
+
+}}
                 className={classes.btnconsol}
               >
                 Book a Consultation

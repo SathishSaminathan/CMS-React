@@ -24,6 +24,7 @@ import React from 'react';
 import ScrollUp from '../ScrollUp';
 import SimpleCarosel from '../SimpleCarosel';
 import Slider from 'react-slick';
+import { goToAnchor } from 'react-scrollable-anchor'
 import {useHistory} from "react-router-dom";
 import {useStyles} from "./Styles.js";
 
@@ -424,7 +425,9 @@ function Home(props) {
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Button className={classes.btnconsol} onClick={() =>history.push("./contact#message")}>Book a Consultation</Button>
+              <Button className={classes.btnconsol} onClick={() =>{
+                
+                history.push("./contact#message")}}>Book a Consultation</Button>
             </Grid>
           </Grid>
           <FooterPage />

@@ -124,13 +124,9 @@ className={classes.HeaderText1}
           <p style={{ color: 'white', fontSize:"16px",fontFamily:"Poppins",fontWeight:"500" }} >
           Palani has worked with our company less than one year in a consulting capacity involving both ISO
 Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
-surveillance audit for each standard.
-<br/>
-He is professional, courteous, and focused on the substantive matters at hand.
+surveillance audit for each standard. He is professional, courteous, and focused on the substantive matters at hand.
 Palani’s practical and make-it-work approach has been especially helpful with our Managers.
-The most critical decision we made in pursuing 3 ISO certifications simultaneously was to hire
-[Palani/Company Name]. We were able to organize quickly, construct an effective management system,
-and pass all three audits in under 4 months. Remarkable.
+
 {/* <br/>
 Shawn Etheridge, SVP<br/>
 ECCO Select<br/>
