@@ -180,8 +180,8 @@ const useStyles = makeStyles((theme) => ({
  
  
     fontSize: '22px',
-  
-  
+    width:"90%",
+    padding:"10px 0px",
    [theme.breakpoints.down('md')]: {
     marginLeft:"0",
     
@@ -259,7 +259,14 @@ function AboutUs(props) {
               <div className="underline"></div>
               <Fade top>
               <Typography variant="subtitle1" className={classes.cantonText}>
-              Canton Management Services, Inc was established in 2008. CMS is a practical and "SHOW-HOW" type of Consultancy Services organization. It has been instrumental in bringing a perceptible change in the company’s outlook image and performance.
+              Canton Management Services, Inc was established in 2008. CMS is a practical and {' '}
+                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                  "SHOW-HOW"
+                </span>{' '}
+                type of Consultancy Services organization. It has been instrumental in bringing a{' '}
+                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                perceptible change in the company’s outlook image and performance.
+                </span>
               </Typography>
               </Fade>
               <Fade bottom>
@@ -282,7 +289,7 @@ function AboutUs(props) {
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                   (IMS)
                 </span>
-                .Business Process{' '}
+                . Business Process{' '}
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                   Re-Engineering{' '}
                 </span>
@@ -296,12 +303,12 @@ function AboutUs(props) {
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                 {' '}CISA, ITIL
                 </span>
-                , Lean and Siz Sigma Black Belts
+                , Lean and Six Sigma Black Belts.
               </Typography>
               </Fade>
               <Fade top>
               <Typography className={classes.undertext} variant="subtitle1">
-                we are committed to contributing to the organization through
+                We are committed to contributing to the organization through
                 compatible guidance.
               </Typography>
               </Fade>
