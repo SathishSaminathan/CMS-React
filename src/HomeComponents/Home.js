@@ -18,6 +18,7 @@ import Fade from 'react-reveal/Fade';
 import FooterPage from '../Footer';
 import Header from '../HeaderComponent/Header';
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import {Link} from "react-router-dom"
 import NavBArMat from '../NavBarMat';
 import React from 'react';
 import ScrollUp from '../ScrollUp';
@@ -121,7 +122,7 @@ function Home(props) {
                     <Typography className={classes.cardText} variant="h6">
                     Hands-on consultancy guidance on establishment and implementation of the management system, including support services.
                     </Typography>
-                    <Typography
+                    {/* <Typography
                       style={{
                         fontSize: '12px',
                         textDecoration: 'underline',
@@ -129,7 +130,8 @@ function Home(props) {
                       }}
                       variant="h6"
                     >
-                    </Typography>
+                    </Typography> */}
+                    <Link to="./service" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
                   </Paper>
                 </Fade>
               </Grid>
@@ -150,12 +152,9 @@ function Home(props) {
                     </Typography>
 
                     <Typography variant="h6" className={classes.cardText}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Atque dicta incidunt eum. Provident qui sequi fuga illo
-                      rerum iusto eius officia perferendis. Nisi, quam unde.
-                      Facilis cum delectus pariatur voluptatem?
+                    All begins with our team. We have topnotch talent who understands your business, understands your problems, and works hand-in-hand with you to identify real transformation opportunities.
                     </Typography>
-                    <Typography
+                    {/* <Typography
                       style={{
                         fontSize: '12px',
                         textDecoration: 'underline',
@@ -163,7 +162,9 @@ function Home(props) {
                       }}
                       variant="h6"
                     >
-                    </Typography>
+                    </Typography> */}
+                    <Link to="./service" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
+
                   </Paper>
                 </Fade>
               </Grid>
@@ -179,25 +180,15 @@ function Home(props) {
                       }}
                       src="../images/presentation.png"
                     />
-                    <Typography  style={{ fontSize: '22px', marginBottom: '10px' }} className={classes.cardText} variant="h5">
+                    <Typography  style={{ fontSize: '22px', marginBottom: '0px' }} className={classes.cardText} variant="h5">
                       Training Workshops
                     </Typography>
 
                     <Typography className={classes.cardText} variant="h6">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Atque dicta incidunt eum. Provident qui sequi fuga illo
-                      rerum iusto eius officia perferendis. Nisi, quam unde.
-                      Facilis cum delectus pariatur voluptatem?
+                    CMS offers a wide range of training and management consultancy services across a variety of learning and development areas.
                     </Typography>
-                    <Typography
-                      style={{
-                        fontSize: '12px',
-                        textDecoration: 'underline',
-                        color: 'white',
-                      }}
-                      variant="h6"
-                    >
-                    </Typography>
+                    <Link to="./service" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
+
                   </Paper>
                 </Fade>
               </Grid>

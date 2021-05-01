@@ -95,7 +95,7 @@ className={classes.HeaderText1}
           <div>
             <div style={{display:"flex",flexDirection:"row",alignItems:"center",width:"100%"}}>
               <div style={{width:"100%"}}>
-                <img src="./images/willsmith.jpg" className={classes.media} alt=""/>
+                <img src="./images/profileimg1.png" className={classes.media} alt=""/>
               </div>
               <div style={{width:"100%",justifyContent:"flex-end",display:"flex"}}>
               <img
@@ -111,10 +111,10 @@ className={classes.HeaderText1}
            
            
             <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
-            Business Controller, EMAG LLC
+            Business Controller
           </Typography>
           <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
-          Farmington Hills, MI
+          EMAG LLC
           </Typography>
           <p style={{ color: 'white', fontSize:"16px",fontFamily:"Poppins",fontWeight:"500" }} >
           Palani has worked with our company less than one year in a consulting capacity involving both ISO
@@ -126,7 +126,7 @@ Palani’s practical and make-it-work approach has been especially helpful with 
 The most critical decision we made in pursuing 3 ISO certifications simultaneously was to hire
 [Palani/Company Name]. We were able to organize quickly, construct an effective management system,
 and pass all three audits in under 4 months. Remarkable.
-<br/>
+{/* <br/>
 Shawn Etheridge, SVP<br/>
 ECCO Select<br/>
 
@@ -144,7 +144,96 @@ make him an absolute must have for any ISO or CMMI work.
 <br/>
 Russ McDowell<br/>
 Director, Technology Services<br/>
-ECCO Select Corporation<br/>
+ECCO Select Corporation<br/> */}
+          </p>
+          </div>
+    </div>
+    
+    </Paper>
+    <img
+                className={classes.orangebox}
+                src="../images/orangebox.png"
+              />
+    </div>
+          </Grid>
+          <Grid item md={12} sm={12} className={classes.cardGrid}>
+                 <div style={{position:"relative"}}>
+                  <Paper className={classes.root}   style={{ backgroundColor: '#0C2D48' }}>     
+          <div>
+            <div style={{display:"flex",flexDirection:"row",alignItems:"center",width:"100%"}}>
+              <div style={{width:"100%"}}>
+                <img src="./images/profileimg1.png" className={classes.media} alt=""/>
+              </div>
+              <div style={{width:"100%",justifyContent:"flex-end",display:"flex"}}>
+              <img
+          className={classes.starimg}
+          src="./images/5star.png"
+        />
+              </div>
+            </div>
+            <div>
+            <Typography gutterBottom variant="h5" component="h2" style={{ color: 'white' }}>
+            Shawn Etheridge
+          </Typography>
+           
+           
+            <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
+            SVP
+          </Typography>
+          <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
+          ECCO Select Corporation
+          </Typography>
+          <p style={{ color: 'white', fontSize:"16px",fontFamily:"Poppins",fontWeight:"500" }} >
+          The most critical decision we made in pursuing 3 ISO certifications simultaneously was to hire
+          Canton Management Services. We were able to organize quickly, construct an effective management system,
+and pass all three audits in under 4 months. Remarkable.
+          </p>
+          </div>
+    </div>
+    
+    </Paper>
+    <img
+                className={classes.orangebox}
+                src="../images/orangebox.png"
+              />
+    </div>
+          </Grid>
+          <Grid item md={12} sm={12} className={classes.cardGrid}>
+                 <div style={{position:"relative"}}>
+                  <Paper className={classes.root}   style={{ backgroundColor: '#0C2D48' }}>     
+          <div>
+            <div style={{display:"flex",flexDirection:"row",alignItems:"center",width:"100%"}}>
+              <div style={{width:"100%"}}>
+                <img src="./images/profileimg1.png" className={classes.media} alt=""/>
+              </div>
+              <div style={{width:"100%",justifyContent:"flex-end",display:"flex"}}>
+              <img
+          className={classes.starimg}
+          src="./images/5star.png"
+        />
+              </div>
+            </div>
+            <div>
+            <Typography gutterBottom variant="h5" component="h2" style={{ color: 'white' }}>
+            Russ McDowell
+          </Typography>
+            <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
+            Director, Technology Services
+          </Typography>
+          <Typography  gutterBottom variant="h6" color="textSecondary" component="p" style={{ color: 'orangered' }}>
+          ECCO Select Corporation
+          </Typography>
+          <p style={{ color: 'white', fontSize:"16px",fontFamily:"Poppins",fontWeight:"500" }} >
+          I am pleased to endorse Palani Masilamani without reservation.  My company is an IT staffing and
+services business that had an urgent need for ISO certification.  While many vendors said they could not
+meet our timeline, Palani agreed to aid us.  As part of his consultancy and evidence of willingness to see
+us succeed he outlined responsibilities and risks so all parties understood what was required.  Over the
+course of the certification evolution Palani quickly understood our industry and existing business
+practices and provided exceptional subject matter expertise backed by unparalleled support.  The result
+of Palani’s work with us was a flawless Stage 2 audit on the demanding timeline we had and we simply
+could not be more pleased with the outcome.
+We will continue to work with Palani in the future as his work ethic and commitment to client success
+make him an absolute must have for any ISO or CMMI work.
           </p>
           </div>
     </div>

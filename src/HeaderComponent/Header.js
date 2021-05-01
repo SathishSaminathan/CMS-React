@@ -173,7 +173,9 @@ function Header(props) {
         <PhoneInTalkOutlinedIcon className={classes.icons}/>
         </div>
         <div className={classes.textContainer}>
-          <Typography className={classes.text}>+1248.842.2805</Typography>
+          <Typography className={classes.text}>+1(248)842-2805
+          
+          </Typography>
           <Typography  className={classes.text}>Give us a call</Typography>
         </div>
         </div>

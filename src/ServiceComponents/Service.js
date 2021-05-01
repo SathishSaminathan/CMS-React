@@ -311,13 +311,13 @@ function Service(props) {
                 >
                   Hands-on consultancy guidance on establishment and
                   implementation of the management system,including support
-                  services:
+                  services
                 </Typography>
               </Fade>
             </div>
           </Grid>
           <Paper className={classes.paper} elevation={0}>
-            <Grid container spacing={0} style={{ marginTop: '10%' }}>
+            <Grid container spacing={0} style={{ marginTop: '4%' }}>
               <Grid item xs={12} sm container>
                 <Grid
                   item
@@ -358,7 +358,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Six sigma Program Implementation
+                        Six Sigma Program Implementation
                       </Typography>
                     </Grid>
                     <Grid item xs>
@@ -530,7 +530,7 @@ function Service(props) {
             </Grid>
           </Paper>
           <Paper className={classes.paper} elevation={0}>
-            <Grid container spacing={0} style={{ marginTop: '10%' }}>
+            <Grid container spacing={0} style={{ marginTop: '4%' }}>
               <Grid item xs={12} sm container>
                 <Grid item md={6} xs={12}>
                   <Fade left delay={1000}>
@@ -753,13 +753,11 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Documentation of policies ,
+                        Documentation of policies, {''}
                         <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                          SOPs,
+                          SOPs{''}
                         </span>
-                        ,Operator instructions,Visual aids,Control plans and
-                        Training Materials relevant to Quality,information
-                        security ,and Environment Management area
+                        , Operator Instructions, Visual Aids, Control Plans and Training Materials relevant to Quality, Information Security, and Environment Management area
                       </Typography>
                     </Grid>
                   </Fade>

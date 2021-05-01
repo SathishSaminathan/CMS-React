@@ -102,8 +102,8 @@ const useStyles = makeStyles((theme) => ({
     top: '42%',
   },
   paper: {
-    width: 300,
-    height: 470,  
+    width: 360  ,
+    height: 515  ,  
     marginTop: "4em",
     marginLeft: "12em",
     [theme.breakpoints.down('sm')]: {
@@ -287,8 +287,8 @@ function ContactComponent(props) {
             <div className="underline"></div>
 
             <Typography className={classes.head1}>
-              Any Kind of business solution and Consulation don't hesitate to
-              contact with us for imidiate customer support.We would love to
+              Any kind of Business Solution and Consultation don't hesitate to
+              contact with us for immediate customer support. We would love to
               hear from you
             </Typography>
           </Grid>
@@ -367,6 +367,7 @@ function ContactComponent(props) {
                       textAlign: 'left',
                       paddingLeft: '30px',
                       color: 'orangered',
+                      paddingTop:10
                     }}
                   >
                     Address:
@@ -427,7 +428,15 @@ function ContactComponent(props) {
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    palani59@gmail.com
+                    pmasilamani@canton-management.com
+                  
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    style={{ textAlign: 'left', paddingLeft: '30px',paddingTop:5 }}
+                  >
+                   sales@canton-management.com 
+                  
                   </Typography>
                 </div>
               </Fade>

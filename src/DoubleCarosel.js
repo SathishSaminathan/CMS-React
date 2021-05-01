@@ -228,7 +228,7 @@ const DoubleCarosel = () => {
                     <div className={classes.willimgcontainer}>
                        <img
                       className={classes.cardimg}
-                      src="./images/willsmith.jpg"
+                      src="./images/profileimg1.png"
                     />
                     </div>
                     <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
@@ -249,15 +249,14 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",}}>
                 <div className={classes.willimgcontainer}>
                    <img
                   className={classes.cardimg}
-                  src="./images/willsmith.jpg"
+                  src="./images/profileimg1.png"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
-                   <Typography className={classes.cardsubtitle}>Business Controller, EMAG LLC</Typography>
+                <Typography className={classes.cardTitle} style={{}}> Shawn Etheridge</Typography>
+                   <Typography className={classes.cardsubtitle}>SVP, ECCO Select Corporation</Typography>
                    <img className={classes.starimg} src="./images/5star.png"/>
-                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
-Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
-surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>The most critical decision we made in pursuing 3 ISO certifications simultaneously was to hire
+Canton Management Services. <Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
               </Paper>
               
                 </Grid>
@@ -272,36 +271,36 @@ surveillance audit for each standard.<Link to="./testimonial" className={classes
                 <div className={classes.willimgcontainer}>
                    <img
                   className={classes.cardimg}
-                  src="./images/willsmith.jpg"
+                  src="./images/profileimg1.png"
                 />
                 </div>
-                <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
-                   <Typography className={classes.cardsubtitle}>Business Controller, EMAG LLC</Typography>
+                <Typography className={classes.cardTitle} style={{}}> Russ McDowell</Typography>
+                   <Typography className={classes.cardsubtitle}>Director, ECCO Select Corporation</Typography>
                    <img className={classes.starimg} src="./images/5star.png"/>
-                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
-Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
-surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}> I am pleased to endorse Palani Masilamani without reservation.  My company is an IT staffing and
+services business that had an urgent need for ISO certification.  While many vendors said they could not
+meet our timeline, Palani agreed to aid us. <Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
               </Paper>
                 </Grid>
                 <Hidden mdDown>
 
                 <Grid item xs={12} md={6} className={classes.cardContainer1}>
-                <Paper className={classes.card} elevation={0}  style={{  padding: '10px',backgroundColor: "#a40606",
-backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)", }}>
+                  <Paper className={classes.card}  style={{  padding: '10px' }} elevation={0}>
                    
-                <div className={classes.willimgcontainer}>
-                   <img
-                  className={classes.cardimg}
-                  src="./images/willsmith.jpg"
-                />
-                </div>
-                <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
+                    <div className={classes.willimgcontainer}>
+                       <img
+                      className={classes.cardimg}
+                      src="./images/profileimg1.png"
+                    />
+                    </div>
+                    <Typography className={classes.cardTitle} style={{}}> G. Walker</Typography>
                    <Typography className={classes.cardsubtitle}>Business Controller, EMAG LLC</Typography>
                    <img className={classes.starimg} src="./images/5star.png"/>
                    <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
 Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
 surveillance audit for each standard.<Link to="./testimonial" className={classes.redmore}>...Read More</Link></Typography>
-              </Paper>
+                  
+                  </Paper>
                 </Grid>
                 </Hidden>
                 </Grid>

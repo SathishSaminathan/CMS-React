@@ -89,13 +89,23 @@ const FooterPagePro = () => {
                   <Link href="#" style={{ color: 'orangered',fontSize:"22px" }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
                   pmasilamani@canton-management.com
                   </Link>
+                  {/* <Link href="#" style={{ color: 'orangered',fontSize:"22px" }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
+                  sales@canton-management.com 
+                  </Link> */}
+                </li>
+                <li style={{fontFamily:"Poppins" }} className={classes.li}>
+                
+                  <Link href="#" style={{ color: 'orangered',fontSize:"22px",paddingLeft:88  }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
+                  sales@canton-management.com 
+                  </Link>
+                 
                 </li>
                 <li style={{ fontFamily:"Poppins"}} className={classes.li}>
                   Call us: {''}
                   <Typography
                     style={{ fontSize: '20px', display: 'inline-block' }}
                   >
-                    +1248.842.2805
+                    +1(248)842-2805
                   </Typography>
                 </li>
               </ul>
