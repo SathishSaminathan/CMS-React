@@ -178,7 +178,7 @@ function Header(props) {
           <Typography className={classes.text}>+1(248)842-2805
           
           </Typography>
-          <Typography  className={classes.text}>Give us a call</Typography>
+          <Typography  className={classes.text} style={{textAlign:"center"}}>Give us a call</Typography>
         </div>
         </div>
         <div style={{display:"flex", flexDirection:"row",paddingTop:"15px"}}>

@@ -31,7 +31,7 @@ function Service(props) {
   return (
     <div>
       <div className={classes.imageContainer}>
-        <img className={classes.bgimg} src="./images/ourservice.jpg" />
+        <img className={classes.bgimg} style={{opacity:0.9}}src="./images/ourservice.jpg" />
       </div>
       <ThemeProvider theme={theme}>
         <HeaderComponent />

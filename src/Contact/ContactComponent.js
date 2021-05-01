@@ -293,7 +293,7 @@ function ContactComponent(props) {
             <Typography className={classes.head1}>
               Any kind of Business Solution and Consultation don't hesitate to
               contact with us for immediate customer support. We would love to
-              hear from you
+              hear from you.
             </Typography>
           </Grid>
 
@@ -308,7 +308,7 @@ function ContactComponent(props) {
               </ScrollableAnchor>
               <div className="underline"></div>
               <Typography className={classes.subtext1}>
-                Alternatively,if you'd like for us to get back in touch with you
+                Alternatively, if you'd like for us to get back in touch with you
                 please fill in the form below.
               </Typography>
              <div style={{marginTop: '20px'}}>
