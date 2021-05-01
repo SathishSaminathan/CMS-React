@@ -295,12 +295,12 @@ function ContactComponent(props) {
           </Grid>
 
           <Grid container md={7}>
+          <ScrollableAnchor id={'message'}>
+
             <Grid item xs={12} md={9} className={classes.Heading2}>
-            <ScrollableAnchor id={'message'}>
               <Typography variant="h4" style={{ marginBottom: '-25px',fontSize:"24px" }} >
                 Send Us Your Message
               </Typography>
-              </ScrollableAnchor>
               <div className="underline"></div>
               <Typography className={classes.subtext1}>
                 Alternatively,if you'd like for us to get back in touch with you
@@ -353,6 +353,8 @@ function ContactComponent(props) {
                 </Button>
               </Grid>
             </Grid>
+            </ScrollableAnchor>
+
           </Grid>
           <Grid
             item
