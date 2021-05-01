@@ -736,7 +736,9 @@ function Service(props) {
                 <Grid Container className={classes.TrainingWorkshop} >
                   <Grid item md={12} className={classes.item1}>
                   <Fade bottom >
+                    <ScrollableAnchor id={'training'}>
                   <Typography  variant="h2" className={classes.workshopTitle}>Training Workshops</Typography>
+                  </ScrollableAnchor>
                   </Fade>
                   <div
               style={{

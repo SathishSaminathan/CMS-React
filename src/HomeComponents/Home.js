@@ -188,7 +188,7 @@ function Home(props) {
                     <Typography className={classes.cardText} variant="h6">
                     CMS offers a wide range of training and management consultancy services across a variety of learning and development areas.
                     </Typography>
-                    <Link to="./service" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
+                    <Link to="./service#training" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
 
                   </Paper>
                 </Fade>
