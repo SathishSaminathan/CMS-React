@@ -8,6 +8,7 @@ import Navbar from "./NavBar";
 import PhoneInTalkOutlinedIcon from "@material-ui/icons/PhoneInTalkOutlined";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import {useHistory} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
@@ -152,6 +153,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Header(props) {
   const classes = useStyles();
+  let history=useHistory();
   return (
     <div className={classes.root}>
       <div className={classes.imageContainer}>
@@ -196,6 +198,7 @@ function Header(props) {
               variant="outlined"
               size="medium"
               style={{borderRadius:"20px",  borderColor:"white"}}
+              onClick={()=>history.push("./contact#message")}
             >
               Get in Touch
             </Button>

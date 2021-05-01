@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import PhoneInTalkOutlinedIcon from '@material-ui/icons/PhoneInTalkOutlined';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import {useHistory} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   //   imageContainer:{
@@ -275,6 +276,8 @@ const useStyles = makeStyles((theme) => ({
 
 function HeaderComponent(props) {
     const classes = useStyles();
+    let history=useHistory();
+
     return (
         <div className={classes.root}>
             
@@ -354,6 +357,7 @@ function HeaderComponent(props) {
               variant="outlined"
               size="medium"
               style={{borderRadius:"20px",  borderColor:"white"}}
+              onClick={()=>history.push("./contact#message")}
             >
               Get in Touch
             </Button>

@@ -103,10 +103,10 @@ const useStyles = makeStyles((theme) => ({
     top: '42%',
   },
   paper: {
-    width: 360  ,
-    height: 515  ,  
+    width: "60%"  ,
     marginTop: "4em",
     marginLeft: "12em",
+    paddingBottom:15,
     [theme.breakpoints.down('sm')]: {
     
       margin: '0px',

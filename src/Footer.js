@@ -10,7 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   li: {
-    fontSize: '22px',
+    fontSize: '16px',
     fontFamily:"Poppins",
   padding:"2px 0px"
   },
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   cantonHeader:{
     fontFamily:"Poppins",
     fontWeight:600,
-    fontSize:"30px",
+    fontSize:"25px",
     paddingLeft:"40px",
     [theme.breakpoints.down('sm')]: {
      
@@ -86,7 +86,7 @@ const FooterPagePro = () => {
                 <li className={classes.li}>United States</li>
                 <li style={{fontFamily:"Poppins" }} className={classes.li}>
                   Mail us: {''}
-                  <Link href="#" style={{ color: 'orangered',fontSize:"22px" }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
+                  <Link href="#" style={{ color: 'orangered',fontSize:"16px" }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
                   pmasilamani@canton-management.com
                   </Link>
                   {/* <Link href="#" style={{ color: 'orangered',fontSize:"22px" }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
@@ -95,7 +95,7 @@ const FooterPagePro = () => {
                 </li>
                 <li style={{fontFamily:"Poppins" }} className={classes.li}>
                 
-                  <Link href="#" style={{ color: 'orangered',fontSize:"22px",paddingLeft:88  }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
+                  <Link href="#" style={{ color: 'orangered',fontSize:"16px",paddingLeft:65  }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
                   sales@canton-management.com 
                   </Link>
                  
@@ -103,7 +103,7 @@ const FooterPagePro = () => {
                 <li style={{ fontFamily:"Poppins"}} className={classes.li}>
                   Call us: {''}
                   <Typography
-                    style={{ fontSize: '20px', display: 'inline-block' }}
+                    style={{ fontSize: '16px', display: 'inline-block' }}
                   >
                     +1(248)842-2805
                   </Typography>
