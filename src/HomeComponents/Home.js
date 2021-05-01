@@ -61,7 +61,7 @@ function Home(props) {
               Type of consultancy services organization
             </Typography>
             <Button
-            onClick={()=>history.push("./service")}
+            onClick={()=>history.push("./about")}
               variant="contained"
               style={{
                 backgroundColor: 'orangered',
@@ -78,7 +78,7 @@ function Home(props) {
               Our Services
             </Button>
             <Button
-            
+            onClick={()=>history.push("./about")}
               variant="outlined"
               style={{
                 marginRight: '20px',
@@ -228,14 +228,15 @@ function Home(props) {
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                   Management Consultancy Services
                 </span>{' '}
-                on integrated Management System(IMS),Business Process{' '}
+                on Integrated Management System(IMS), Business Process{' '}
                 <span style={{ color: '#0C2D48', fontWeight: '600' }}>
                   Re-Engineering
                 </span>{' '}
-                and improvement
+                and improvement.
               </Typography>
               <Button
                 className={classes.btnLearn}
+                onClick={()=>history.push("./about")}
                 style={{
                   backgroundColor: 'orangered',
                   borderRadius: '30px',

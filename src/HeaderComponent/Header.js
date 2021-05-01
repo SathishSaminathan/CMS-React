@@ -185,7 +185,7 @@ function Header(props) {
               />
         </div>
         <div className={classes.textContainer}>
-          <Typography  className={classes.text}>cantonManagement@gmail.com</Typography>
+          <Typography  className={classes.text}>sales@canton-management.com  </Typography>
           {/* <Typography  className={classes.text}>Get in Touch</Typography> */}
         </div>
         </div>
