@@ -39,7 +39,6 @@ function Home(props) {
       <ThemeProvider theme={theme}>
         <Header />
         <NavBArMat  />
-
         <Grid xl="auto" container id="back-to-top-anchor">
           <Grid item spacing={2} xs={12}  className={classes.cmsContent}>
             <Typography

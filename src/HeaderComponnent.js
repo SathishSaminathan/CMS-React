@@ -325,7 +325,7 @@ function HeaderComponent(props) {
        
              </Grid> */}
               <div style={{display: 'flex',justifyContent: 'center'}}>
-      <div style={{width:"78%"}}>
+      <div style={{width:"78%",zIndex:2}}>
       <Hidden mdDown>
         <div style={{display:"flex", flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
         <div>
