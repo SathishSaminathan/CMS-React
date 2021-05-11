@@ -54,12 +54,11 @@ const useStyles = makeStyles((theme) => ({
   options: {
     display: 'flex',
     justifyContent: 'space-around',
-    paddingBottom:"10px",
+    // paddingBottom:"10px",
     flex: 1,
     alignContent:"center",
     textAlign:"center",
-    alignContent:"center",
-    paddingBottom:"25px"
+    alignItems: 'center',
   },
   containerIcons:{
       
