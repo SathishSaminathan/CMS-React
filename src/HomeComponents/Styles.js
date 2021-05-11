@@ -105,7 +105,7 @@ let useStyles = makeStyles((theme) => ({
       width: 400,
       position: 'relative',
       top: '10px',
-      left: '12.4%',
+      left: '12.2%',
       justifyContent: 'center',
       textAlign: 'center',
       backgroundColor: '#2E8BC0',

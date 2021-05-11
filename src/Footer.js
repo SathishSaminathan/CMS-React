@@ -67,9 +67,9 @@ const FooterPagePro = () => {
 
   return (
     <MDBFooter
-      color="bg-dark"
+      
       className="page-footer font-small pt-4 mt-4"
-      style={{ width: '100%', backgroundColor: '1e212d',paddingTop: '40px'}}
+      style={{ width: '100%', backgroundColor: 'rgb(0 21 45)',paddingTop: '40px'}}
     >
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
@@ -81,9 +81,9 @@ const FooterPagePro = () => {
             </h5>
             <Typography className={classes.addressDetails}>
               <ul className={classes.ulcontainer}>
-                <li className={classes.li}>46060 Ashton Woods Ct, Canton,</li>
-                <li className={classes.li}>Michigan 48187, </li>
-                <li className={classes.li}>United States</li>
+                <li className={classes.li}>46060 Ashton Woods Ct.</li>
+                <li className={classes.li}>Canton, MI 48187 </li>
+                <li className={classes.li}>USA</li>
                 <li style={{fontFamily:"Poppins" }} className={classes.li}>
                   Mail us: {''}
                   <Link href="#" style={{ color: 'orangered',fontSize:"16px" }} onClick={()=>window.open('mailto:your@email.address?subject=Comments about the color blue')}>
@@ -105,7 +105,7 @@ const FooterPagePro = () => {
                   <Typography
                     style={{ fontSize: '16px', display: 'inline-block' }}
                   >
-                    +1(248)842-2805
+                    +1(248)444-8097 
                   </Typography>
                 </li>
               </ul>

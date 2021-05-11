@@ -65,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
   aboutText: {
     position:"absolute",
     left:"11%",
+    top:"20%",
+    // backgroundColor:"pink",
+   
     // marginBottom: '60px',
     // paddingBottom:"80px",
     top:"-8.5%",
@@ -313,15 +316,15 @@ function AboutUs(props) {
               </Typography>
               </Fade>
             </Grid>
-            <Grid
+            {/* <Grid
               item
               xs={12}
               md={12}
               xl={12}
               className={classes.playimgcontainer}
-            >
+            > */}
               {/* <img className={classes.playimg}  src="../images/playvid.jpg"/> */}
-              <div className={classes.imgdiv}>
+              {/* <div className={classes.imgdiv}>
                 <Typography
                   variant="h5"
                   style={{
@@ -337,8 +340,8 @@ function AboutUs(props) {
                   <AlbumOutlinedIcon />
                   Play Video
                 </Typography>
-              </div>
-            </Grid>
+              </div> */}
+            {/* </Grid> */}
             <Grid container className={classes.cardCarosel}>
             <Grid item xs={12} md={12}>
               <Typography variant="h4" style={{color:"#1687a7",fontFamily: 'Hammersmith One, sans-serif'}}>From Our Great Clients</Typography>

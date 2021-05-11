@@ -386,19 +386,19 @@ function ContactComponent(props) {
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    46060 Ashton Woods Ct, Canton,
+                    46060 Ashton Woods Ct.
                   </Typography>
                   <Typography
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    Michigan 48187,
+                   Canton, MI 48187
                   </Typography>
                   <Typography
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    United States
+                    USA
                   </Typography>
                 </div>
               </Fade>
@@ -418,11 +418,11 @@ function ContactComponent(props) {
                     variant="subtitle1"
                     style={{ textAlign: 'left', paddingLeft: '30px' }}
                   >
-                    +1(248)842-2805
+                    +1 2484448097
                   </Typography>
                 </div>
               </Fade>
-              <Fade left >
+              {/* <Fade left >
                 <div style={{ marginBottom: '50px' }}>
                   <Typography
                     variant="h6"
@@ -449,7 +449,7 @@ function ContactComponent(props) {
                   
                   </Typography>
                 </div>
-              </Fade>
+              </Fade> */}
               <Fade right >
                 <div>
                   <Typography
