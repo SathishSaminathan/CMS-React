@@ -1,18 +1,15 @@
-.underline{
-    width: 112px;
-height: 47px;
-border-bottom: 3px solid orangered;
+.underline {
+  width: 112px;
+  height: 47px;
+  border-bottom: 3px solid orangered;
 }
-footer.page-footer{
-    width:100%;
-    
+footer.page-footer {
+  width: 100%;
 }
 .MuiButton-root:hover {
-    background-color: orangered;
-  }
-  
-  
-  .MuiButton-root:hover {
-   
-    background-color: orangered;
-  }
+  background-color: orangered;
+}
+
+.MuiButton-root:hover {
+  background-color: orangered;
+}

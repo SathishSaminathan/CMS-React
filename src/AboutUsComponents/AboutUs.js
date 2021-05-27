@@ -8,16 +8,15 @@ import {
   createMuiTheme,
   responsiveFontSizes,
 } from '@material-ui/core';
-
 import AlbumOutlinedIcon from '@material-ui/icons/AlbumOutlined';
 import DoubleCarosel from '../DoubleCarosel';
-import Fab from "@material-ui/core/Fab";
+import Fab from '@material-ui/core/Fab';
 import Fade from 'react-reveal/Fade';
 import FooterPage from '../Footer';
 import FooterPagePro from '../Footer';
 import Header from '../HeaderComponent/Header';
 import HeaderComponent from '../HeaderComponnent';
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import NavBArMat from '../NavBarMat';
 import React from 'react';
 import ScrollUp from '../ScrollUp';
@@ -27,18 +26,16 @@ let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
   imageContainer: {
-
-    position: "absolute",
-    width: "100%",
-    height: "60vh",
+    position: 'absolute',
+    width: '100%',
+    height: '60vh',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor:" rgba(111,111,111,2.0)",
+    backgroundColor: ' rgba(111,111,111,2.0)',
     zIndex: -1,
-    background: "linear-gradient(90deg, black, transparent)",
-   
+    background: 'linear-gradient(90deg, black, transparent)',
   },
 
   root: {
@@ -58,33 +55,29 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: ' 0 -500px',
     [theme.breakpoints.down('md')]: {
       width: '100%',
-    },[theme.breakpoints.down('xs')]: {
+    },
+    [theme.breakpoints.down('xs')]: {
       height: '60vh',
     },
   },
   aboutText: {
-    position:"absolute",
-    left:"11%",
-    top:"20%",
+    position: 'absolute',
+    left: '11%',
+    top: '20%',
     // backgroundColor:"pink",
-   
+
     // marginBottom: '60px',
     // paddingBottom:"80px",
-    top:"-8.5%",
+    top: '-8.5%',
     [theme.breakpoints.down('sm')]: {
-      left:"2%",
-      top:"1%",
+      left: '2%',
+      top: '1%',
     },
-   
   },
   contentContainer: {
-   width:"100%",
-   
-   
-   
-    [theme.breakpoints.down('xs')]: {
-     
-    },
+    width: '100%',
+
+    [theme.breakpoints.down('xs')]: {},
   },
   vidcontainer: {
     width: '100%',
@@ -98,7 +91,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('xs')]: {
       top: '0',
-    },[theme.breakpoints.down('sm')]: {
+    },
+    [theme.breakpoints.down('sm')]: {
       top: '0',
     },
   },
@@ -124,8 +118,8 @@ const useStyles = makeStyles((theme) => ({
 
   Aboutimg: {
     width: '80%',
-    height:"80%",
-    objectFit:"cover",
+    height: '80%',
+    objectFit: 'cover',
     [theme.breakpoints.down('xs')]: {
       width: '100%',
     },
@@ -162,80 +156,74 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '0px',
     marginRight: '0px',
     position: 'relative',
-   
+
     marginTop: '13px',
   },
   cantonContainer: {
-    paddingLeft:"12.5em",
-    paddingTop:"4em",
+    paddingLeft: '12.5em',
+    paddingTop: '4em',
     [theme.breakpoints.down('md')]: {
       left: '0',
-    },[theme.breakpoints.down('xs')]: {
+    },
+    [theme.breakpoints.down('xs')]: {
       left: '0',
-      paddingLeft:"5px",
+      paddingLeft: '5px',
     },
     [theme.breakpoints.down('sm')]: {
       left: '0',
-      paddingLeft:"5px",
+      paddingLeft: '5px',
     },
   },
   undertext: {
- 
- 
     fontSize: '22px',
-    width:"90%",
-    padding:"10px 0px",
-   [theme.breakpoints.down('md')]: {
-    marginLeft:"0",
-    
-    width:"100%",
-  },
-  [theme.breakpoints.down('xs')]: {
-   
-    fontSize: '17px',
-   
-  },
-  },
-  gridmain:{
-    position:"relative",
-    top:"27em",
-    [theme.breakpoints.down('xs')]: {
-      top:"19em",
+    width: '90%',
+    padding: '10px 0px',
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '0',
+
+      width: '100%',
     },
-   
-   
-  },
-  aboutTypo:{
-    fontFamily:"Anton, sans-serif",
-    color:"white"
-  },
-  subs:{
-    width:"80%",
-    paddingLeft:"12.5em",
-    paddingBottom:"2em",
     [theme.breakpoints.down('xs')]: {
-      paddingLeft:"0",
-      marginTop:"40px",
-      paddingLeft:"5px",
+      fontSize: '17px',
+    },
+  },
+  gridmain: {
+    position: 'relative',
+    top: '27em',
+    [theme.breakpoints.down('xs')]: {
+      top: '19em',
+    },
+  },
+  aboutTypo: {
+    fontFamily: 'Anton, sans-serif',
+    color: 'white',
+  },
+  subs: {
+    width: '80%',
+    paddingLeft: '12.5em',
+    paddingBottom: '2em',
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft: '0',
+      marginTop: '40px',
+      paddingLeft: '5px',
     },
     [theme.breakpoints.down('sm')]: {
-      paddingLeft:"0",
-      marginTop:"40px",
-      paddingLeft:"5px",
+      paddingLeft: '0',
+      marginTop: '40px',
+      paddingLeft: '5px',
     },
   },
-  subGrid:{
-    marginTop:"10em",
-    [theme.breakpoints.down('sm')]: {
-      marginTop:"9em",
+  subGrid: {
+    marginTop: '10em',
+    [theme.breakpoints.down('lg')]: {
+      marginTop: '1em',
     },
-  }
-  
+  },
 }));
 
 function AboutUs(props) {
   const classes = useStyles();
-  
+
   const { width } = props;
   console.log(width);
   return (
@@ -246,74 +234,84 @@ function AboutUs(props) {
       <ThemeProvider theme={theme}>
         <HeaderComponent />
         <NavBArMat />
-        <Grid container  className={classes.gridmain}>
+        <Grid container className={classes.gridmain}>
           <Grid item md={12} className={classes.aboutText}>
-            <Typography className={classes.aboutTypo} variant="h3">ABOUT US {width}</Typography>
+            <Typography className={classes.aboutTypo} variant="h3">
+              ABOUT US {width}
+            </Typography>
           </Grid>
-        
-      
-          <Grid container className={classes.subGrid}>
+
+          <Grid container className={`${classes.subGrid} ${'subgrid_one'}`}>
             <Grid item xs={12} md={6} className={classes.cantonContainer}>
               <Fade bottom>
-              <Typography variant="h2" className={classes.cantonTitle}>
-                Canton Management Services
-              </Typography>
+                <Typography variant="h2" className={classes.cantonTitle}>
+                  Canton Management Services
+                </Typography>
               </Fade>
               <div className="underline"></div>
               <Fade top>
-              <Typography variant="subtitle1" className={classes.cantonText}>
-              Canton Management Services, Inc was established in 2008. CMS is a practical and {' '}
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                  "SHOW-HOW"
-                </span>{' '}
-                type of Consultancy Services organization. It has been instrumental in bringing a{' '}
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                perceptible change in the company’s outlook image and performance.
-                </span>
-              </Typography>
+                <Typography variant="subtitle1" className={classes.cantonText}>
+                  Canton Management Services, Inc was established in 2008. CMS
+                  is a practical and{' '}
+                  <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                    "SHOW-HOW"
+                  </span>{' '}
+                  type of Consultancy Services organization. It has been
+                  instrumental in bringing a{' '}
+                  <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                    perceptible change in the company’s outlook image and
+                    performance.
+                  </span>
+                </Typography>
               </Fade>
               <Fade bottom>
-              <Typography variant="subtitle1" className={classes.cantonText}>
-              We provide consultancy services to Automotive, Tire & Steel Foundries, Paint and Electrical & Electronics manufacturing companies, Software Development companies, Data Processing Centers, Conical Research Organizations, and Asset Recovery Centers utilizing Kitting, 3PL providers and Banks in Service industries.
-              </Typography>
+                <Typography variant="subtitle1" className={classes.cantonText}>
+                  We provide consultancy services to Automotive, Tire & Steel
+                  Foundries, Paint and Electrical & Electronics manufacturing
+                  companies, Software Development companies, Data Processing
+                  Centers, Conical Research Organizations, and Asset Recovery
+                  Centers utilizing Kitting, 3PL providers and Banks in Service
+                  industries.
+                </Typography>
               </Fade>
             </Grid>
-            
+
             <Grid item className={classes.aboutimgcontainer} md={6} xs={12}>
               <Fade top>
-              <img className={classes.Aboutimg} src="../images/Aboutus.jpg" />
+                <img className={classes.Aboutimg} src="../images/Aboutus.jpg" />
               </Fade>
             </Grid>
             <Grid item xs={12} md={12} xl={12} className={classes.subs}>
-            <Fade left>
-              <Typography className={classes.undertext} variant="subtitle1">
-                Our core Competencies are Management Consultancy Services on
-                Integrated Management System{' '}
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                  (IMS)
-                </span>
-                . Business Process{' '}
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                  Re-Engineering{' '}
-                </span>
-                 and Continual improvement.
-              </Typography>
+              <Fade left>
+                <Typography className={classes.undertext} variant="subtitle1">
+                  Our core Competencies are Management Consultancy Services on
+                  Integrated Management System{' '}
+                  <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                    (IMS)
+                  </span>
+                  . Business Process{' '}
+                  <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                    Re-Engineering{' '}
+                  </span>
+                  and Continual improvement.
+                </Typography>
               </Fade>
               <Fade bottom>
-              <Typography variant="subtitle1" className={classes.undertext}>
-                We are well qualified, very experienced and holds certification
-                on Auditing,
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
-                {' '}CISA, ITIL
-                </span>
-                , Lean and Six Sigma Black Belts.
-              </Typography>
+                <Typography variant="subtitle1" className={classes.undertext}>
+                  We are well qualified, very experienced and holds
+                  certification on Auditing,
+                  <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                    {' '}
+                    CISA, ITIL
+                  </span>
+                  , Lean and Six Sigma Black Belts.
+                </Typography>
               </Fade>
               <Fade top>
-              <Typography className={classes.undertext} variant="subtitle1">
-                We are committed to contributing to the organization through
-                compatible guidance.
-              </Typography>
+                <Typography className={classes.undertext} variant="subtitle1">
+                  We are committed to contributing to the organization through
+                  compatible guidance.
+                </Typography>
               </Fade>
             </Grid>
             {/* <Grid
@@ -323,8 +321,8 @@ function AboutUs(props) {
               xl={12}
               className={classes.playimgcontainer}
             > */}
-              {/* <img className={classes.playimg}  src="../images/playvid.jpg"/> */}
-              {/* <div className={classes.imgdiv}>
+            {/* <img className={classes.playimg}  src="../images/playvid.jpg"/> */}
+            {/* <div className={classes.imgdiv}>
                 <Typography
                   variant="h5"
                   style={{
@@ -343,28 +341,47 @@ function AboutUs(props) {
               </div> */}
             {/* </Grid> */}
             <Grid container className={classes.cardCarosel}>
-            <Grid item xs={12} md={12}>
-              <Typography variant="h4" style={{color:"#1687a7",fontFamily: 'Hammersmith One, sans-serif'}}>From Our Great Clients</Typography>
-            </Grid>
-            <Grid item xs={12} md={12}>
-              <Typography variant="h3" style={{ color: '#0C2D48',fontFamily: 'Hammersmith One, sans-serif' }}>
-                What clients Say About Us ?
-              </Typography>
-            </Grid>
-              <Grid item xs={12} md={12} style={{marginBottom:"40px"}}>
+              <Grid item xs={12} md={12}>
+                <Typography
+                  variant="h4"
+                  style={{
+                    color: '#1687a7',
+                    fontFamily: 'Hammersmith One, sans-serif',
+                  }}
+                >
+                  From Our Great Clients
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={12}>
+                <Typography
+                  variant="h3"
+                  style={{
+                    color: '#0C2D48',
+                    fontFamily: 'Hammersmith One, sans-serif',
+                  }}
+                >
+                  What clients Say About Us ?
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={12} style={{ marginBottom: '40px' }}>
                 <DoubleCarosel />
               </Grid>
             </Grid>
-            </Grid>
-            <FooterPage />
-            </Grid>
-           
-          
-        
+          </Grid>
+          <FooterPage />
+        </Grid>
       </ThemeProvider>
       <ScrollUp {...props}>
-        <Fab style={{  backgroundColor: '#a40606',
-    backgroundImage: ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',opacity: "0.5"}} size="small" aria-label="scroll back to top">
+        <Fab
+          style={{
+            backgroundColor: '#a40606',
+            backgroundImage:
+              ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',
+            opacity: '0.5',
+          }}
+          size="small"
+          aria-label="scroll back to top"
+        >
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollUp>

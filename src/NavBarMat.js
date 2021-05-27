@@ -25,28 +25,27 @@ import { withRouter } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    position:"absolute",
-    top:"20%",
-    left:"50%",
-    transform:"translate(-50%,-50%)",
-    width:"78%",
-    justifyContent:"center",
-    display:"flex",
-    justifyContent:"center",
-    alignContent:"center",
-    height:"9vh",
+    position: 'absolute',
+    top: '20%',
+    left: '50%',
+    transform: 'translate(-50%,-50%)',
+    width: '78%',
+    justifyContent: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
+    height: '9vh',
     [theme.breakpoints.down('md')]: {
-      width:"100%",
-      top:"0%",
-      left:"0%",
-      transform:"none",
+      width: '100%',
+      top: '0%',
+      left: '0%',
+      transform: 'none',
     },
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
-     
     [theme.breakpoints.down('sm')]: {
       flexGrow: 1,
     },
@@ -56,61 +55,60 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     // paddingBottom:"10px",
     flex: 1,
-    alignContent:"center",
-    textAlign:"center",
+    alignContent: 'center',
+    textAlign: 'center',
     alignItems: 'center',
   },
-  containerIcons:{
-      
+  containerIcons: {
     flex: 1,
     justifyContent: 'space-evenly',
   },
-  hamburger:{
-      display:"flex",
-      justifyContent:"flex-end",
-      paddingBottom:"35px" 
+  hamburger: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    paddingBottom: '35px',
   },
-  btn:{
-     
-   
-    fontSize: "17px",
-    fontFamily: "Work Sans, sans-serif",
-  //     color: "white !important",
-  //     position:"relative",
-  //     '&::before': {
-  //       content: "",
-  //       position: "absolute",
-  //       width: "100%",
-  //       height: "2px",
-  //       bottom: 0,
-  //       left: 0,
-  //       backgroundColor: "#FFF",
-  //       visibility: "hidden",
-  //       transform: "scaleX(0)",
-  //       transition: "all 0.3s ease-in-out",
-  //     },
-  //     '&:hover:before':{
-  //       visibility: "visible",
-  // transform: "scaleX(1)",
-  //     },
-
-
-      '&:hover': {
-        borderBottom: "white 0.140em solid",
-        transition: "width 0.3s ease 1s, left 0.3s ease 0s",
-      
+  toolbar: {
+    [theme.breakpoints.down('lg')]: {
+      minHeight: 'unset',
+    },
+    [theme.breakpoints.down('sm')]: {
+      minHeight: '-webkit-fill-available',
+    },
   },
-},
-icons:{
-  marginTop:"5px"
-},
-menuicon:{
-  display:"flex",
-  
-  
-}
+  btn: {
+    fontSize: '17px',
+    fontFamily: 'Work Sans, sans-serif',
+    //     color: "white !important",
+    //     position:"relative",
+    //     '&::before': {
+    //       content: "",
+    //       position: "absolute",
+    //       width: "100%",
+    //       height: "2px",
+    //       bottom: 0,
+    //       left: 0,
+    //       backgroundColor: "#FFF",
+    //       visibility: "hidden",
+    //       transform: "scaleX(0)",
+    //       transition: "all 0.3s ease-in-out",
+    //     },
+    //     '&:hover:before':{
+    //       visibility: "visible",
+    // transform: "scaleX(1)",
+    //     },
 
- 
+    '&:hover': {
+      borderBottom: 'white 0.140em solid',
+      transition: 'width 0.3s ease 1s, left 0.3s ease 0s',
+    },
+  },
+  icons: {
+    marginTop: '5px',
+  },
+  menuicon: {
+    display: 'flex',
+  },
 }));
 
 function NavBArMat(props) {
@@ -122,7 +120,6 @@ function NavBArMat(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
- 
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -143,73 +140,94 @@ function NavBArMat(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{backgroundColor: "#a40606",
-backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
-}}>
-        <Toolbar >
-          
-
+      <AppBar
+        position="static"
+        style={{
+          backgroundColor: '#a40606',
+          backgroundImage: ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',
+        }}
+      >
+        <Toolbar className={classes.toolbar}>
           <div className={classes.containerIcons}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          ></IconButton>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+            ></IconButton>
             {isMobile ? (
               <>
-              <div className={classes.hamburger}>
-                <div
-                style={{position:"absolute",left:"4%",paddingTop:"4px"}}><img style={{width:"60%",  filter: "brightness(0) invert(1)",opacity:"0.8"}}  src="./images/logosmall.png"/></div>
-                
-                <IconButton
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleMenu}
-                  color="inherit"
-                  className={classes.menuicon}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  open={open}
-                  onClose={() => setAnchorEl(null)}
-                >
-                  <MenuItem onClick={() => handleClick('/')}>Home</MenuItem>
-                  <MenuItem onClick={() => handleClick('/about')}>
-                    About
-                  </MenuItem>
-                  <MenuItem onClick={() => handleClick('/service')}>
-                    Our Services
-                  </MenuItem>
-                  <MenuItem onClick={() => handleClick('/blog')}>News & Blog</MenuItem>
-                  <MenuItem onClick={() => handleClick('/client')}>Our Clients</MenuItem>
-                  <MenuItem onClick={() => handleClick('/testimonial')}>
-                    Testimonials
-                  </MenuItem>
-                  <MenuItem onClick={() => handleClick('/contact')}>Contact</MenuItem>
-                </Menu>
+                <div className={classes.hamburger}>
+                  <div
+                    style={{
+                      position: 'absolute',
+                      left: '4%',
+                      paddingTop: '4px',
+                    }}
+                  >
+                    <img
+                      style={{
+                        width: '60%',
+                        filter: 'brightness(0) invert(1)',
+                        opacity: '0.8',
+                      }}
+                      src="./images/logosmall.png"
+                    />
+                  </div>
+
+                  <IconButton
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    onClick={handleMenu}
+                    color="inherit"
+                    className={classes.menuicon}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorEl}
+                    anchorOrigin={{
+                      vertical: 'top',
+                      horizontal: 'right',
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: 'top',
+                      horizontal: 'right',
+                    }}
+                    open={open}
+                    onClose={() => setAnchorEl(null)}
+                  >
+                    <MenuItem onClick={() => handleClick('/')}>Home</MenuItem>
+                    <MenuItem onClick={() => handleClick('/about')}>
+                      About
+                    </MenuItem>
+                    <MenuItem onClick={() => handleClick('/service')}>
+                      Our Services
+                    </MenuItem>
+                    <MenuItem onClick={() => handleClick('/blog')}>
+                      News & Blog
+                    </MenuItem>
+                    <MenuItem onClick={() => handleClick('/client')}>
+                      Our Clients
+                    </MenuItem>
+                    <MenuItem onClick={() => handleClick('/testimonial')}>
+                      Testimonials
+                    </MenuItem>
+                    <MenuItem onClick={() => handleClick('/contact')}>
+                      Contact
+                    </MenuItem>
+                  </Menu>
                 </div>
               </>
             ) : (
               <div className={classes.options}>
                 <Link
                   onClick={() => handleButtonClick('/')}
-                 className={classes.btn}
+                  className={classes.btn}
                   size="large"
-
                 >
                   Home
                 </Link>
@@ -250,14 +268,14 @@ backgroundImage:" linear-gradient(315deg, #a40606 0%, #d98324 74%)",
                   Contact
                 </Link>
                 <Divider orientation="vertical" flexItem />
-                <TwitterIcon  className={classes.icons}/>
+                <TwitterIcon className={classes.icons} />
 
                 <Divider orientation="vertical" flexItem />
-                <FacebookIcon className={classes.icons}/>
+                <FacebookIcon className={classes.icons} />
 
                 <Divider orientation="vertical" flexItem />
 
-                <InstagramIcon  className={classes.icons}/>
+                <InstagramIcon className={classes.icons} />
               </div>
             )}
           </div>
