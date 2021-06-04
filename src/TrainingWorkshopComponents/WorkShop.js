@@ -1,21 +1,23 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import FooterPage from '../Footer';
-import clientimg from '../assets/images/clients1.jpg'
+import '../workshopStyles.css';
+
 import {
+  Button,
   Grid,
+  Paper,
+  TextField,
+  ThemeProvider,
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-  ThemeProvider,
-  Paper,
-  TextField,
-  Button,
 } from '@material-ui/core';
-import NavBArMat from '../NavBarMat';
 
-import '../workshopStyles.css';
+import FooterPage from '../Footer';
 import HeaderComponent from '../HeaderComponnent';
+import NavBArMat from '../NavBarMat';
+import React from 'react';
+import clientimg from '../assets/images/clients1.jpg'
+import { makeStyles } from '@material-ui/core/styles';
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
@@ -586,8 +588,8 @@ function WorkShop(props) {
       <Grid container className={classes.lastGrid}>
             <Grid item xs={12} md={6}>
               <Typography variant="h6" style={{ color: 'white' }}>
-                We Help You unlock & unleash the power within your large scale
-                buissness
+                We Help You unlock & unleash the power within your 
+                business
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>

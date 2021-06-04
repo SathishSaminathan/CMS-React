@@ -375,10 +375,8 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Critical process analysis and development of{" "}
-                        <span style={{ color: "#0C2D48", fontWeight: "600" }}>
-                          Business Continuity and Disaster Recovery Plans
-                        </span>
+                        Critical process analysis and development of Business
+                        Continuity and Disaster Recovery Plans
                       </Typography>
                     </Grid>
                   </Fade>
@@ -860,28 +858,7 @@ function Service(props) {
                       </Typography>
                     </div>
                   </div>
-                  <div className={classes.textContainer}>
-                    <div>
-                      <Typography
-                        variant="subtitle1"
-                        className={classes.trainingText}
-                      >
-                        {" "}
-                        <img
-                          style={{ paddingRight: "10px" }}
-                          className={classes.img}
-                          alt="complex"
-                          src="./images/logosmall.png"
-                        />
-                        Awareness Training on {""}
-                        <span className={classes.spanText}>
-                          ISO 9001, ISO 14001, IATF 16949, ISO/IEC 17025,
-                          ISO/IEC 27001, ISO/IEC 20000-1, NIST 800-171, CMMC,
-                          CMMI V2.0
-                        </span>
-                      </Typography>
-                    </div>
-                  </div>
+
                   <div className={classes.textContainer}>
                     <div>
                       <Typography
@@ -972,27 +949,7 @@ function Service(props) {
                       </Typography>
                     </div>
                   </div>
-                  <div className={classes.textContainer}>
-                    <div>
-                      <Typography
-                        variant="subtitle1"
-                        className={classes.trainingText}
-                      >
-                        {" "}
-                        <img
-                          style={{ paddingRight: "10px" }}
-                          className={classes.img}
-                          alt="complex"
-                          src="./images/logosmall.png"
-                        />
-                        Internal Quality Auditor Training for{" "}
-                        <span className={classes.spanText}>
-                          {""} ISO 9001, ISO 14001, IATF 16949, ISO/IEC 17025,
-                          ISO/IEC 27001, ISO/IEC 20000-1, NIST 800-171
-                        </span>
-                      </Typography>
-                    </div>
-                  </div>
+
                   <div className={classes.textContainer}>
                     <div>
                       <Typography
@@ -1237,8 +1194,7 @@ function Service(props) {
           <Grid container className={classes.lastGrid}>
             <Grid item xs={12} md={6}>
               <Typography variant="h4" className={classes.businesstext}>
-                We Help You unlock & unleash the power within your large scale
-                buissness
+                We Help You unlock & unleash the power within your business
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
