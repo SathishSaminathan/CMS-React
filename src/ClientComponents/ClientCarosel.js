@@ -55,6 +55,24 @@ function Review(props) {
     {
       images: Images[13],
     },
+    {
+      images: Images[14],
+    },
+    {
+      images: Images[15],
+    },
+    {
+      images: Images[16],
+    },
+    {
+      images: Images[17],
+    },
+    {
+      images: Images[18],
+    },
+    {
+      images: Images[19],
+    },
   ];
 
   const [items, setItems] = useState(array);
