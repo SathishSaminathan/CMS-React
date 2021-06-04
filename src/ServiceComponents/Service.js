@@ -321,6 +321,26 @@ function Service(props) {
                           />
                         </span>
                         <span style={{ color: "#0C2D48", fontWeight: "600" }}>
+                          CMMI V2.0
+                        </span>
+                        - Capability Maturity Model Integrated
+                      </Typography>
+                    </Grid>
+                    <Grid item xs>
+                      <Typography
+                        gutterBottom
+                        variant="subtitle1"
+                        className={classes.typotext}
+                      >
+                        <span>
+                          <img
+                            style={{ paddingRight: "10px" }}
+                            className={classes.img}
+                            alt="complex"
+                            src="./images/logosmall.png"
+                          />
+                        </span>
+                        <span style={{ color: "#0C2D48", fontWeight: "600" }}>
                           NIST 800-171/ CMMC
                         </span>
                         - Cybersecurity Maturity Model Certification
