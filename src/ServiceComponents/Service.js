@@ -375,8 +375,10 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Critical process analysis and development of Business
-                        Continuity and Disaster Recovery Plans
+                        Critical process analysis and development of{" "}
+                        <span style={{ color: "#0C2D48", fontWeight: "600" }}>
+                          Business Continuity and Disaster Recovery Plans
+                        </span>
                       </Typography>
                     </Grid>
                   </Fade>
