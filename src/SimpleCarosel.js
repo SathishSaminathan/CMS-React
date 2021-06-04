@@ -1,63 +1,68 @@
-import React from 'react';
-import {
-  MDBCarousel,
-  MDBCarouselInner,
-  MDBCarouselItem,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBBtn,
-} from 'mdbreact';
+import "./simpleCarosel.css";
+
 import {
   Grid,
+  Paper,
+  ThemeProvider,
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-  ThemeProvider,
-  Paper,
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import './simpleCarosel.css'
+} from "@material-ui/core";
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardText,
+  MDBCardTitle,
+  MDBCarousel,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBCol,
+  MDBContainer,
+  MDBRow,
+} from "mdbreact";
+
+import { Images } from "./assets/images";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+
 const useStyles = makeStyles((theme) => ({
-  paper:{
-    width:200,
-    height:200,
-    justifyContent:"center",
-    alignContent:"center",
-    alignItems:"center",
-    display:"flex",
-    marginBottom:"10px",
-    marginTop:"10px",
-    marginLeft:"20px",
-    backgroundColor:"transparent",
-    borderRadius: 200, borderColor: "black" ,
-    [theme.breakpoints.down('xs')]: {
-    marginLeft:"50px"
+  paper: {
+    width: 200,
+    height: 200,
+    justifyContent: "center",
+    alignContent: "center",
+    alignItems: "center",
+    display: "flex",
+    marginBottom: "10px",
+    marginTop: "10px",
+    marginLeft: "20px",
+    backgroundColor: "transparent",
+    borderRadius: 200,
+    borderColor: "black",
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "50px",
     },
-    '&:hover, &:focus': {
-      transform: 'scale(1.03)',
+    "&:hover, &:focus": {
+      transform: "scale(1.03)",
       boxShadow:
-        '0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12), 0 8px 32px -8px hsla(0, 0%, 0%, 0.14), 0 -6px 32px -6px hsla(0, 0%, 0%, 0.02)',
-      transition: 'all ease 200ms',
+        "0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12), 0 8px 32px -8px hsla(0, 0%, 0%, 0.14), 0 -6px 32px -6px hsla(0, 0%, 0%, 0.02)",
+      transition: "all ease 200ms",
     },
-},
-cardimg:{
-    width:"70%"
-},
-  paperContainer:{
-  width:"auto"
-    
   },
-  container:{
-    [theme.breakpoints.down('xs')]: {
-      paddingLeft:" 44px",
-      },
-  }
+  cardimg: {
+    width: "70%",
+  },
+  paperContainer: {
+    width: "auto",
+  },
+  container: {
+    width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: " 44px",
+    },
+  },
 }));
 
 const SimpleCarosel = () => {
@@ -74,8 +79,8 @@ const SimpleCarosel = () => {
         multiItem
       >
         <MDBCarouselInner>
-          <MDBRow style={{marginRight:"10px"}}>
-            <MDBCarouselItem itemId="1" >
+          <MDBRow style={{ marginRight: "10px" }}>
+            <MDBCarouselItem itemId="1">
               {/* <Grid
                 container
                 direction="row"
@@ -127,35 +132,37 @@ const SimpleCarosel = () => {
                   </Paper>
                 </Grid>
               </Grid> */}
-              <Grid container spacing={0} style={{marginBottom:"50px",width:"100%"}}>
-        <Grid item xs>
-          <Paper className={classes.paper}  variant="outlined" >
-            <img className={classes.cardimg} src="./images/mspng.png"/>
-
-          </Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper} variant="outlined">
-              
-          <img  className={classes.cardimg} src="./images/ibmpng.png"/>
-          </Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper} variant="outlined">
-          <img className={classes.cardimg} src="./images/fedexpng.png"/>
-          </Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper} variant="outlined">
-          <img className={classes.cardimg} src="./images/nikepng.png"/>
-          </Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper} variant="outlined">
-          <img className={classes.cardimg} src="./images/addidaspng.png"/>
-          </Paper>
-        </Grid>
-      </Grid>
+              <Grid
+                container
+                spacing={0}
+                style={{ marginBottom: "50px", width: "100%" }}
+              >
+                <Grid item xs>
+                  <Paper className={classes.paper} variant="outlined">
+                    <img className={classes.cardimg} src={Images[1]} />
+                  </Paper>
+                </Grid>
+                <Grid item xs>
+                  <Paper className={classes.paper} variant="outlined">
+                    <img className={classes.cardimg} src={Images[2]} />
+                  </Paper>
+                </Grid>
+                <Grid item xs>
+                  <Paper className={classes.paper} variant="outlined">
+                    <img className={classes.cardimg} src={Images[4]} />
+                  </Paper>
+                </Grid>
+                <Grid item xs>
+                  <Paper className={classes.paper} variant="outlined">
+                    <img className={classes.cardimg} src={Images[5]} />
+                  </Paper>
+                </Grid>
+                <Grid item xs>
+                  <Paper className={classes.paper} variant="outlined">
+                    <img className={classes.cardimg} src={Images[6]} />
+                  </Paper>
+                </Grid>
+              </Grid>
             </MDBCarouselItem>
           </MDBRow>
         </MDBCarouselInner>
