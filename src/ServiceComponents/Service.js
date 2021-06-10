@@ -585,45 +585,6 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Perform{" "}
-                        <span style={{ color: "#0C2D48", fontWeight: "600" }}>
-                          IQ/QQ/PQ(software validation) per ICH Guidelines and{" "}
-                          <span>21CFR Part 11 compliance requirements</span>
-                        </span>{" "}
-                      </Typography>
-                    </Grid>
-                    <Grid item xs>
-                      <Typography
-                        gutterBottom
-                        variant="subtitle1"
-                        className={classes.typotext}
-                      >
-                        <span>
-                          <img
-                            style={{ paddingRight: "10px" }}
-                            className={classes.img}
-                            alt="complex"
-                            src="./images/logosmall.png"
-                          />
-                        </span>
-                        Critical process analysis and development of Business
-                        Continuity and Disaster Recovery Plans{" "}
-                      </Typography>
-                    </Grid>
-                    <Grid item xs>
-                      <Typography
-                        gutterBottom
-                        variant="subtitle1"
-                        className={classes.typotext}
-                      >
-                        <span>
-                          <img
-                            style={{ paddingRight: "10px" }}
-                            className={classes.img}
-                            alt="complex"
-                            src="./images/logosmall.png"
-                          />
-                        </span>
                         Documentation of policies, {""}
                         <span style={{ color: "#0C2D48", fontWeight: "600" }}>
                           SOPs{""}
@@ -770,24 +731,7 @@ function Service(props) {
                         Prepare a project plan and reach agreement
                       </Typography>
                     </Grid>
-                    <Grid item xs>
-                      <Typography
-                        style={{ color: "white" }}
-                        gutterBottom
-                        variant="subtitle1"
-                        className={classes.typotext}
-                      >
-                        <span>
-                          <img
-                            style={{ paddingRight: "10px" }}
-                            className={classes.img}
-                            alt="complex"
-                            src="./images/logosmall.png"
-                          />
-                        </span>
-                        Perform onsite visits/ virtual meetings as per the plan
-                      </Typography>
-                    </Grid>
+
                     <Grid item xs>
                       <Typography
                         style={{ color: "white" }}

@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "10px",
     marginTop: "10px",
     marginLeft: "20px",
-    backgroundColor: "transparent",
+    backgroundColor: "white",
     borderRadius: 200,
     borderColor: "black",
     [theme.breakpoints.down("xs")]: {
