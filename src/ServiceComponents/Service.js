@@ -731,7 +731,25 @@ function Service(props) {
                         Prepare a project plan and reach agreement
                       </Typography>
                     </Grid>
+  <Grid item xs>
+                      <Typography
+                        style={{ color: "white" }}
+                        gutterBottom
+                        variant="subtitle1"
+                        className={classes.typotext}
+                      >
+                        <span>
+                          <img
+                            style={{ paddingRight: "10px" }}
+                            className={classes.img}
+                            alt="complex"
+                            src="./images/logosmall.png"
+                          />
+                        </span>
+                       Perform onsite visits/ virtual meetings as per the plan
 
+                      </Typography>
+                    </Grid>
                     <Grid item xs>
                       <Typography
                         style={{ color: "white" }}

@@ -253,15 +253,15 @@ function AboutUs(props) {
               <Fade top>
                 <Typography variant="subtitle1" className={classes.cantonText}>
                   Canton Management Services, Inc was established in 2008. CMS
-                  is a practical and{" "}
+                  is a practical and {" "}
                   <span style={{ color: "#0C2D48", fontWeight: "600" }}>
                     "SHOW-HOW"
                   </span>{" "}
                   type of Consultancy Services organization. It has been
                   instrumental in bringing a{" "}
                   <span style={{ color: "#0C2D48", fontWeight: "600" }}>
-                    perceptible change in the client’s company’s outlook image
-                    and performance.
+                    perceptible change in the client’s outlook image and
+                    performance.
                   </span>
                 </Typography>
               </Fade>
@@ -285,32 +285,18 @@ function AboutUs(props) {
               <Fade left>
                 <Typography className={classes.undertext} variant="subtitle1">
                   Our core Competencies are Management Consultancy Services on
-                  Integrated Management System {" "}
-                  <span style={{ color: "#0C2D48", fontWeight: "600" }}>
-                    (IMS),
-                  </span>
-                  Business Process{" "}
-                  <span style={{ color: "#0C2D48", fontWeight: "600" }}>
-                    Re-Engineering{" "}
-                  </span>
-                  and Continual improvement.
+                  Integrated Management System (IMS), Business
+                  Process Re-Engineering and Continual improvement.
                 </Typography>
               </Fade>
               <Fade bottom>
                 <Typography variant="subtitle1" className={classes.undertext}>
-                  We are well qualified, very experienced and holds
-                  certification on Auditing,
-                  <span style={{ color: "#0C2D48", fontWeight: "600" }}>
-                    {" "}
-                    CISA, ITIL, CMMI, Lean{" "}
-                  </span>
-                  and Six Sigma Black Belts.
+                We are well qualified, experienced and holds certification on Auditing, CISA, ITIL, CMMI, Lean and Six Sigma Black Belts.
                 </Typography>
               </Fade>
               <Fade top>
                 <Typography className={classes.undertext} variant="subtitle1">
-                  We are committed to contributing to the organization through
-                  compatible guidance.
+                We are committed to contributing to the organization through compatible guidance.
                 </Typography>
               </Fade>
             </Grid>
