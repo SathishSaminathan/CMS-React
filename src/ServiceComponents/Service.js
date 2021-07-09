@@ -47,7 +47,7 @@ function Service(props) {
               className={classes.clientH1}
               style={{ fontFamily: "Anton, sans-serif", color: "white" }}
             >
-              OUR SERVICE
+              OUR SERVICES
             </Typography>
           </Grid>
           <Grid item md={12} className={classes.Header1}>
@@ -731,7 +731,7 @@ function Service(props) {
                         Prepare a project plan and reach agreement
                       </Typography>
                     </Grid>
-  <Grid item xs>
+                    <Grid item xs>
                       <Typography
                         style={{ color: "white" }}
                         gutterBottom
@@ -746,8 +746,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                       Perform onsite visits/ virtual meetings as per the plan
-
+                        Perform onsite visits/ virtual meetings as per the plan
                       </Typography>
                     </Grid>
                     <Grid item xs>

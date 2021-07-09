@@ -260,12 +260,14 @@ function ContactComponent(props) {
         <NavBArMat />
         <Grid container spacing={0} className={classes.GridContainer}>
           <Grid item md={12} className={classes.ContactText}>
-            <Typography
-              variant="h3"
-              style={{ fontFamily: "Anton, sans-serif", color: "white" }}
-            >
-              CONTACT
-            </Typography>
+            <ScrollableAnchor id={"contactus"}>
+              <Typography
+                variant="h3"
+                style={{ fontFamily: "Anton, sans-serif", color: "white" }}
+              >
+                CONTACT
+              </Typography>
+            </ScrollableAnchor>
           </Grid>
 
           <Grid
@@ -497,32 +499,6 @@ function ContactComponent(props) {
                   </Typography>
                 </div>
               </Fade> */}
-              <Fade right>
-                <div>
-                  <Typography
-                    variant="h6"
-                    style={{
-                      textAlign: "left",
-                      paddingLeft: "30px",
-                      color: "orangered",
-                    }}
-                  >
-                    Watching Hours:
-                  </Typography>
-                  <Typography
-                    variant="subtitle1"
-                    style={{ textAlign: "left", paddingLeft: "30px" }}
-                  >
-                    Mon-Fri: 10.00-19.00
-                  </Typography>
-                  <Typography
-                    variant="subtitle1"
-                    style={{ textAlign: "left", paddingLeft: "30px" }}
-                  >
-                    Sat-Sun: Holiday
-                  </Typography>
-                </div>
-              </Fade>
             </Paper>
           </Grid>
           <Grid container className={classes.lastGrid}>

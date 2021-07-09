@@ -26,9 +26,6 @@ function Review(props) {
       images: Images[3],
     },
     {
-      images: Images[4],
-    },
-    {
       images: Images[5],
     },
     {

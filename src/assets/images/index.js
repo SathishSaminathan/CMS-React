@@ -2,7 +2,6 @@ export const Images = {
   1: require("./1.png").default,
   2: require("./2.png").default,
   3: require("./3.png").default,
-  4: require("./4.png").default,
   5: require("./5.png").default,
   6: require("./6.png").default,
   7: require("./7.png").default,

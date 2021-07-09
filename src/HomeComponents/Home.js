@@ -405,7 +405,7 @@ function Home(props) {
                 }}
                 variant="h1"
               >
-                OUR PARTNERS
+                OUR CLIENTS
               </Typography>
             </Grid>
             <Grid item xs={12} md={12}>
