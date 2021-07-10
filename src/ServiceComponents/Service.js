@@ -113,7 +113,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Strategic business planning
+                        Strategic Business Planning
                       </Typography>
                     </Grid>
                     <Grid item xs>
@@ -147,7 +147,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        Cost reduction projects{" "}
+                        Cost Reduction Projects{" "}
                       </Typography>
                     </Grid>
                     <Grid item xs>
@@ -181,7 +181,7 @@ function Service(props) {
                             src="./images/logosmall.png"
                           />
                         </span>
-                        QA as a Service(QAaaS){" "}
+                        QA as a Service (QAaaS){" "}
                       </Typography>
                     </Grid>
                     <Grid item xs>
@@ -241,8 +241,8 @@ function Service(props) {
                         <span style={{ color: "#0C2D48", fontWeight: "600" }}>
                           IATF 16949
                         </span>
-                        - Quality Management System Requirements for automotive
-                        suppliers
+                        - Quality Management System Requirements for Automotive
+                        Suppliers
                       </Typography>
                     </Grid>
                     <Grid item xs>
