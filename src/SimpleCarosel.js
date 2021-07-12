@@ -149,7 +149,7 @@ const SimpleCarosel = () => {
                 </Grid>
                 <Grid item xs>
                   <Paper className={classes.paper} variant="outlined">
-                    <img className={classes.cardimg} src={Images[4]} />
+                    <img className={classes.cardimg} src={Images[8]} />
                   </Paper>
                 </Grid>
                 <Grid item xs>
