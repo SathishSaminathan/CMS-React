@@ -21,6 +21,7 @@ import NavBArMat from "../NavBarMat";
 import React from "react";
 import ScrollUp from "../ScrollUp";
 import ScrollableAnchor from "react-scrollable-anchor";
+import emailjs from "emailjs-com";
 import { goToAnchor } from "react-scrollable-anchor";
 import { makeStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
@@ -250,6 +251,26 @@ function ContactComponent(props) {
   const classes = useStyles();
   let img = "images/download.png";
   let history = useHistory();
+
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_dmlxyk4",
+        "template_hot7pdd",
+        e.target,
+        "user_iRH4aAaTLEgPvhQTJueSt"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
   return (
     <div className={classes.root}>
       <div className={classes.imageContainer} id="back-to-top-anchor">
@@ -306,7 +327,7 @@ function ContactComponent(props) {
                 Alternatively, if you'd like for us to get back in touch with
                 you please fill in the form below.
               </Typography>
-              <div style={{ marginTop: "20px" }}>
+              <form style={{ marginTop: "20px" }} onSubmit={sendEmail}>
                 <div
                   style={{
                     display: "flex",
@@ -319,11 +340,13 @@ function ContactComponent(props) {
                       placeholder="First Name"
                       type="text"
                       className={classes.textField}
+                      name="firstname"
                     />
                   </div>
                   <div style={{ width: "50%", marginRight: 10 }}>
                     <input
                       placeholder="Last Name"
+                      name="lastname"
                       type="text"
                       className={classes.textField}
                     />
@@ -340,6 +363,7 @@ function ContactComponent(props) {
                     <input
                       placeholder="Email Address"
                       type="email"
+                      name="email"
                       className={classes.textField}
                     />
                   </div>
@@ -371,6 +395,7 @@ function ContactComponent(props) {
                       <input
                         type="number"
                         placeholder="+1"
+                        name="phone"
                         className={classes.textFieldNumber}
                       />
                     </div>
@@ -379,35 +404,37 @@ function ContactComponent(props) {
                 <div style={{ marginRight: 10 }}>
                   <input
                     type="text"
+                    name="message"
                     placeholder="Message"
                     className={classes.textFieldMessage}
                   />
                 </div>
-              </div>
-              <Grid
-                item
-                md={12}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <Button
+                <Grid
+                  item
+                  md={12}
                   style={{
-                    color: "white",
-                    backgroundColor: "orangered",
-                    marginBottom: "20px",
-                    borderRadius: "30px",
-                    paddingBottom: "15px",
-                    paddingTop: "15px",
-                    marginTop: "1em",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
-                  variant="outlined"
                 >
-                  Send Message
-                </Button>
-              </Grid>
+                  <Button
+                    type="submit"
+                    style={{
+                      color: "white",
+                      backgroundColor: "orangered",
+                      marginBottom: "20px",
+                      borderRadius: "30px",
+                      paddingBottom: "15px",
+                      paddingTop: "15px",
+                      marginTop: "1em",
+                    }}
+                    variant="outlined"
+                  >
+                    Send Message
+                  </Button>
+                </Grid>
+              </form>
             </Grid>
           </Grid>
           <Grid
