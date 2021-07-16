@@ -5,6 +5,7 @@ import {
   Button,
   Grid,
   Paper,
+  Snackbar,
   TextField,
   ThemeProvider,
   Typography,
@@ -17,6 +18,7 @@ import Fade from "react-reveal/Fade";
 import FooterPage from "../Footer";
 import HeaderComponent from "../HeaderComponnent";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import MuiAlert from "@material-ui/lab/Alert";
 import NavBArMat from "../NavBarMat";
 import React from "react";
 import ScrollUp from "../ScrollUp";
@@ -247,6 +249,10 @@ const useStyles = makeStyles((theme) => ({
   },
   options: {},
 }));
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 function ContactComponent(props) {
   const classes = useStyles();
   let img = "images/download.png";
@@ -264,6 +270,7 @@ function ContactComponent(props) {
       .then(
         (result) => {
           console.log(result.text);
+          setOpen(true);
         },
         (error) => {
           console.log(error.text);
@@ -271,6 +278,16 @@ function ContactComponent(props) {
       );
     e.target.reset();
   }
+  const [open, setOpen] = React.useState(false);
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+  let vertical = "top";
+  let horizontal = "center";
   return (
     <div className={classes.root}>
       <div className={classes.imageContainer} id="back-to-top-anchor">
@@ -562,6 +579,16 @@ function ContactComponent(props) {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollUp>
+      <Snackbar
+        open={open}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical, horizontal }}
+      >
+        <Alert onClose={handleClose} severity="success">
+          Message Sent Successfully!
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
