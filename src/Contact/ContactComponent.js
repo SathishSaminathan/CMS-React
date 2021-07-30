@@ -262,10 +262,10 @@ function ContactComponent(props) {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_1czfqlk",
-        "template_nvj1kuj",
+        "service_wtk6doj",
+        "template_hot7pdd",
         e.target,
-        "user_RGpXMgF16hGignC221XYV"
+        "user_iRH4aAaTLEgPvhQTJueSt"
       )
       .then(
         (result) => {
