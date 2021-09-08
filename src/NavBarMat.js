@@ -212,9 +212,9 @@ function NavBArMat(props) {
                     <MenuItem onClick={() => handleClick("/service")}>
                       Our Services
                     </MenuItem>
-                    <MenuItem onClick={() => handleClick("/blog")}>
+                    {/* <MenuItem onClick={() => handleClick("/blog")}>
                       News & Blog
-                    </MenuItem>
+                    </MenuItem> */}
                     <MenuItem onClick={() => handleClick("/client")}>
                       Our Clients
                     </MenuItem>
