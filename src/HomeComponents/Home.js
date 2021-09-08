@@ -277,7 +277,7 @@ function Home(props) {
               </Button>
             </Fade>
           </Grid>
-          <Grid container className={classes.newsnblog} spacing={3}>
+          {/* <Grid container className={classes.newsnblog} spacing={3}>
             <Grid
               item
               xs={12}
@@ -389,7 +389,7 @@ function Home(props) {
                 Go To Blog
               </Button>
             </Grid>
-          </Grid>
+          </Grid> */}
           <Grid container className={classes.partnerContainer} spacing={3}>
             <Grid item xs={12} md={12} className={classes.trustcontainer}>
               <Typography style={{ color: "white", fontSize: "30px" }}>

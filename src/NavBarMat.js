@@ -248,12 +248,12 @@ function NavBArMat(props) {
                 >
                   Our Services
                 </Link>
-                <Link
+                {/* <Link
                   onClick={() => handleButtonClick("/blog")}
                   className={classes.btn}
                 >
                   News & Blog
-                </Link>
+                </Link> */}
                 <Link
                   onClick={() => handleButtonClick("/client")}
                   className={classes.btn}
