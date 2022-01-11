@@ -1,4 +1,4 @@
-import '../HomeStyles.css';
+import "../HomeStyles.css";
 
 import {
   Grid,
@@ -7,26 +7,26 @@ import {
   Typography,
   createMuiTheme,
   responsiveFontSizes,
-} from '@material-ui/core';
-import { MDBMask, MDBView } from 'mdbreact';
+} from "@material-ui/core";
+import { MDBMask, MDBView } from "mdbreact";
 
-import Button from '@material-ui/core/Button';
-import Carousel from 'react-multi-carousel';
-import DoubleCarosel from '../DoubleCarosel';
+import Button from "@material-ui/core/Button";
+import Carousel from "react-multi-carousel";
+import DoubleCarosel from "../DoubleCarosel";
 import Fab from "@material-ui/core/Fab";
-import Fade from 'react-reveal/Fade';
-import FooterPage from '../Footer';
-import Header from '../HeaderComponent/Header';
+import Fade from "react-reveal/Fade";
+import FooterPage from "../Footer";
+import Header from "../HeaderComponent/Header";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import {Link} from "react-router-dom"
-import NavBArMat from '../NavBarMat';
-import React from 'react';
-import ScrollUp from '../ScrollUp';
-import SimpleCarosel from '../SimpleCarosel';
-import Slider from 'react-slick';
-import { goToAnchor } from 'react-scrollable-anchor'
-import {useHistory} from "react-router-dom";
-import {useStyles} from "./Styles.js";
+import { Link } from "react-router-dom";
+import NavBArMat from "../NavBarMat";
+import React from "react";
+import ScrollUp from "../ScrollUp";
+import SimpleCarosel from "../SimpleCarosel";
+import Slider from "react-slick";
+import { goToAnchor } from "react-scrollable-anchor";
+import { useHistory } from "react-router-dom";
+import { useStyles } from "./Styles.js";
 
 // import Carousel from "../carousolComponent";
 let theme = createMuiTheme();
@@ -38,14 +38,14 @@ function Home(props) {
     <div>
       <ThemeProvider theme={theme}>
         <Header />
-        <NavBArMat  />
+        <NavBArMat />
         <Grid xl="auto" container id="back-to-top-anchor">
-          <Grid item spacing={2} xs={12}  className={classes.cmsContent}>
+          <Grid item spacing={2} xs={12} className={classes.cmsContent}>
             <Typography
               style={{
-                marginBottom: '10px',
-                fontFamily: 'Noto Sans KR, sans-serif',
-                color: 'white',
+                marginBottom: "10px",
+                fontFamily: "Noto Sans KR, sans-serif",
+                color: "white",
               }}
               variant="h4"
             >
@@ -55,42 +55,42 @@ function Home(props) {
               PRACTICAL & "SHOW-HOW"
             </Typography>
             <Typography
-              style={{ marginBottom: '20px', color: 'white' }}
+              style={{ marginBottom: "20px", color: "white" }}
               variant="h5"
             >
               Type of consultancy services organization
             </Typography>
             <Button
-            onClick={()=>history.push("./about")}
+              onClick={() => history.push("./about")}
               variant="contained"
               style={{
-                backgroundColor: 'orangered',
-                marginRight: '20px',
-                borderRadius: '30px',
-                color: 'white',
-                marginBottom: '10px',
-                paddingTop: '18px',
-                paddingBottom: '18px',
-                paddingRight: '20px',
-                paddingLeft: '20px',
+                backgroundColor: "orangered",
+                marginRight: "20px",
+                borderRadius: "30px",
+                color: "white",
+                marginBottom: "10px",
+                paddingTop: "18px",
+                paddingBottom: "18px",
+                paddingRight: "20px",
+                paddingLeft: "20px",
               }}
             >
               Our Services
             </Button>
             <Button
-            onClick={()=>history.push("./about")}
+              onClick={() => history.push("./about")}
               variant="outlined"
               style={{
-                marginRight: '20px',
-                borderRadius: '30px',
-                color: 'white',
-                marginBottom: '10px',
-                paddingTop: '15px',
-                paddingBottom: '15px',
-                paddingRight: '20px',
-                paddingLeft: '20px',
-                borderWidth: '2px',
-                borderColor: 'white',
+                marginRight: "20px",
+                borderRadius: "30px",
+                color: "white",
+                marginBottom: "10px",
+                paddingTop: "15px",
+                paddingBottom: "15px",
+                paddingRight: "20px",
+                paddingLeft: "20px",
+                borderWidth: "2px",
+                borderColor: "white",
               }}
             >
               Learn More
@@ -106,21 +106,23 @@ function Home(props) {
                   <Paper className={classes.paper1} elevation={0}>
                     <img
                       style={{
-                        width: '90px',
-                        marginBottom: '20px',
-                        marginTop: '10px',
+                        width: "90px",
+                        marginBottom: "20px",
+                        marginTop: "10px",
                       }}
                       src="../images/callAgent.png"
                     />
                     <Typography
-                      style={{ fontSize: '22px', marginBottom: '10px' }}
+                      style={{ fontSize: "22px", marginBottom: "10px" }}
                       variant="h5"
                     >
                       Consulting Services
                     </Typography>
 
                     <Typography className={classes.cardText} variant="h6">
-                    Hands-on consultancy guidance on establishment and implementation of the management system, including support services.
+                      Hands-on consultancy guidance on establishment and
+                      implementation of the management system, including support
+                      services.
                     </Typography>
                     {/* <Typography
                       style={{
@@ -131,7 +133,12 @@ function Home(props) {
                       variant="h6"
                     >
                     </Typography> */}
-                    <Link to="./service#services" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
+                    <Link
+                      to="./service#services"
+                      style={{ color: "white", textDecoration: "underline" }}
+                    >
+                      Read More
+                    </Link>
                   </Paper>
                 </Fade>
               </Grid>
@@ -141,18 +148,21 @@ function Home(props) {
                   <Paper className={classes.paper2} elevation={0}>
                     <img
                       className={classes.card2img}
-                      style={{ width: '90px', marginBottom: '20px' }}
+                      style={{ width: "90px", marginBottom: "20px" }}
                       src="../images/pickingPeople.png"
                     />
                     <Typography
-                      style={{ fontSize: '22px', marginBottom: '10px' }}
+                      style={{ fontSize: "22px", marginBottom: "10px" }}
                       variant="h5"
                     >
                       Consultancy Approach
                     </Typography>
 
                     <Typography variant="h6" className={classes.cardText}>
-                    All begins with our team. We have topnotch talent who understands your business, understands your problems, and works hand-in-hand with you to identify real transformation opportunities.
+                      All begins with our team. We have topnotch talent who
+                      understands your business, understands your problems, and
+                      works hand-in-hand with you to identify real
+                      transformation opportunities.
                     </Typography>
                     {/* <Typography
                       style={{
@@ -163,32 +173,46 @@ function Home(props) {
                       variant="h6"
                     >
                     </Typography> */}
-                    <Link to="./service#approach" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
-
+                    <Link
+                      to="./service#approach"
+                      style={{ color: "white", textDecoration: "underline" }}
+                    >
+                      Read More
+                    </Link>
                   </Paper>
                 </Fade>
               </Grid>
 
               <Grid item>
                 <Fade right>
-                  <Paper  className={classes.paper3} elevation={0}>
+                  <Paper className={classes.paper3} elevation={0}>
                     <img
                       style={{
-                        width: '90px',
-                        marginBottom: '20px',
-                        marginTop: '10px',
+                        width: "90px",
+                        marginBottom: "20px",
+                        marginTop: "10px",
                       }}
                       src="../images/presentation.png"
                     />
-                    <Typography  style={{ fontSize: '22px', marginBottom: '0px' }} className={classes.cardText} variant="h5">
+                    <Typography
+                      style={{ fontSize: "22px", marginBottom: "0px" }}
+                      className={classes.cardText}
+                      variant="h5"
+                    >
                       Training Workshops
                     </Typography>
 
                     <Typography className={classes.cardText} variant="h6">
-                    CMS offers a wide range of training and management consultancy services across a variety of learning and development areas.
+                      CMS offers a wide range of training and management
+                      consultancy services across a variety of learning and
+                      development areas.
                     </Typography>
-                    <Link to="./service#training" style={{color:"white",textDecoration: 'underline',}}>Read More</Link>
-
+                    <Link
+                      to="./service#training"
+                      style={{ color: "white", textDecoration: "underline" }}
+                    >
+                      Read More
+                    </Link>
                   </Paper>
                 </Fade>
               </Grid>
@@ -207,16 +231,16 @@ function Home(props) {
             <div class="devicer"></div>
             <Typography
               variant="h4"
-              style={{ marginLeft: '40px', color: 'orangered' }}
+              style={{ marginLeft: "40px", color: "orangered" }}
             >
               About Us
             </Typography>
             <Fade top>
               <Typography
                 style={{
-                  width: '50%',
-                  color: '#0C2D48',
-                  fontFamily: 'Hammersmith One, sans-serif',
+                  width: "50%",
+                  color: "#0C2D48",
+                  fontFamily: "Hammersmith One, sans-serif",
                 }}
                 variant="h2"
                 gutterBottom="true"
@@ -224,36 +248,36 @@ function Home(props) {
                 Canton Management
               </Typography>
               <Typography variant="h6" gutterBottom="true">
-                Our core competencies are{' '}
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                Our core competencies are{" "}
+                <span style={{ color: "#0C2D48", fontWeight: "600" }}>
                   Management Consultancy Services
-                </span>{' '}
-                on Integrated Management System(IMS), Business Process{' '}
-                <span style={{ color: '#0C2D48', fontWeight: '600' }}>
+                </span>{" "}
+                on Integrated Management System(IMS), Business Process{" "}
+                <span style={{ color: "#0C2D48", fontWeight: "600" }}>
                   Re-Engineering
-                </span>{' '}
+                </span>{" "}
                 and improvement.
               </Typography>
               <Button
                 className={classes.btnLearn}
-                onClick={()=>history.push("./about")}
+                onClick={() => history.push("./about")}
                 style={{
-                  backgroundColor: 'orangered',
-                  borderRadius: '30px',
+                  backgroundColor: "orangered",
+                  borderRadius: "30px",
 
-                  color: 'white',
-                  marginTop: '20px',
-                  paddingTop: '15px',
-                  paddingBottom: '15px',
-                  paddingLeft: '25px',
-                  paddingRight: '25px',
+                  color: "white",
+                  marginTop: "20px",
+                  paddingTop: "15px",
+                  paddingBottom: "15px",
+                  paddingLeft: "25px",
+                  paddingRight: "25px",
                 }}
               >
                 Learn More
               </Button>
             </Fade>
           </Grid>
-          <Grid container className={classes.newsnblog} spacing={3}>
+          {/* <Grid container className={classes.newsnblog} spacing={3}>
             <Grid
               item
               xs={12}
@@ -261,24 +285,24 @@ function Home(props) {
               xl={12}
               className={classes.blogContainer}
             >
-              <Typography variant="h4" style={{ color: 'white' }}>
-                {' '}
-                Our{' '}
+              <Typography variant="h4" style={{ color: "white" }}>
+                {" "}
+                Our{" "}
               </Typography>
               <Typography
                 variant="h4"
-                style={{ color: 'white', fontWeight: '600' }}
+                style={{ color: "white", fontWeight: "600" }}
               >
-                {' '}
-                News & blog{' '}
+                {" "}
+                News & blog{" "}
               </Typography>
             </Grid>
             <Grid item xs={12} md={4} className={classes.blogCard}>
               <Paper
                 style={{
-                  marginLeft: '10px',
-                  marginRight: '10px',
-                  backgroundColor: 'transparent',
+                  marginLeft: "10px",
+                  marginRight: "10px",
+                  backgroundColor: "transparent",
                 }}
                 className={classes.paperblog1}
                 elevation={0}
@@ -304,9 +328,9 @@ function Home(props) {
             <Grid item xs={12} md={4} className={classes.blogCard}>
               <Paper
                 style={{
-                  marginLeft: '10px',
-                  marginRight: '10px',
-                  backgroundColor: 'transparent',
+                  marginLeft: "10px",
+                  marginRight: "10px",
+                  backgroundColor: "transparent",
                 }}
                 className={classes.paperblog2}
                 elevation={0}
@@ -329,9 +353,9 @@ function Home(props) {
             <Grid item xs={12} md={4} className={classes.blogCard}>
               <Paper
                 style={{
-                  marginLeft: '10px',
-                  marginRight: '10px',
-                  backgroundColor: 'transparent',
+                  marginLeft: "10px",
+                  marginRight: "10px",
+                  backgroundColor: "transparent",
                 }}
                 className={classes.paperblog3}
                 elevation={0}
@@ -354,34 +378,34 @@ function Home(props) {
 
             <Grid item xs={12} md={12} xl={12} className={classes.blogBtn}>
               <Button
-              onClick={()=>history.push("/blog")}
+                onClick={() => history.push("/blog")}
                 variant="outlined"
                 style={{
-                  color: 'black',
-                  backgroundColor: 'white',
-                  borderRadius: '20px',
+                  color: "black",
+                  backgroundColor: "white",
+                  borderRadius: "20px",
                 }}
               >
                 Go To Blog
               </Button>
             </Grid>
-          </Grid>
+          </Grid> */}
           <Grid container className={classes.partnerContainer} spacing={3}>
             <Grid item xs={12} md={12} className={classes.trustcontainer}>
-              <Typography style={{ color: 'white', fontSize: '30px' }}>
-                {' '}
+              <Typography style={{ color: "white", fontSize: "30px" }}>
+                {" "}
                 <span class="devicer1"></span>TRUST WE GOT
               </Typography>
             </Grid>
             <Grid item xs={12} md={12} className={classes.partnerText}>
               <Typography
                 style={{
-                  color: 'white',
-                  fontFamily: 'Hammersmith One, sans-serif',
+                  color: "white",
+                  fontFamily: "Hammersmith One, sans-serif",
                 }}
                 variant="h1"
               >
-                OUR PARTNERS
+                OUR CLIENTS
               </Typography>
             </Grid>
             <Grid item xs={12} md={12}>
@@ -389,12 +413,12 @@ function Home(props) {
             </Grid>
           </Grid>
           <Grid container className={classes.cardCarosel}>
-            <Grid item xs={12} md={12} style={{paddingTop:60}}>
+            <Grid item xs={12} md={12} style={{ paddingTop: 60 }}>
               <Typography
                 variant="h4"
                 style={{
-                  color: '#1687a7',
-                  fontFamily: 'Hammersmith One, sans-serif',
+                  color: "#1687a7",
+                  fontFamily: "Hammersmith One, sans-serif",
                 }}
               >
                 From Our Great Clients
@@ -405,36 +429,48 @@ function Home(props) {
                 className={classes.clientText}
                 variant="h3"
                 style={{
-                  color: '#0C2D48',
-                  fontFamily: 'Hammersmith One, sans-serif',
+                  color: "#0C2D48",
+                  fontFamily: "Hammersmith One, sans-serif",
                 }}
               >
                 What clients Say About Us ?
               </Typography>
             </Grid>
-            <Grid item xs={12} md={12} style={{ marginBottom: '60px' }}>
+            <Grid item xs={12} md={12} style={{ marginBottom: "60px" }}>
               <DoubleCarosel />
             </Grid>
           </Grid>
           <Grid container className={classes.lastGrid}>
             <Grid item xs={12} md={6}>
               <Typography variant="h4" className={classes.businesstext}>
-                We Help You unlock & unleash the power within your large scale
-                business
+                We Help You unlock & unleash the power within your business
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Button className={classes.btnconsol} onClick={() =>{
-                
-                history.push("./contact#message")}}>Book a Consultation</Button>
+              <Button
+                className={classes.btnconsol}
+                onClick={() => {
+                  history.push("./contact#message");
+                }}
+              >
+                Book a Consultation
+              </Button>
             </Grid>
           </Grid>
           <FooterPage />
         </Grid>
       </ThemeProvider>
       <ScrollUp {...props}>
-        <Fab style={{  backgroundColor: '#a40606',
-    backgroundImage: ' linear-gradient(315deg, #a40606 0%, #d98324 74%)',    opacity: "0.5"}} size="small" aria-label="scroll back to top">
+        <Fab
+          style={{
+            backgroundColor: "#a40606",
+            backgroundImage:
+              " linear-gradient(315deg, #a40606 0%, #d98324 74%)",
+            opacity: "0.5",
+          }}
+          size="small"
+          aria-label="scroll back to top"
+        >
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollUp>
