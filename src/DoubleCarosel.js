@@ -179,7 +179,7 @@ const DoubleCarosel = () => {
     <MDBContainer>
       <MDBCarousel
         activeItem={1}
-        length={2}
+        length={4}
         slide={true}
         showControls={true}
         showIndicators={true}
@@ -299,6 +299,94 @@ meet our timeline, Palani agreed to aid us. <Link to="./testimonial#Russ" class
                    <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani has worked with our company less than one year in a consulting capacity involving both ISO
 Standards 9001: 2015 as well as 14001: 2015. That included preparation for, and leading us through one
 surveillance audit for each standard.<Link to="./testimonial#Walker" className={classes.redmore}>...Read More</Link></Typography>
+                  
+                  </Paper>
+                </Grid>
+                </Hidden>
+                </Grid>
+            </MDBCarouselItem>
+            <MDBCarouselItem itemId="3" >
+              <Grid container direction="row" spacing={2} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
+                <Grid item xs={12} md={6} className={classes.cardContainer1}>
+                <Paper className={classes.card} elevation={0} style={{  padding: '10px' }}>
+                   
+                <div className={classes.willimgcontainer}>
+                   <img
+                  className={classes.cardimg}
+                  src="./images/profileimg1.png"
+                />
+                </div>
+                <Typography className={classes.cardTitle} style={{}}> Michael Crews</Typography>
+                   <Typography className={classes.cardsubtitle}>Owner, Marion Water County Test Lab  </Typography>
+                   <img className={classes.starimg} src="./images/5star.png"/>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>  Very knowledgeable & helpful. 
+{/* <Link to="./testimonial#Russ" className={classes.redmore}>...Read More</Link> */}
+</Typography>
+              </Paper>
+                </Grid>
+                <Hidden mdDown>
+
+                <Grid item xs={12} md={6} className={classes.cardContainer1}>
+                  <Paper className={classes.card}  style={{  padding: '10px' }} elevation={0}>
+                   
+                    <div className={classes.willimgcontainer}>
+                       <img
+                      className={classes.cardimg}
+                      src="./images/profileimg1.png"
+                    />
+                    </div>
+                    <Typography className={classes.cardTitle} style={{}}>Kiefer Taylor</Typography>
+                   <Typography className={classes.cardsubtitle}>Quality Engineer, Baxter Machine  </Typography>
+                   <img className={classes.starimg} src="./images/5star.png"/>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}> Professional, personable and focused.
+                 
+                   </Typography>
+                  
+                  </Paper>
+                </Grid>
+                </Hidden>
+                </Grid>
+            </MDBCarouselItem>
+            <MDBCarouselItem itemId="4" >
+              <Grid container direction="row" spacing={2} alignContent='space-around' style={{justifyContent:"space-evenly"}} className={classes.cardContainerMain}>
+                <Grid item xs={12} md={6} className={classes.cardContainer1}>
+                <Paper className={classes.card} elevation={0} style={{  padding: '10px' }}>
+                   
+                <div className={classes.willimgcontainer}>
+                   <img
+                  className={classes.cardimg}
+                  src="./images/profileimg1.png"
+                />
+                </div>
+                <Typography className={classes.cardTitle} style={{}}> Jacob Spangler</Typography>
+                <Typography className={classes.cardsubtitle}>
+Quality Engineer, Yamato Intl. Corp </Typography>
+                   <img className={classes.starimg} src="./images/5star.png"/>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}> Mr. Masilamani is extremely knowledgeable and easy to work with. His guidance has been crucial to the development of a smoothly operating Quality and Environmental management systems.
+{/* <Link to="./testimonial#Russ" className={classes.redmore}>...Read More</Link> */}
+</Typography>
+              </Paper>
+                </Grid>
+                <Hidden mdDown>
+
+                <Grid item xs={12} md={6} className={classes.cardContainer1}>
+                  <Paper className={classes.card}  style={{  padding: '10px' }} elevation={0}>
+                   
+                    <div className={classes.willimgcontainer}>
+                       <img
+                      className={classes.cardimg}
+                      src="./images/profileimg1.png"
+                    />
+                    </div>
+                    <Typography className={classes.cardTitle} style={{}}>Russ McDowell</Typography>
+                   <Typography className={classes.cardsubtitle}>
+                   Director – Technology Services, ECCO Select </Typography>
+                   <img className={classes.starimg} src="./images/5star.png"/>
+                   <Typography className={classes.cardContent}  style={{ padding: '10px' }}>Palani at CMS was hands down the best choice we made regarding our pursuit of ISO and CMMI certification.
+ I interviewed close to a dozen providers in this field and Palani stood out immediately.
+ <Link to="./testimonial#RussMC" className={classes.redmore}>...Read More</Link> 
+                   {/* <Link to="./testimonial#Walker" className={classes.redmore}>...Read More</Link> */}
+                   </Typography>
                   
                   </Paper>
                 </Grid>

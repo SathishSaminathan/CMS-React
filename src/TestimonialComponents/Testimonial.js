@@ -385,6 +385,93 @@ ECCO Select Corporation<br/> */}
                     </div>
                   </Paper>
                 </ScrollableAnchor>
+                <img
+                  className={classes.orangebox}
+                  src="../images/orangebox.png"
+                />
+              </div>
+            </Grid>
+            <Grid item md={12} sm={12} className={classes.cardGrid}>
+              <div style={{ position: 'relative' }}>
+                <ScrollableAnchor id={'RussMC'}>
+                  <Paper
+                    className={classes.root}
+                    style={{ backgroundColor: '#0C2D48' }}
+                  >
+                    <div>
+                      <div
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'row',
+                          alignItems: 'center',
+                          width: '100%',
+                        }}
+                      >
+                        <div style={{ width: '100%' }}>
+                          <img
+                            src="./images/profileimg1.png"
+                            className={classes.media}
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          style={{
+                            width: '100%',
+                            justifyContent: 'flex-end',
+                            display: 'flex',
+                          }}
+                        >
+                          <img
+                            className={classes.starimg}
+                            src="./images/5star.png"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="h2"
+                          style={{ color: 'white' }}
+                        >
+                          Russ McDowell
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h6"
+                          color="textSecondary"
+                          component="p"
+                          style={{ color: 'orangered' }}
+                        >
+                         Director – Technology Services,
+                        </Typography>
+                        <Typography
+                          gutterBottom
+                          variant="h6"
+                          color="textSecondary"
+                          component="p"
+                          style={{ color: 'orangered' }}
+                        >
+                          ECCO Select 
+                        </Typography>
+                        <p
+                          style={{
+                            color: 'white',
+                            fontSize: '16px',
+                            fontFamily: 'Poppins',
+                            fontWeight: '500',
+                          }}
+                        >
+                        Palani at CMS was hands down the best choice we made regarding our pursuit of ISO and CMMI certification.
+ I interviewed close to a dozen providers in this field and Palani stood out immediately.
+ We were on a demanding timeline for our initial deliverables and his expertise made all the difference in our success.
+ Palani is extremely knowledgeable and experienced, professional, efficient, and flexible.
+ I would recommend Palani at CMS without reservation for any business seeking the services he provides 
+                        </p>
+                      </div>
+                    </div>
+                  </Paper>
+                </ScrollableAnchor>
 
                 <img
                   className={classes.orangebox}
