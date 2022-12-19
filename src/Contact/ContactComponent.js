@@ -255,17 +255,15 @@ function Alert(props) {
 }
 function ContactComponent(props) {
   const classes = useStyles();
-  let img = "images/download.png";
-  let history = useHistory();
 
   function sendEmail(e) {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_wtk6doj",
-        "template_hot7pdd",
+        "service_m1jw5bm",
+        "template_nbqyejf",
         e.target,
-        "user_iRH4aAaTLEgPvhQTJueSt"
+        "3tTL_hwA65VO8kkfP"
       )
       .then(
         (result) => {
@@ -291,7 +289,11 @@ function ContactComponent(props) {
   return (
     <div className={classes.root}>
       <div className={classes.imageContainer} id="back-to-top-anchor">
-        <img className={classes.bgimg} src="images/telphone.jpg" />
+        <img
+          className={classes.bgimg}
+          src="images/telphone.jpg"
+          alt="telephone"
+        />
       </div>
       <ThemeProvider theme={theme}>
         <HeaderComponent />

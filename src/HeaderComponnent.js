@@ -356,7 +356,13 @@ function HeaderComponent(props) {
                   display: "flex",
                   flexDirection: "row",
                   paddingTop: "15px",
+                  cursor: "pointer",
                 }}
+                onClick={() =>
+                  window.open(
+                    "mailto:thirupu@canton-management.com; sales@canton-management.com?&cc=palani659@gmail.com"
+                  )
+                }
               >
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <EmailOutlinedIcon className={classes.icons} />

@@ -82,7 +82,7 @@ const FooterPagePro = () => {
                     style={{ color: "orangered", fontSize: "16px" }}
                     onClick={() =>
                       window.open(
-                        "mailto:your@email.address?subject=Comments about the color blue"
+                        "mailto:thirupu@canton-management.com; pmasilamani@canton-management.com?&cc=palani659@gmail.com"
                       )
                     }
                   >
@@ -102,7 +102,7 @@ const FooterPagePro = () => {
                     }}
                     onClick={() =>
                       window.open(
-                        "mailto:your@email.address?subject=Comments about the color blue"
+                        "mailto:thirupu@canton-management.com; sales@canton-management.com?&cc=palani659@gmail.com"
                       )
                     }
                   >
